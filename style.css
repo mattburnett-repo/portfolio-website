@@ -1,0 +1,280 @@
+/* VARIABLES */
+:root {
+    --primary_TextColor: black;
+    --secondary_TextColor: lightgray;
+
+    --primary_BGcolor: rgb(201, 198, 198);
+    --section01_BGcolor: lightsteelblue;
+    --section02_BGcolor: lightskyblue;
+    --section03_BGcolor: lightsteelblue;
+    --footer_BGcolor: rgb(186, 221, 245);
+    --copyright_BGcolor: lightsteelblue;
+
+    /* these are for section 02 overlays only */
+    --overlay_TextColor: lightgray;
+    --overlay_BGcolor: #008CBA;
+
+    --cornerRounding: 7px;
+    --innerBorder: 3px double silver;
+    --outerBorder: 3px double black;
+
+    --opacityHi: 0.5;
+    --opacityMed: 0.65;
+    --opacityLo: 0.8;
+}
+
+/* START */
+html {
+    font-family: Play, "M PLUS 1p"; /* imported in index.html head element */
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary_TextColor);
+    background-color: var(--primary_BGcolor);
+
+    margin: 0;
+    padding: 0;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center; 
+
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 99%;
+    height: 75px;
+
+    /* border: var(--outerBorder); */
+    background-color: var(--primary_BGcolor);
+    border-radius: var(--cornerRounding);
+}
+nav img {
+    vertical-align: center;
+    height: 50px;
+    margin: 10px;
+    margin-left: 20px;
+
+    border: var(--innerBorder);
+    border-radius: var(--cornerRounding);
+}
+nav .title {
+    color: var(--primary_TextColor);
+    vertical-align: center;
+    padding-left: 17.78rem; to center the element
+}
+@media (max-width: 1000px) {
+    nav .title {
+        display: none;
+    }
+}
+nav a {
+    vertical-align: top;
+    margin-right: 20px;
+    line-height: 4.2rem;   /* if you want it vertically middle of the navbar */
+    color: var(--primary_TextColor);
+    text-decoration: none;
+}
+
+@media (max-width: 515px) {
+    nav a {
+        font-size: 0.8rem;
+    }
+}
+
+.main {
+    width: 90%;
+    margin: auto;
+}
+
+/* SECTION */
+
+/* we want all sections to be flexboxes */
+section {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    justify-content: center;
+    text-align: center;
+
+    width: 100%;
+    border: var(--outerBorder);
+    border-radius: var(--cornerRounding);
+    margin-bottom: 10px;
+}
+
+/* SECTION_01 */
+#section_01 {
+    /* inherit flex from section tag/class */
+    margin-top: 90px;
+    height: 500px;
+    background-color: var(--section01_BGcolor);
+    /* background-image: url(''); */
+}
+#section_01 .overlayTextOuter {
+    margin: auto;
+    padding: auto;
+    background-color: green;
+    width: 50%;
+    /* height: 30%; */
+
+    opacity: var(--opacityLo);
+}
+#section_01 .overlayTextInner {
+    margin: auto;
+    /* margin-top: 0.55rem; */
+    color: var(--secondary_TextColor);
+    background-color: black;
+    width: 75%; 
+    border: var(--innerBorder);
+    border-radius: var(--cornerRounding);
+    opacity: var(--opacityLo);
+} 
+
+/* SECTION_02 */
+
+#section_02 {
+    /* inherit flex from section tag/class */
+    padding-bottom: 50px;
+    background-color: var(--section02_BGcolor);
+    opacity: 0.85;
+
+    /* background-image: url(''); */
+}
+#section_02 .header {
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+#section_02 .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#section_02 .item {
+    position: relative;
+    padding: 20px;
+    border-radius: 25px;
+}
+#section_02 .item img {
+    margin: auto;
+    width: 300px;
+    height: 200px;
+    border: var(--innerBorder);
+    border-radius: var(--cornerRounding);
+}
+#section_02 .item h4 {
+    padding: 5px;
+    min-width: 240px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#section_02 .overlay {
+    position: absolute;
+    top: 0; /* relative to item container. use margin-top to offset downwards */
+    margin-top: 23px;
+    margin-left: 3px;
+    height: 200px;
+    width: 300px;
+
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--overlay_BGcolor);
+}
+
+#section_02 .item:hover .overlay {
+    opacity: 1;
+} 
+
+#section_02 .overlay .text {
+    color: var(--overlay_TextColor);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+/* SECTION_03 */
+
+#section_03 {
+    /* inherit flexbox from section tag/class */
+    padding-bottom: 50px;
+    background-color: var(--section03_BGcolor);
+    /* background-image: url(''); 
+    background-size: cover;*/
+}   
+#section_03 .header {
+    text-align: center;
+    width: 100%;
+}
+#section_03 .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    opacity: var(--opacityMed);
+}
+#section_03 .items .item {
+    padding: 20px;
+    margin: 20px 20px;
+    width: 300px;
+
+    color: white;
+    background-color: black;
+
+    border: var(--innerBorder);
+    border-radius: var(--cornerRounding);
+}
+
+/* FOOTER */
+
+footer {
+    color: darkblue;
+    background-color: var(--footer_BGcolor);
+    height: 130px;
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: center; 
+
+    border: var(--outerBorder);
+    border-radius: var(--cornerRounding);
+   
+    opacity: var(--opacityHi);
+}
+footer h2, h5 {
+    top: 10px;
+    margin-top: 0px;
+    line-height: 1.5rem;
+}
+
+footer a {
+    margin: 50px;
+}
+
+.copyright {
+    padding: 15px;
+    text-align: left;
+
+    color: var(--primary_TextColor);
+    background-color: var(--copyright_BGcolor);
+    opacity: var(--opacityLo);
+
+    border: var(--outerBorder);
+    border-radius: var(--cornerRounding);
+}
