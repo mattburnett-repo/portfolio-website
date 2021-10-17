@@ -64,9 +64,10 @@ nav img {
     border-radius: var(--cornerRounding);
 }
 nav .title {
+    /* font-size: 1.65rem; */
     color: var(--primary_TextColor);
     vertical-align: center;
-    /* padding-left: 17.78rem; to center the element */
+    padding-left: 17.78rem; /* to center the element */
 }
 @media (max-width: 1000px) {
     nav .title {
@@ -163,7 +164,6 @@ section {
 #section_02 .item {
     position: relative;
     padding: 20px;
-    border-radius: 25px;
 }
 #section_02 .item img {
     margin: auto;
@@ -241,7 +241,9 @@ section {
     border: var(--innerBorder);
     border-radius: var(--cornerRounding);
 }
-
+#section_03 .secondLine {
+    margin-bottom: 70px;
+}
 /* FOOTER */
 
 footer {
