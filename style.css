@@ -3,7 +3,7 @@
     --primary_TextColor: black;
     --secondary_TextColor: lightgray;
 
-    --primary_BGcolor: rgb(201, 198, 198);
+    --primary_BGcolor: rgb(187, 187, 187);
     --section01_BGcolor: lightsteelblue;
     --section02_BGcolor: lightskyblue;
     --section03_BGcolor: lightsteelblue;
@@ -14,7 +14,7 @@
     --overlay_TextColor: lightgray;
     --overlay_BGcolor: #008CBA;
 
-    --cornerRounding: 7px;
+    --borderRadius: 7px;
     --innerBorder: 3px double silver;
     --outerBorder: 3px double black;
 
@@ -22,6 +22,10 @@
     --opacityMed: 0.65;
     --opacityLo: 0.8;
 }
+
+/* * {
+    border: 1px solid pink;
+} */
 
 /* START */
 html {
@@ -52,7 +56,7 @@ nav {
 
     /* border: var(--outerBorder); */
     background-color: var(--primary_BGcolor);
-    border-radius: var(--cornerRounding);
+    border-radius: var(--borderRadius);
 }
 nav img {
     vertical-align: center;
@@ -61,7 +65,7 @@ nav img {
     margin-left: 20px;
 
     border: var(--innerBorder);
-    border-radius: var(--cornerRounding);
+    border-radius: var(--borderRadius);
 }
 nav .title {
     /* font-size: 1.65rem; */
@@ -107,7 +111,7 @@ section {
 
     width: 100%;
     border: var(--outerBorder);
-    border-radius: var(--cornerRounding);
+    border-radius: var(--borderRadius);
     margin-bottom: 10px;
 }
 
@@ -117,7 +121,9 @@ section {
     margin-top: 90px;
     height: 500px;
     background-color: var(--section01_BGcolor);
-    /* background-image: url(''); */
+    background-image: url('./images/techImage_01.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #section_01 .overlayTextOuter {
     margin: auto;
@@ -135,7 +141,7 @@ section {
     background-color: black;
     width: 75%; 
     border: var(--innerBorder);
-    border-radius: var(--cornerRounding);
+    border-radius: var(--borderRadius);
     opacity: var(--opacityLo);
 } 
 
@@ -170,11 +176,12 @@ section {
     width: 300px;
     height: 200px;
     border: var(--innerBorder);
-    border-radius: var(--cornerRounding);
+    border-radius: var(--borderRadius);
 }
 #section_02 .item h4 {
     padding: 5px;
     min-width: 240px;
+
     font-weight: bold;
     text-align: center;
 }
@@ -189,6 +196,7 @@ section {
 
     opacity: 0;
     transition: .5s ease;
+    color:var(--secondary_TextColor);
     background-color: var(--overlay_BGcolor);
 }
 
@@ -198,15 +206,36 @@ section {
 
 #section_02 .overlay .text {
     color: var(--overlay_TextColor);
-    font-size: 20px;
+    font-size: 0.9rem;
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 90%;
+    text-align: left;
 
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
+  }
+
+#section_02 .overlay ul {
+    margin: 0rem 0.6rem;
+    padding: 0px;
+}
+
+  #section_02 .overlay .text a {
+      position: absolute;
+      border: var(--innerBorder);
+      padding: 0.3rem;
+      margin-top: 0.8rem;
+      margin-left: 4.1rem;
+
+      text-decoration: none;
+      font-style: italic;
+      text-align: center;
+      color: var(--primary_TextColor);
+
+      background-color: var(--section02_BGcolor);
   }
 
 /* SECTION_03 */
@@ -239,9 +268,9 @@ section {
     background-color: black;
 
     border: var(--innerBorder);
-    border-radius: var(--cornerRounding);
+    border-radius: var(--borderRadius);
 }
-#section_03 .secondLine {
+.secondLine {
     margin-bottom: 70px;
 }
 /* FOOTER */
@@ -255,7 +284,7 @@ footer {
     text-align: center; 
 
     border: var(--outerBorder);
-    border-radius: var(--cornerRounding);
+    border-radius: var(--borderRadius);
    
     opacity: var(--opacityHi);
 }
@@ -278,5 +307,5 @@ footer a {
     opacity: var(--opacityLo);
 
     border: var(--outerBorder);
-    border-radius: var(--cornerRounding);
+    border-radius: var(--borderRadius);
 }
