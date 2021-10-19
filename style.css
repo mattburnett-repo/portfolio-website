@@ -3,7 +3,7 @@
     --primary_TextColor: black;
     --secondary_TextColor: lightgray;
 
-    --primary_BGcolor: rgb(187, 187, 187);
+    --primary_BGcolor: rgb(175, 174, 174);
     --section01_BGcolor: lightsteelblue;
     --section02_BGcolor: lightskyblue;
     --section03_BGcolor: lightsteelblue;
@@ -69,6 +69,7 @@ nav img {
 }
 nav .title {
     /* font-size: 1.65rem; */
+    /* font-weight: bold; */
     color: var(--primary_TextColor);
     vertical-align: center;
     padding-left: 17.78rem; /* to center the element */
