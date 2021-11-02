@@ -79,6 +79,8 @@ nav .title {
         display: none;
     }
 }
+
+/* TODO: resize / media query nav links to fit iPhone */
 nav a {
     vertical-align: top;
     margin-right: 20px;
@@ -90,6 +92,12 @@ nav a {
 @media (max-width: 515px) {
     nav a {
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 435px) {
+    nav a {
+        font-size: 0.5rem;
     }
 }
 
@@ -303,6 +311,12 @@ footer .links a {
     font-size: 2rem;
     text-decoration: none;
     margin: 40px;
+}
+
+@media (max-width: 455px) {
+    footer .links a {
+        font-size: 0.95rem;
+    }
 }
 
 .copyright {
