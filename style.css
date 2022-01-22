@@ -3,7 +3,8 @@
     --primary_TextColor: black;
     --secondary_TextColor: lightgray;
 
-    --primary_BGcolor: rgb(175, 174, 174);
+    /* --primary_BGcolor: rgb(175, 174, 174); */
+    --primary_BGcolor: rgb(245, 244, 244);
     --section01_BGcolor: lightsteelblue;
     --section02_BGcolor: lightskyblue;
     --section03_BGcolor: lightsteelblue;
