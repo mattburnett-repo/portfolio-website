@@ -16,7 +16,7 @@
     --overlay_BGcolor: #008CBA;
 
     --borderRadius: 7px;
-    --innerBorder: 3px double silver;
+    --innerBorder: 5px double silver;
     --outerBorder: 3px double black;
 
     --opacityHi: 0.5;
@@ -30,9 +30,9 @@
 
 /* START */
 html {
-    font-family: Play, "M PLUS 1p"; /* imported in index.html head element */
+    font-family: "M PLUS 1p"; /* imported in index.html head element */
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--primary_TextColor);
     background-color: var(--primary_BGcolor);
 
@@ -73,15 +73,20 @@ nav .title {
     /* font-weight: bold; */
     color: var(--primary_TextColor);
     vertical-align: center;
-    padding-left: 17.78rem; /* to center the element */
+    /* padding-left: 17.78rem; to center the element */
+    padding-left: 25rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1250px) {
     nav .title {
         display: none;
     }
 }
+@media (max-width: 1000px) {
+    nav {
+        display: none;
+    }
+}
 
-/* TODO: resize / media query nav links to fit iPhone */
 nav a {
     vertical-align: top;
     margin-right: 20px;
@@ -165,7 +170,7 @@ section {
     /* inherit flex from section tag/class */
     padding-bottom: 50px;
     background-color: var(--section02_BGcolor);
-    opacity: 0.85;
+    opacity: var(--opacityLo);
 
     /* background-image: url(''); */
 }
@@ -194,17 +199,15 @@ section {
 }
 #section_02 .item h4 {
     padding: 5px;
-    min-width: 240px;
-
-    font-weight: bold;
+    min-width: 240px;   
     text-align: center;
 }
 
 #section_02 .overlay {
     position: absolute;
     top: 0; /* relative to item container. use margin-top to offset downwards */
-    margin-top: 23px;
-    margin-left: 3px;
+    margin-top: 25px;
+    margin-left: 5px;
     height: 200px;
     width: 300px;
 
@@ -252,6 +255,42 @@ section {
       background-color: var(--section02_BGcolor);
   }
 
+/* SKILLS */
+#skills {
+    /* inherit flexbox from section tag/class */
+    padding-bottom: 50px;
+    background-color: var(--footer_BGcolor);
+}   
+#skills .header {
+    text-align: center;
+    width: 100%;
+}
+#skills .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: top;
+    width: 100%;
+    opacity: var(--opacityMed);
+}
+#skills .items .item {
+    padding: 20px;
+    margin: 20px 20px;
+    width: 300px;
+
+    color: white;
+    background-color: black;
+
+    border: var(--innerBorder);
+    border-radius: var(--borderRadius);
+}
+#skills .items .item h3 {
+    color: var(--footer_BGcolor);
+}
+/* .secondLine {
+    margin-bottom: 70px;
+} */
+
 /* SECTION_03 */
 
 #section_03 {
@@ -284,6 +323,9 @@ section {
     border: var(--innerBorder);
     border-radius: var(--borderRadius);
 }
+#section_03 .items .item h3 {
+    color: var(--section03_BGcolor);
+}
 .secondLine {
     margin-bottom: 70px;
 }
@@ -293,7 +335,7 @@ footer {
     color: darkblue;
     background-color: var(--footer_BGcolor);
     height: 130px;
-    padding: 20px;
+    padding: 50px;
     margin-bottom: 10px;
     text-align: center; 
 
