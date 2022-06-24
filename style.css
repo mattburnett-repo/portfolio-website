@@ -15,9 +15,9 @@
     --overlay_TextColor: lightgray;
     --overlay_BGcolor: #008CBA;
 
-    --borderRadius: 7px;
-    --innerBorder: 5px double silver;
-    --outerBorder: 3px double black;
+    --borderRadius: 3px;
+    --innerBorder: 3px double silver;
+    --outerBorder: 1px solid black;
 
     --opacityHi: 0.5;
     --opacityMed: 0.65;
@@ -55,7 +55,6 @@ nav {
     width: 99%;
     height: 75px;
 
-    /* border: var(--outerBorder); */
     background-color: var(--primary_BGcolor);
     border-radius: var(--borderRadius);
 }
@@ -65,7 +64,7 @@ nav img {
     margin: 10px;
     margin-left: 20px;
 
-    border: var(--innerBorder);
+    border: var(--outerBorder);
     border-radius: var(--borderRadius);
 }
 nav .title {
@@ -206,10 +205,10 @@ section {
 #section_02 .overlay {
     position: absolute;
     top: 0; /* relative to item container. use margin-top to offset downwards */
-    margin-top: 25px;
-    margin-left: 5px;
-    height: 200px;
-    width: 300px;
+    margin-top: 22px;
+    margin-left: 3px;
+    height: 202px;
+    width: 302px;
 
     opacity: 0;
     transition: .5s ease;
@@ -276,7 +275,7 @@ section {
 #skills .items .item {
     padding: 20px;
     margin: 20px 20px;
-    width: 300px;
+    width: 350px;
 
     color: white;
     background-color: black;
