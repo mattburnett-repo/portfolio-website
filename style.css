@@ -287,6 +287,9 @@ section {
 #skills .items .item h3 {
     color: var(--footer_BGcolor);
 }
+#skills .items .item a {
+    color: var(--section02_BGcolor);
+}
 /* .secondLine {
     margin-bottom: 70px;
 } */
