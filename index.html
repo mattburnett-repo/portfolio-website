@@ -20,301 +20,341 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;500&family=Play&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/7f8ab5b4da.js" crossorigin="anonymous"></script>
 
   <link rel="shortcut icon" href="./images/ladderIcon_01.png" type="image/x-icon" />
 
-  <link rel="stylesheet" type="text/css" href="./style.css">
-  <script src="https://kit.fontawesome.com/7f8ab5b4da.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="./styles/styles.css">
 
   <title>Matt Burnett -- Full Stack Engineer</title>
 </head>
 
-<body>
-  <nav>
-    <img src="./images/ladderIcon_01.png" alt="tech banner image">
-    <h1 class="title">Matt Burnett</h1>
-    <div class="navLinks">
-      <a href="#section_01">Intro</a>
-      <a href="#section_02">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#section_03">Other Information</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <div class="main">
-    <section id="section_01">
-      <div class="overlayTextInner">
-        <h2>Making things. Making things better.</h2>
-        <h4>15 years Web-based Enterprise Application development experience</h4>
-        <h4>Early-adopter Internet and Web 1.0</h4>
-        <h4>Dot-com survivor</h4>
-        <h4>Open Source project contributor</h4>
-        <h4>Upskilled to Full Stack Engineer</h4>
-        <h5>React / Node JS / PostgreSQL / Apollo GraphQL / Git / GitHub / HTML / CSS / Javascript / TypeScript</h5>
+<body class="main-content">
+  <main>
+    <section class="section sec1 active" id="home">
+      <div class="home-container">
+        <div class="home-overlay">
+          <h1>Matt Burnett</h1>
+          <h2>Making things. Making things better.</h2>
+          <h4>Software developer with attention to detail and outcomes</h4>
+          <h4>Open Source project contributor</h4>
+          <h4>Driven to get it right the first time</h4>
+          <h4>Relentlessly seeking improvement</h4>
+        </div>
       </div>
     </section>
-
-    <section id="section_02">
-      <div class="header">
-        <h1>Projects</h1>
-        <h4>Some recent work. Hover over the images for more info.</h4>
+    <section class="section sec2" id="skillset">
+      <div class="main-title">
+        <h2>Skill <span>set</span><span class="bg-text">Skill set</span></h2>
       </div>
-      <div class="items">
-
-        <div class="item">
-          <img src="./images/gcc02-header.png" alt="Generic FSE Code Challenge 02 image">
-          <div class="overlay">
-            <h4>Generic FSE Code Challenge 02</h4>
-            <div class="text">
-              <ul>
-                <li>TypeScript / React / Node</li>
-                <li>3rd party API</li>
-                <li>Docker deployment</li>
-              </ul>
-              <a href="https://github.com/mattburnett-repo/generic_code_challenge_02" target="_blank">Click to view</a>
+      <div class="skillset-container">
+        <div class="skillset-item">
+          <p class="skillset-title">Front End</p>
+          <div class="skillset-list">
+            <ul>
+              <li>React</li>
+              <li>Redux / Redux Toolkit</li>
+              <li>EJS / PUG template engines</li>
+              <li>Bootstrap / Tailwind</li>
+              <li>Javascript / TypeScript</li>
+              <li>HTML / CSS</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skillset-item">
+          <p class="skillset-title">Middleware / API</p>
+          <div class="skillset-list">
+            <ul>
+              <li>Node JS / Express</li>
+              <li>Swagger / Open API</li>
+              <li>Java Server Pages</li>
+              <li>ColdFusion MX</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skillset-item">
+          <p class="skillset-title">Back End</p>
+          <div class="skillset-list">
+            <ul>
+              <li>PostgreSQL</li>
+              <li>Mongo DB / Mongoose</li>
+              <li>Apollo GraphQL</li>
+              <li>Oracle</li>
+              <li>MS SQL Server</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skillset-item">
+          <p class="skillset-title">Testing</p>
+          <div class="skillset-list">
+            <ul>
+              <li>Jest</li>
+              <li>React Testing Library</li>
+              <li>Mocha / Chai</li>
+              <li>Supertest</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skillset-item">
+          <p class="skillset-title">Miscellaneous</p>
+          <div class="skillset-list">
+            <ul>
+              <li>Git / GitHub</li>
+              <li>Postman</li>
+              <li>Passport Authentication Library</li>
+              <li>Docker</li>
+              <li>Json Web Token (JWT) Authorization</li>
+              <li>Stripe Payment API</li>
+              <li>Heroku Hosting / Deployment</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skillset-item">
+          <p class="skillset-title">Open Source Contributor</p>
+          <div class="skillset-list">
+            <ul>
+              <li><a href="https://resonate.coop">Resonate.coop</a></li>
+              <li>React</li>
+              <li>Koa</li>
+              <li>PostgreSQL</li>
+              <li>Mocha / Chai</li>
+              <li>Sequelize</li>
+              <li>Git / Github code review and approval</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="section sec3" id="portfolio">
+      <div class="main-title">
+        <h2>My <span>portfolio</span><span class="bg-text">Portfolio</span></h2>
+        <p class="port-text">
+          Some recent work. Hover over the images for more info.
+        </p>
+      </div>
+      <div class="portfolio-container">
+        <div class="portfolio-item">
+          <div class="image">
+            <img src="images/gcc02-header.png" alt="portfolio item 1">
+          </div>
+          <div class="hover-item">
+            <h3>Photovoltaic Output Estimation</h3>
+            <ul>
+              <li>TypeScript / React / Node</li>
+              <li>3rd party API integration</li>
+              <li>Docker deployment</li>
+            </ul>
+            <div class="icons">
+              <a href="https://github.com/mattburnett-repo/generic_code_challenge_02" class="icon" target="_blank">
+                <i class="fab fa-github" title="View on GitHub"></i>
+              </a>
             </div>
           </div>
-          <h4>Generic FSE Code Challenge 02</h4>
+          <h3>Photovoltaic Output Estimation</h3>
         </div>
-        <div class="item">
-          <img src="./images/resonate_logo_01.png" alt="Open Source Contributor image">
-          <div class="overlay">
-            <h4>Open Source Contributor</h4>
-            <div class="text">
-              <ul>
-                <li>Resonate Coop</li>
-                <li>Front / Back End Development</li>
-                <li>Test Development</li>
-              </ul>
-              <a href="https://github.com/resonatecoop" target="_blank">Click to view</a>
+        <div class="portfolio-item">
+          <div class="image">
+            <img src="images/resonate_logo_01.png" alt="portfolio item 2">
+          </div>
+          <div class="hover-item">
+            <h3>Resonate Music Streaming Service</h3>
+            <ul>
+              <li>Open Source</li>
+              <li>Front End / Back End Development</li>
+              <li>Test Development</li>
+            </ul>
+            <div class="icons">
+              <a href="https://github.com/resonatecoop" class="icon" target="_blank">
+                <i class="fab fa-github" title="View on GitHub"></i>
+              </a>
+              <a href="https://resonate.coop/" class="icon" target="_blank">
+                <i class="fas fa-home" title="Visit Resonate Coop Website"></i>
+              </a>
             </div>
           </div>
-          <h4>Open Source Contributor</h4>
+          <h3>Resonate Music Streaming Service</h3>
         </div>
-
-        <div class="item">
-          <img src="./images/dashboard-smaller.png" alt="Generic FSE Code Challenge 01 image">
-          <div class="overlay">
-            <h4>Generic FSE Code Challenge 01</h4>
-            <div class="text">
-              <ul>
-                <li>React frontend</li>
-                <li>Apollo GraphQL backend</li>
-                <li>AuthServer authentication</li>
-              </ul>
+        <div class="portfolio-item">
+          <div class="image">
+            <img src="images/dashboard-smaller.png" alt="portfolio item 3">
+          </div>
+          <div class="hover-item">
+            <h3>Insurance Client / Policy Management</h3>
+            <ul>
+              <li>React frontend</li>
+              <li>Apollo GraphQL backend</li>
+              <li>AuthServer authentication</li>
+            </ul>
+            <div class="icons">
               <a href="https://github.com/mattburnett-repo/generic-fse-code-challenge#generic-full-stack-engineer-code-challenge"
-                target="_blank">Click to view</a>
+                class="icon" target="_blank">
+                <i class="fab fa-github" title="View on GitHub"></i>
+              </a>
             </div>
           </div>
-          <h4>Generic FSE Code Challenge 01</h4>
+          <h3>Insurance Client / Policy Management</h3>
         </div>
+        <div class="portfolio-item">
+          <div class="image">
+            <img src="images/security.jpeg" alt="portfolio item 4">
+          </div>
+          <div class="hover-item">
+            <h3>Auth Sandbox</h3>
+            <ul>
+              <li>TypeScript</li>
+              <li>Passport JS</li>
+              <li>Basic, OAuth, JWT</li>
+            </ul>
+            <div class="icons">
+              <a href="https://github.com/mattburnett-repo/authSandbox#auth-sandbox" class="icon" target="_blank">
+                <i class="fab fa-github" title="View on GitHub"></i>
+              </a>
+            </div>
+          </div>
+          <h3>Auth Sandbox</h3>
+        </div>
+        <div class="portfolio-item">
+          <div class="image">
+            <img src="images/ecomm-ui.png" alt="portfolio item 7">
+          </div>
+          <div class="hover-item">
+            <h3>E-commerce UI / Shopping Cart</h3>
+            <ul>
+              <li>PERN Stack / Redux</li>
+              <li>JWT Authorization</li>
+              <li>Stripe payment API integration</li>
+            </ul>
+            <div class="icons">
+              <a href="https://github.com/mattburnett-repo/cc-ecomm-ui#e-commerce-ui--react-project" class="icon"
+                target="_blank">
+                <i class="fab fa-github" title="View on GitHub"></i>
+              </a>
+            </div>
+          </div>
+          <h3>E-commerce UI / Shopping Cart</h3>
+        </div>
+        <div class="portfolio-item">
+          <div class="image">
+            <img src="images/ecomm-api.png" alt="portfolio item 7">
+          </div>
+          <div class="hover-item">
+            <h3>E-commerce REST API</h3>
+            <ul>
+              <li>Express / Node JS</li>
+              <li>PostgreSQL database</li>
+              <li>OpenAPI documentation</li>
+            </ul>
+            <div class="icons">
+              <a href="https://github.com/mattburnett-repo/cc-ecom-rest-api-v2#e-commerce-rest-api-project" class="icon"
+                target="_blank">
+                <i class="fab fa-github" title="View on GitHub"></i>
+              </a>
+            </div>
+          </div>
+          <h3>E-commerce REST API</h3>
+        </div>
+      </div>
+      </div>
 
-        <div class="item">
-          <img src="./images/security.jpeg" alt="authSandbox image">
-          <div class="overlay">
-            <h4>Auth Sandbox</h4>
-            <div class="text">
-              <ul>
-                <li>Passport JS</li>
-                <li>Basic, OAuth, JWT</li>
-              </ul>
-              <a href="https://github.com/mattburnett-repo/authSandbox#auth-sandbox" target="_blank">Click to view</a>
-            </div>
+    </section>
+    <section class="section sec4" id="other-info">
+      <div class="main-title">
+        <h2>Other <span>Info</span><span class="bg-text">Other Info</span></h2>
+      </div>
+      <p class="other-info-text">Quick info at a glance</p>
+      <div class="other-info-container">
+        <div class="other-info-item">
+          <div class="other-info-title">
+            <p>Work Info</p>
           </div>
-          <h4>Auth Sandbox</h4>
-        </div>
-        <div class="item">
-          <img src="./images/ecomm-ui.png" alt="E-commerce image">
-          <div class="overlay">
-            <h4>E-commerce UI / Shopping Cart</h4>
-            <div class="text">
-              <ul>
-                <li>PERN Stack / Redux</li>
-                <li>JWT Authorization</li>
-                <li>Stripe payment API integration</li>
-              </ul>
-              <a href="https://github.com/mattburnett-repo/cc-ecomm-ui#e-commerce-ui--react-project"
-                target="_blank">Click to view</a>
-            </div>
+          <div class="other-info-list">
+            <ul>
+              <li>German residence/work permit</li>
+              <li>Available for free-lance work</li>
+              <li>Full and/or part-time possible</li>
+            </ul>
           </div>
-          <h4>E-commerce UI / Shopping Cart</h4>
         </div>
-        <div class="item">
-          <img src="./images/ecomm-api.png" alt="E-Commerce REST API app image">
-          <div class="overlay">
-            <h4>E-Commerce REST API</h4>
-            <div class="text">
-              <ul>
-                <li>Express / Node JS</li>
-                <li>PostgreSQL database</li>
-                <li>OpenAPI documentation</li>
-              </ul>
-              <a href="https://github.com/mattburnett-repo/cc-ecom-rest-api-v2#e-commerce-rest-api-project"
-                target="_blank">Click to view</a>
-            </div>
+        <div class="other-info-item">
+          <div class="other-info-title">
+            <p>Languages</p>
           </div>
-          <h4>E-Commerce REST API</h4>
-        </div>
-        <div class="item">
-          <img src="./images/techImage_02.jpeg" alt="portfolio website image">
-          <div class="overlay">
-            <h4>This Website</h4>
-            <div class="text">
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Reactive Design</li>
-              </ul>
-              <a href="https://github.com/mattburnett-repo/portfolio-website" target="_blank">Click to view</a>
-            </div>
+          <div class="other-info-list">
+            <ul>
+              <li>English (native speaker)</li>
+              <li>German (B1 TELC-certified)</li>
+            </ul>
           </div>
-          <h4>This Website</h4>
         </div>
-        <div class="item">
-          <img src="./images/audeGallery_01.png" alt="Unity virtual art gallery image">
-          <div class="overlay">
-            <h4>Unity virtual art gallery</h4>
-            <div class="text">
-              <ul>
-                <li>Virtual environment</li>
-                <li>Features work of French artist Aude Rrose</li>
-              </ul>
-              <a href="https://play.unity.com/mg/other/webgl-builds-59300" target="_blank">Click to view</a>
-            </div>
+      </div>
+      </div>
+    </section>
+    <section class="section sec5" id="contact">
+      <div class="main-title">
+        <h2>Contact <span>me</span><span class="bg-text">Contact Me</span></h2>
+      </div>
+      <p class="contact-text">Contact me here</p>
+      <div class="contact-container">
+        <div class="contact-icons">
+          <div>
+            <a href="mailto:burnett.mj@gmail.com?subject=Message from Matt Burnett portfolio website"
+              target="_blank">burnett.mj@gmail.com</a>
           </div>
-          <h4>Unity virtual art gallery</h4>
-        </div>
-        <div class="item">
-          <img src="./images/multi_8_screencap.png" alt="QuadTool sound projection">
-          <div class="overlay">
-            <h4>Quadraphonic sound projection</h4>
-            <div class="text">
-              <ul>
-                <li>Server built using SuperCollider</li>
-                <li>Controller built using Lemur</li>
-              </ul>
-              <a href="https://github.com/mattburnett-repo/QuadTool/wiki" target="_blank">Click to view</a>
-            </div>
+          <div class="contact-icon">
+            <a href="https://www.linkedin.com/in/matt-burnett-5768ab20a/" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/mattburnett-repo" target="_blank" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:burnett.mj@gmail.com?subject=Message from Matt Burnett portfolio website" target="_blank"
+              title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
           </div>
-          <h4>QuadTool sound projection</h4>
         </div>
-        <div class="item">
-          <img src="./images/wordpressScreenCap.png" alt="Hypertext-intensive website image">
-          <div class="overlay">
-            <h4>Hypertext-intensive website</h4>
-            <div class="text">
-              <ul>
-                <li>Website built using WordPress</li>
-                <li>Organized numerous documents as hypertext</li>
-              </ul>
-              <a href="https://mattburnett.wordpress.com/" target="_blank">Click to view</a>
-            </div>
-          </div>
-          <h4>Hypertext-intensive website</h4>
-        </div>
+      </div>
+      <div class="btn-container">
+        <a href="https://docs.google.com/document/d/1JlppHopSAnABzpoqcxhr5DMtdfY320oVLx9Ik5o8BHk/edit?usp=sharing"
+          target="_blank" class="main-btn">
+          <span class="btn-text">Download CV</span>
+          <span class="btn-icon"><i class="fas fa-download"></i></span>
+        </a>
       </div>
     </section>
 
-    <section id="skills">
-      <div class="header">
-        <h1>Skills</h1>
+    <div class="controls">
+      <div class="control control-1 active active-btn" title="Home">
+        <span title="Home" data-id="home"><i class="fas fa-home"></i></span>
       </div>
-      <div class="items">
-        <div class="item">
-          <h3>Front-End</h3>
-          <h4>React</h4>
-          <h4>Redux / Redux Toolkit</h4>
-          <h4>EJS / PUG template engines</h4>
-          <h4>Bootstrap / Tailwind</h4>
-          <h4>Javascript / TypeScript</h4>
-          <h4>HTML / CSS</h4>
-        </div>
-        <div class="item">
-          <h3>Middleware / API</h3>
-          <h4>Node JS / Express</h4>
-          <h4>Swagger / Open API</h4>
-          <h4>ColdFusion MX</h4>
-          <h4>Java Server Pages</h4>
-        </div>
-        <div class="item">
-          <h3>Back-End</h3>
-          <h4>Apollo GraphQL</h4>
-          <h4>PostgreSQL</h4>
-          <h4>Mongo DB / Mongoose</h4>
-          <h4>Oracle</h4>
-          <h4>MS SQL Server</h4>
-        </div>
-        <div class="item">
-          <h3>Test-driven development</h3>
-          <h4>React Testing Library</h4>
-          <h4>Jest</h4>
-          <h4>Mocha / Chai</h4>
-          <h4>Supertest</h4>
-        </div>
-        <div class="item">
-          <h3>Miscellaneous</h3>
-          <h4>Git / GitHub</h4>
-          <h4>Postman</h4>
-          <h4>Passport Authentication Library</h4>
-          <h4>Json Web Token (JWT) Authorization</h4>
-          <h4>Stripe Payment API</h4>
-          <h4>Heroku Hosting / Deployment</h4>
-          <h4>Google Cloud Hosting / Deployment</h4>
-          <h4>TypeScript</h4>
-          <h4>Docker</h4>
-        </div>
-        <div class="item">
-          <h3>Open Source Contributor</h3>
-          <h4><a href="https://resonate.coop/" target="_blank">Resonate.coop</a></h4>
-          <h4>React</h4>
-          <h4>Koa</h4>
-          <h4>PostgresQL</h4>
-          <h4>Mocha / Chai</h4>
-          <h4>Sequelize</h4>
-          <h4>Git / Github code review and approval</h4>
-        </div>
+      <div class="control control-2 active" title="Skill Set">
+        <span title="Skill Set" data-id="skillset"><i class="fas fa-tools"></i></span>
       </div>
-    </section>
+      <div class="control control-3 active" title="Porfolio">
+        <span title="Porfolio" data-id="portfolio"><i class="fas fa-briefcase"></i></span>
+      </div>
+      <div class="control control-4 active" title="Other Info">
+        <span title="Other Info" data-id="other-info"><i class="fas fa-newspaper"></i></span>
+      </div>
+      <div class="control control-5 active" title="Contact">
+        <span title="Contact" data-id="contact"><i class="fas fa-envelope-open"></i></span>
+      </div>
+    </div>
 
-    <section id="section_03">
-      <div class="header">
-        <h1>Other Information</h1>
-        <h4>Quick info at a glance</h4>
-      </div>
+    <div class="theme-btn" title="Toggle light/dark mode">
+      <span title="Toggle light/dark mode"><i id="theme-icon" class="fas fa-moon"></i></span>
+    </div>
+  </main>
 
-      <div class="items">
-        <div class="item">
-          <h3>Work Info</h3>
-          <h4>German residence/work permit</h4>
-          <h4>Available for free-lance work</h4>
-          <h4>Full and/or part-time possible</h4>
-        </div>
-        <div class="item">
-          <h3>Languages</h3>
-          <h4>English (native speaker)</h4>
-          <h4 class="secondLine">German (B1 TELC-certified)</h4>
-        </div>
-      </div>
-    </section>
-
-    <footer id="contact">
-      <h2>Matt Burnett</h2>
-      <h5><a href="mailto:burnett.mj@gmail.com" target="_blank">burnett.mj@gmail.com</a></h5>
-      <div class="links">
-        <a href="https://www.linkedin.com/in/matt-burnett-5768ab20a/" target="_blank"><i
-            class="fa fa-linkedin icon"></i></a>
-        <a href="https://github.com/mattburnett-repo" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:burnett.mj@gmail.com?subject=Message from Matt Burnett portfolio website" target="_blank"><i
-            class="fas fa-envelope-square icon"></i></a>
-      </div>
-    </footer>
-
-    <h5 class="copyright">&copy; Matt Burnett 2022</h5>
-  </div>
+  <script src="app.js"></script>
 </body>
 
 </html>
