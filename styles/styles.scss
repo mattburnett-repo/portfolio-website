@@ -32,7 +32,7 @@
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
   --transition-default: all .4s ease-in-out;
-  --transition-anim-default: scaleAnim .5s ease-in-out;
+  --transition-anim-default: scaleAnim .9s ease-in-out;
   --button-scale-default: .9
 }
 
@@ -125,12 +125,12 @@ section {
   @keyframes scaleAnim {
     0% {
       opacity: 0;
-      transform: scale(0);
+      // transform: scale(0);
     }
 
     100% {
       opacity: 1;
-      transform: scale(1);
+      // transform: scale(1);
     }
   }
 }

@@ -25,10 +25,10 @@
   --opacityMed: 0.65;
   --opacityLo: 0.8;
   --br-sm-2: 14px;
-  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
-  --transition-default: all 0.4s ease-in-out;
-  --transition-anim-default: scaleAnim 0.5s ease-in-out;
-  --button-scale-default: 0.9;
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
+  --transition-default: all .4s ease-in-out;
+  --transition-anim-default: scaleAnim .9s ease-in-out;
+  --button-scale-default: .9 ;
 }
 
 .light-mode {
@@ -46,7 +46,7 @@
 
 body {
   background-color: var(--color-primary);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
   color: var(--color-white);
   transition: var(--transition-default);
@@ -107,32 +107,17 @@ section {
 
 .active {
   display: block;
-  /* -webkit-animation: var(--transition-anim-default);
-          animation: var(--transition-anim-default); */
-  -webkit-animation: var(--transition-default);
-  animation: var(--transition-default);
+  animation: var(--transition-anim-default);
 }
 .active:active {
   transform: scale(var(--button-scale-default));
 }
-@-webkit-keyframes scaleAnim {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 @keyframes scaleAnim {
   0% {
     opacity: 0;
-    transform: scale(0);
   }
   100% {
     opacity: 1;
-    transform: scale(1);
   }
 }
 
@@ -201,7 +186,7 @@ section {
   align-items: center;
   justify-content: center;
   height: 840px;
-  background-image: url('../images/techImage_02.jpeg');
+  background-image: url("../images/techImage_02.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -489,7 +474,7 @@ section {
   padding: 1rem;
 }
 .main-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -722,4 +707,4 @@ section {
   .theme-btn {
     right: 0.5%;
   }
-} /*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
