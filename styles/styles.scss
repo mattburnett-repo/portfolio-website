@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // outline: 3px solid limegreen !important;
 }
 
 :root {
@@ -88,27 +87,27 @@ section {
   background-color: var(--color-primary);
 }
 
-.sec1 {
+.home {
   display: none;
   transform: translateY(0) scale(1);
 }
 
-.sec2 {
+.skillset {
   display: none;
   transform: translateY(0) scale(1);
 }
 
-.sec3 {
+.portfolio {
   display: none;
   transform: translateY(0) scale(1);
 }
 
-.sec4 {
+.other-info {
   display: none;
   transform: translateY(0) scale(1);
 }
 
-.sec5 {
+.contact {
   display: none;
   transform: translateY(0) scale(1);
 }
@@ -158,9 +157,9 @@ section {
     padding: 1rem;
     cursor: pointer;
     background-color: var(--color-tertiary-4);
-    width: 55px;
+    width: 120px;
     height: 55px;
-    border-radius: 50%;
+    border-radius: var(--borderRadiusHi);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -387,11 +386,59 @@ section {
 .portfolio-item:hover .hover-item {
   opacity: 1;
   transform: scale(1);
+  cursor: pointer;
 }
 
 .port-text {
   padding: 2rem 0;
   text-align: center;
+}
+
+.portfolio-detail {
+  position: fixed;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 80%;
+  padding: 2rem;
+  border: var(--outerBorder);
+  border-radius: var(--borderRadiusMed);
+  background-color: var(--color-white);
+  color: var(--color-tertiary-5);
+  box-shadow: var(--box-shadow-1);
+  overflow-y: auto;
+}
+
+.portfolio-detail::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-detail h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-tertiary-6);
+}
+
+.portfolio-detail p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.close-dialog {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--borderRadiusLo);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.close-dialog:hover {
+  background-color: var(--color-primary);
 }
 
 .other-info-container {
@@ -585,7 +632,7 @@ section {
       top: 50%;
       left: 50%;
       color: var(--color-tertiary-5);
-      transition: all .4s ease-in-out;
+      transition: var(--transition-default);
       z-index: -1;
       transform: translate(-50%, -50%);
       font-weight: 800;
