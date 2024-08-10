@@ -397,16 +397,17 @@ section {
 
 .portfolio-detail {
   position: fixed;
-  top: 35%;
+  top: 15vh;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   max-width: 80%;
   padding: 2rem;
   border: var(--outerBorder);
-  border-radius: var(--borderRadiusLo);
+  border-radius: var(--borderRadiusMed);
   background-color: var(--color-white);
   color: var(--color-tertiary-5);
   box-shadow: var(--box-shadow-1);
+  overflow-y: auto;
 }
 
 .portfolio-detail::backdrop {
