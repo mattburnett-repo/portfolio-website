@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // outline: 3px solid limegreen !important;
 }
 
 :root {
@@ -633,7 +632,7 @@ section {
       top: 50%;
       left: 50%;
       color: var(--color-tertiary-5);
-      transition: all .4s ease-in-out;
+      transition: var(--transition-default);
       z-index: -1;
       transform: translate(-50%, -50%);
       font-weight: 800;
