@@ -3,6 +3,9 @@ const sectBtns = document.querySelectorAll('.controls')
 const sectBtn = document.querySelectorAll('.control')
 const allSections = document.querySelector('.main-content')
 
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+// const hoverItems = document.querySelectorAll('.hover-item');
+
 function PageTransitions() {
   // Active button
   for (let i = 0; i < sectBtn.length; i++) {
@@ -27,6 +30,35 @@ function PageTransitions() {
       element.classList.add('active')
     }
   })
+
+  // Make portfolio items hover class clickable and show description when clicked.
+  // hoverItems.forEach(item => {
+  //   item.addEventListener('click', function(event) {
+  //     event.preventDefault();
+  //     alert('Make portfolio detail visible for this project.');
+  //   });
+  // });
+
+  document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('close-dialog')) {
+      const dialog = event.target.closest('.portfolio-detail');
+      if (dialog) {
+        dialog.close();
+      }
+    }
+    });
+  
+  portfolioItems.forEach(item => {
+    const hoverItem = item.querySelector('.hover-item');
+    const dialog = item.querySelector('.portfolio-detail');
+
+    if (hoverItem && dialog) {
+      hoverItem.addEventListener('click', function(event) {
+        event.preventDefault();
+        dialog.showModal();
+      });
+    }
+  });
 
   // Toggle theme
   const themeBtn = document.querySelector('.theme-btn')
