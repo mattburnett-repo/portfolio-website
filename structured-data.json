@@ -1,0 +1,65 @@
+{
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Matt Burnett",
+      "jobTitle": "Web Developer",
+      "url": "https://mattburnett-repo.github.io/portfolio-website/",
+      "sameAs": [
+        "https://www.linkedin.com/in/matt-burnett-5768ab20a/",
+        "https://github.com/mattburnett-repo"
+      ],
+      "skills": ["React", "Node.js", "PostgreSQL", "TypeScript", "Vue", "Vue.js", "HTML", "JavaScript", "CSS", "Git"],
+      "knowsAbout": ["React", "Node JS", "Nest JS", "PostgreSQL", "TypeORM", "Git", "GitHub", "HTML", "CSS", "Javascript", "TypeScript", "SEO", "Vue", "Vue.js"],
+      "workExample": [
+        {
+          "@type": "CreativeWork",
+          "name": "Activist.org",
+          "url": "https://activist.org/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Carbon Interface API Frontend",
+          "url": "https://carbon-interface.vercel.app/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Carbon Interface API Frontend",
+          "url": "https://carbon-interface.vercel.app/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Photovoltaic Output Estimation",
+          "url": "http://pv-estimate.s3-website.eu-north-1.amazonaws.com/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "GreenShop / E-commerce UI",
+          "url": "https://e-comm-ui.vercel.app/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "E-commerce REST API",
+          "url": "https://e-comm-api.fly.dev/api"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "NestJS REST API Template",
+          "url": "https://nestjs-api-template.fly.dev/api"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Resonate Music Streaming Service",
+          "url": "https://resonate.coop/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Carbon Interface API Frontend",
+          "url": "https://carbon-interface.vercel.app/"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Porfolio Website",
+          "url": "https://github.com/mattburnett-repo/portfolio-website"
+        }
+      ]
+    }

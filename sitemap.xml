@@ -5,5 +5,10 @@
     <lastmod>2024-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mattburnett-repo.github.io/portfolio-website/images/techImage_02.png</image:loc>
+      <image:title>Tech Image</image:title>
+      <image:caption>Background image for the portfolio website</image:caption>
+    </image:image>
   </url>
 </urlset>

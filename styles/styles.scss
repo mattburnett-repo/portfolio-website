@@ -144,6 +144,7 @@ section {
   align-items: center;
   justify-content: center;
   transform: translateY(-50%);
+  will-change: opacity, transform;
 
   .active-btn {
     background-color: var(--color-secondary) !important;
@@ -350,6 +351,7 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
+        will-change: opacity, transform;
 
         .icon {
           display: flex;
@@ -387,6 +389,7 @@ section {
   opacity: 1;
   transform: scale(1);
   cursor: pointer;
+  will-change: opacity, transform;
 }
 
 .port-text {
