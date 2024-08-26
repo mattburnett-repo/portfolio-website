@@ -626,6 +626,10 @@ section {
   .portfolio-container .hover-item ul {
     font-size: 1rem;
   }
+  .portfolio-detail {
+    top: 5vh;
+    width: 100%;
+  }
   .bg-text {
     display: none;
   }
@@ -668,7 +672,7 @@ section {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background-color: var(--color-tertiary-5);
+    background-color: var(--color-primary);
   }
   .controls .control {
     margin: 0.6rem 1rem !important;
@@ -750,8 +754,10 @@ section {
     height: 200px;
   }
   .controls .control {
-    width: 40px;
+    width: 80px;
     height: 40px;
+    margin: 0px;
+    padding: 0px;
   }
   .theme-btn {
     right: 0.5%;
