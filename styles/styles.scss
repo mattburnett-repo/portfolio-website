@@ -167,6 +167,10 @@ section {
       color: var(--color-tertiary-2);
       pointer-events: none;
     }
+
+    &:hover {
+      background-color: var(--color-tertiary-5);
+    }
   }
 }
 

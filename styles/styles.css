@@ -150,6 +150,9 @@ section {
   color: var(--color-tertiary-2);
   pointer-events: none;
 }
+.controls .control:hover {
+  background-color: var(--color-tertiary-5);
+}
 
 .theme-btn {
   display: flex;
