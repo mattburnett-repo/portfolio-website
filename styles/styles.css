@@ -145,11 +145,6 @@ section {
   margin: 0.7rem 0;
   box-shadow: var(--box-shadow-1);
 }
-.controls .control i {
-  font-size: 1.2rem;
-  color: var(--color-tertiary-2);
-  pointer-events: none;
-}
 .controls .control:hover {
   background-color: var(--color-tertiary-5);
 }
@@ -336,7 +331,7 @@ section {
   display: block;
   margin: 1rem auto 0;
   padding: 0.5rem 1rem;
-  background-color: var(--color-secondary);
+  background-color: var(--color-tertiary-5);
   color: var(--color-white);
   border: none;
   border-radius: var(--borderRadiusLo);
@@ -345,7 +340,7 @@ section {
 }
 
 .close-dialog:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
 }
 
 .other-info-container {
