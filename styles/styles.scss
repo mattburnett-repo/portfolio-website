@@ -161,9 +161,19 @@ section {
     align-items: center;
     margin: .7rem 0;
     box-shadow: var(--box-shadow-1);
+    transition: background-color 0.5s ease-in-out;
 
     &:hover {
       background-color: var(--color-tertiary-5);
+    }
+
+    span {
+      color: var(--color-white);
+      transition: color 0.25s ease-in-out;
+
+      &:hover {
+        color: var(--color-secondary);
+      }
     }
   }
 }
@@ -357,6 +367,7 @@ section {
   box-shadow: var(--box-shadow-1);
   overflow-y: auto;
 }
+
 
 .portfolio-detail::backdrop {
   background-color: rgba(0, 0, 0, 0.7);

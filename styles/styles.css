@@ -144,9 +144,17 @@ section {
   align-items: center;
   margin: 0.7rem 0;
   box-shadow: var(--box-shadow-1);
+  transition: background-color 0.5s ease-in-out;
 }
 .controls .control:hover {
   background-color: var(--color-tertiary-5);
+}
+.controls .control span {
+  color: var(--color-white);
+  transition: color 0.25s ease-in-out;
+}
+.controls .control span:hover {
+  color: var(--color-secondary);
 }
 
 .theme-btn {
