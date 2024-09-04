@@ -51,7 +51,7 @@ body {
   font-family: "Cairo", sans-serif;
   font-size: 1.1rem;
   color: var(--color-white);
-  transition: var(--transition-default);
+  transition: all 1s ease-in-out;
 }
 
 a {
@@ -194,6 +194,7 @@ section {
   background-size: cover;
   background-position: center;
   box-shadow: var(--box-shadow-1);
+  border: 2px double silver;
   border-radius: var(--borderRadiusLo);
 }
 .home-container .home-overlay {
