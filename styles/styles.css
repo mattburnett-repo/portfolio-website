@@ -627,7 +627,6 @@ section {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    background-color: var(--color-primary);
   }
   .controls .control {
     margin: 0.6rem 1rem !important;
