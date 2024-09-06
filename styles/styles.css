@@ -52,8 +52,26 @@ body {
   font-size: 1.1rem;
   color: var(--color-white);
   transition: all 1s ease-in-out;
+  animation: gradientShift 15s ease-in-out infinite;
 }
 
+@keyframes gradientShift {
+  0% {
+    background-size: 100% 100%;
+  }
+  25% {
+    background-size: 150% 150%;
+  }
+  50% {
+    background-size: 300% 300%;
+  }
+  75% {
+    background-size: 150% 150%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
 a {
   display: inline-block;
   text-decoration: none;
@@ -176,25 +194,25 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: var(--box-shadow-1);
+  border: 2px double silver;
+  border-radius: var(--borderRadiusLo);
   height: 840px;
   background-image: url("../images/techImage_02.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  box-shadow: var(--box-shadow-1);
-  border: 2px double silver;
-  border-radius: var(--borderRadiusLo);
 }
 .home-container .home-overlay {
+  background-color: black;
+  border: var(--innerBorder);
+  border-radius: var(--borderRadiusLo);
+  opacity: var(--opacityLo);
   margin: 0 auto;
   padding: 3rem;
   line-height: 3rem;
   color: lightgray;
-  background-color: black;
   width: 75%;
-  border: var(--innerBorder);
-  border-radius: var(--borderRadiusLo);
-  opacity: var(--opacityLo);
 }
 .home-container .home-overlay h1 {
   font-size: 3rem;

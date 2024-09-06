@@ -1,9 +1,8 @@
 // Classes for .home-* 
 
 .home-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
+  @include section-container;
 
   height: 840px;
   background-image: url('../images/techImage_02.jpeg');
@@ -11,21 +10,13 @@
   background-size: cover;
   background-position: center;
 
-  box-shadow: var(--box-shadow-1);
-  border: 2px double silver;
-  border-radius: var(--borderRadiusLo);
-
   .home-overlay {
+    @include overlay-styles;
     margin: 0 auto;
     padding: 3rem;
     line-height: 3rem;
     color: lightgray;
-
-    background-color: black;
     width: 75%;
-    border: var(--innerBorder);
-    border-radius: var(--borderRadiusLo);
-    opacity: var(--opacityLo);
 
     h1 {
       font-size: 3rem;

@@ -1,0 +1,25 @@
+// Common variables
+$border-radius-lo: var(--borderRadiusLo);
+$box-shadow-1: var(--box-shadow-1);
+$inner-border: var(--innerBorder);
+$opacity-lo: var(--opacityLo);
+
+// Common mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin section-container {
+  box-shadow: $box-shadow-1;
+  border: 2px double silver;
+  border-radius: $border-radius-lo;
+}
+
+@mixin overlay-styles {
+  background-color: black;
+  border: $inner-border;
+  border-radius: $border-radius-lo;
+  opacity: $opacity-lo;
+}
