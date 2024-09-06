@@ -81,21 +81,9 @@ section {
   background-color: transparent;
 }
 
-.home {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.portfolio {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
-.other-info {
-  display: none;
-  transform: translateY(0) scale(1);
-}
-
+.home,
+.portfolio,
+.other-info,
 .contact {
   display: none;
   transform: translateY(0) scale(1);

@@ -1,0 +1,45 @@
+// Classes for .home-* 
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 840px;
+  background-image: url('../images/techImage_02.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  box-shadow: var(--box-shadow-1);
+  border: 2px double silver;
+  border-radius: var(--borderRadiusLo);
+
+  .home-overlay {
+    margin: 0 auto;
+    padding: 3rem;
+    line-height: 3rem;
+    color: lightgray;
+
+    background-color: black;
+    width: 75%;
+    border: var(--innerBorder);
+    border-radius: var(--borderRadiusLo);
+    opacity: var(--opacityLo);
+
+    h1 {
+      font-size: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+      line-height: 3rem;
+    }
+  }
+}
