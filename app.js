@@ -1,90 +1,78 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('.section');
-  const sectBtns = document.querySelectorAll('.controls');
-  const sectBtn = document.querySelectorAll('.control');
-  const allSections = document.querySelector('.main-content');
+  const app = {
+    init() {
+      this.cacheDOM();
+      this.bindEvents();
+      this.setInitialState();
+    },
 
-  // Event listeners for the nav buttons
-  sectBtns.forEach((btn) => {
-    btn.addEventListener('click', function(e) {
+    cacheDOM() {
+      this.sections = document.querySelectorAll('.section');
+      this.sectBtns = document.querySelectorAll('.controls');
+      this.sectBtn = document.querySelectorAll('.control');
+      this.allSections = document.querySelector('.main-content');
+      this.themeBtn = document.querySelector('.theme-btn');
+      this.portfolioContainer = document.querySelector('.portfolio-container');
+    },
+
+    bindEvents() {
+      this.sectBtns.forEach(btn => btn.addEventListener('click', this.handleNavigation.bind(this)));
+      this.themeBtn.addEventListener('click', this.toggleTheme.bind(this));
+      this.portfolioContainer.addEventListener('click', this.handlePortfolioClick.bind(this));
+      document.addEventListener('click', this.handleDialogClose.bind(this));
+    },
+
+    setInitialState() {
+      this.setActiveSection('home');
+    },
+
+    handleNavigation(e) {
       const clicked = e.target.closest('.control');
       if (!clicked) return;
 
-      let currentBtn = document.querySelector('.active-btn');
-      if (currentBtn) {
-        currentBtn.classList.remove('active-btn');
+      this.updateActiveButton(clicked);
+      
+      // Delay the section update to allow button transition
+      setTimeout(() => {
+        this.updateActiveSection(clicked.querySelector('span').dataset.id);
+      }, 50);
+    },
+
+    updateActiveButton(clickedBtn) {
+      this.sectBtn.forEach(btn => btn.classList.remove('active-btn'));
+      clickedBtn.classList.add('active-btn');
+    },
+
+    updateActiveSection(sectionId) {
+      this.sections.forEach(section => section.classList.remove('section-active'));
+      document.getElementById(sectionId).classList.add('section-active');
+    },
+
+    setActiveSection(sectionId) {
+      this.updateActiveButton(document.querySelector(`[data-id="${sectionId}"]`).closest('.control'));
+      this.updateActiveSection(sectionId);
+    },
+
+    toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    },
+
+    handlePortfolioClick(e) {
+      if (e.target.closest('.hover-item') && !e.target.closest('.icons')) {
+        const dialog = e.target.closest('.portfolio-item').querySelector('.portfolio-detail');
+        dialog.showModal();
       }
+    },
 
-      clicked.classList.add('active-btn');
-
-      // Additional logic for section switching
-      const id = clicked.querySelector('span').dataset.id;
-      if (id) {
-        // Remove selected from the other btns
-        sectBtns.forEach((btn) => {
-          btn.classList.remove('active');
-        });
-        e.target.classList.add('active');
-
-        // Hide other sections
-        sections.forEach((section) => {
-          section.classList.remove('active');
-        });
-
-        const element = document.getElementById(id);
-        element.classList.add('active');
-      } 
-    });
-  });
-
-  // Sections Active
-  allSections.addEventListener('click', (e) => {
-    const id = e.target.dataset.id;
-    if (id) {
-      // Remove selected from the other btns
-      sectBtns.forEach((btn) => {
-        btn.classList.remove('active');
-      });
-      e.target.classList.add('active');
-
-      // Hide other sections
-      sections.forEach((section) => {
-        section.classList.remove('active');
-      });
-
-      const element = document.getElementById(id);
-      element.classList.add('active');
-    }
-  });
-
-  // Toggle theme
-  const themeBtn = document.querySelector('.theme-btn');
-  themeBtn.addEventListener('click', () => {
-    let element = document.body;
-    element.classList.toggle('light-mode');
-  });
-
-  // Updated portfolio-item and close-dialog event listeners
-  document.querySelector('.portfolio-container').addEventListener('click', function(e) {
-    // For portfolio-detail dialogs
-    if (e.target.closest('.hover-item') && !e.target.closest('.icons')) {
-      const dialog = e.target.closest('.portfolio-item').querySelector('.portfolio-detail');
-      dialog.showModal();
-    }
-    
-    // For icon links
-    if (e.target.closest('.icons .icon')) {
-      e.stopPropagation(); // Prevent triggering the dialog
-    }
-  });
-
-  // Add event listeners for closing dialogs
-  document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('close-dialog')) {
-      const dialog = e.target.closest('dialog');
-      if (dialog) {
-        dialog.close();
+    handleDialogClose(e) {
+      if (e.target.classList.contains('close-dialog')) {
+        const dialog = e.target.closest('dialog');
+        if (dialog) {
+          dialog.close();
+        }
       }
-    }
-  });
+    },
+  };
+
+  app.init();
 });

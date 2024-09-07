@@ -1,12 +1,6 @@
 @import './_setup.scss';
 @import './_elements.scss';
 
-.section {
-  // transform: translateY(-100%) scale(0);
-  // transition: var(--transition-default);
-  background-color: transparent;
-}
-
 .home,
 .portfolio,
 .other-info,
@@ -15,7 +9,7 @@
   transform: translateY(0) scale(1);
 }
 
-@import './section-opacity-animation.scss';
+@import './section-transition-animation.scss';
 
 // Nav buttons
 @import './nav-btns.scss';

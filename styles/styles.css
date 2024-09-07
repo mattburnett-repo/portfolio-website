@@ -44,6 +44,30 @@
   --color-tertiary-6: rgb(248, 248, 248);
 }
 
+/* Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary-2);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-secondary) var(--color-primary);
+}
+
 body {
   background-image: radial-gradient(var(--color-tertiary-3), var(--color-primary));
   background-repeat: no-repeat;
@@ -87,14 +111,9 @@ section {
   justify-content: center;
   text-align: center;
   margin: 0 auto;
-  margin-top: 10px;
   padding: 20px 60px;
   width: 80%;
   min-height: 100vh;
-}
-
-.section {
-  background-color: transparent;
 }
 
 .home,
@@ -105,14 +124,21 @@ section {
   transform: translateY(0) scale(1);
 }
 
-.active {
+.section {
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  transform: translateY(100px);
+  display: none;
+}
+
+.section-active {
+  opacity: 1;
+  transform: translateY(0);
   display: block;
-  animation: var(--transition-anim-default);
+  animation: fadeInUp 0.9s ease-in-out;
 }
-.active:active {
-  transform: scale(var(--button-scale-default));
-}
-@keyframes scaleAnim {
+
+@keyframes fadeInUp {
   0% {
     opacity: 0;
   }
@@ -120,7 +146,6 @@ section {
     opacity: 1;
   }
 }
-
 .controls {
   position: fixed;
   z-index: 10;
@@ -136,9 +161,6 @@ section {
 .controls .active-btn {
   background-color: var(--color-secondary) !important;
 }
-.controls .active-btn i {
-  color: var(--color-tertiary-5) !important;
-}
 .controls .control {
   padding: 1rem;
   cursor: pointer;
@@ -151,7 +173,14 @@ section {
   align-items: center;
   margin: 0.7rem 0;
   box-shadow: var(--box-shadow-1);
-  transition: background-color 0.5s ease-in-out;
+  transition: all 0.1s ease-out;
+}
+.controls .control:active {
+  transform: scale(0.75);
+}
+.controls .control.active-btn {
+  background-color: var(--color-secondary);
+  transform: scale(1);
 }
 .controls .control:hover {
   background-color: var(--color-tertiary-5);
@@ -161,7 +190,7 @@ section {
   transition: color 0.25s ease-in-out;
 }
 .controls .control span:hover {
-  color: var(--color-tertiary-0);
+  color: var(--color-tertiary-2);
 }
 
 .theme-btn {
@@ -358,6 +387,7 @@ section {
 
 .close-dialog:hover {
   background-color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 .other-info-container {
