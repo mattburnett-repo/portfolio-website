@@ -1,0 +1,57 @@
+// Elements: body, section, etc.
+
+body {
+  background-image: radial-gradient(var(--color-tertiary-3), var(--color-primary));
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Cairo', sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  transition: all 1s ease-in-out;
+  animation: gradientShift 15s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-size: 100% 100%;
+  }
+
+  25% {
+    background-size: 150% 150%;
+  }
+
+  50% {
+    background-size: 300% 300%;
+  }
+
+  75% {
+    background-size: 150% 150%;
+  }
+
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+section {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  justify-content: center;
+  text-align: center;
+
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 20px 60px;
+  width: 80%;
+  min-height: 100vh;
+}

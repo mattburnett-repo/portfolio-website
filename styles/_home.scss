@@ -1,0 +1,36 @@
+// Classes for .home-* 
+
+.home-container {
+  @include flex-center;
+  @include section-container;
+
+  height: 840px;
+  background-image: url('../images/techImage_02.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .home-overlay {
+    @include overlay-styles;
+    margin: 0 auto;
+    padding: 3rem;
+    line-height: 3rem;
+    color: lightgray;
+    width: 75%;
+
+    h1 {
+      font-size: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    h4 {
+      font-size: 1.3rem;
+      line-height: 3rem;
+    }
+  }
+}

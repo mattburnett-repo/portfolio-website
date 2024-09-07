@@ -1,0 +1,30 @@
+// For the light/dark mode toggle button
+
+.theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 5%;
+  right: 2.55%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+
+  background-color: var(--color-secondary);
+  cursor: pointer;
+
+  box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
+  transition: all .1s ease-in-out;
+
+  &:active {
+    transform: scale(var(--button-scale-default));
+  }
+
+  i {
+    font-size: 1.4rem;
+    color: var(--color-tertiary-5);
+    pointer-events: none;
+  }
+}

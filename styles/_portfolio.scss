@@ -1,0 +1,154 @@
+// Classes for .portfolio-*
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+
+  .portfolio-item {
+    position: relative;
+    padding: 1rem 0;
+    border-radius: var(--borderRadiusLo);
+    box-shadow: var(--box-shadow-1);
+
+    background-color: var(--color-tertiary-5);
+
+    img {
+      width: 300px;
+      height: 200px;
+      border-radius: var(--borderRadiusLo);
+    }
+
+    .hover-item {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      height: 100%;
+      color: var(--color-tertiary-5);
+
+      border: var(--innerBorder);
+      background-color: var(--color-secondary);
+
+      left: 0;
+      top: 0;
+      border-radius: var(--borderRadiusLo);
+      opacity: 0;
+      transform: scale(0);
+      transition: var(--transition-default);
+
+      ul {
+        text-align: left;
+        margin-bottom: 2rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+
+        color: var(--color-tertiary-6)
+      }
+
+      .icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        will-change: opacity, transform;
+
+        .icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          background-color: var(--color-primary);
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          margin: 0 1rem;
+          cursor: pointer;
+          transition: var(--transition-default);
+
+          i {
+            font-size: 1.5rem;
+            color: var(--color-white);
+            margin: 0 1rem;
+          }
+
+          &:hover {
+            background-color: var(--color-white);
+
+            i {
+              color: var(--color-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.portfolio-item:hover .hover-item {
+  opacity: 1;
+  transform: scale(1);
+  cursor: pointer;
+  will-change: opacity, transform;
+}
+
+.port-text {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.portfolio-detail {
+  position: fixed;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 80%;
+  padding: 2rem;
+  border: var(--outerBorder);
+  border-radius: var(--borderRadiusMed);
+
+  background-color: var(--color-white);
+  color: var(--color-tertiary-5);
+
+  opacity: 0.825;
+  box-shadow: var(--box-shadow-1);
+  overflow-y: auto;
+}
+
+
+.portfolio-detail::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-detail h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-tertiary-6);
+}
+
+.portfolio-detail p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.close-dialog {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--color-tertiary-5);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--borderRadiusLo);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.close-dialog:hover {
+  background-color: var(--color-secondary);
+}
