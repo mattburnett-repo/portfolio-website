@@ -1,4 +1,4 @@
-// reset, root and light mode
+// reset, root, light mode and scrollbar styling
 
 * {
   margin: 0;
@@ -49,4 +49,29 @@
   --color-tertiary-4: rgb(178, 190, 205);
   --color-tertiary-5: rgb(219, 225, 232);
   --color-tertiary-6: rgb(248, 248, 248);
+}
+
+/* Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary-2);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-secondary) var(--color-primary);
+
 }

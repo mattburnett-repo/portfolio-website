@@ -14,10 +14,6 @@
 
   .active-btn {
     background-color: var(--color-secondary) !important;
-
-    i {
-      color: var(--color-tertiary-5) !important
-    }
   }
 
   .control {
@@ -32,7 +28,18 @@
     align-items: center;
     margin: .7rem 0;
     box-shadow: var(--box-shadow-1);
-    transition: background-color 0.5s ease-in-out;
+
+    transition: all 0.1s ease-out;
+
+    &:active {
+      transform: scale(0.75);
+    }
+
+    &.active-btn {
+      background-color: var(--color-secondary);
+      transform: scale(1);
+    }
+
 
     &:hover {
       background-color: var(--color-tertiary-5);
@@ -43,7 +50,7 @@
       transition: color 0.25s ease-in-out;
 
       &:hover {
-        color: var(--color-tertiary-0);
+        color: var(--color-tertiary-2);
       }
     }
   }
