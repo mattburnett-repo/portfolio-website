@@ -28,6 +28,7 @@
     align-items: center;
     margin: .7rem 0;
     box-shadow: var(--box-shadow-1);
+
     transition: all 0.1s ease-out;
 
     &:active {
@@ -38,6 +39,7 @@
       background-color: var(--color-secondary);
       transform: scale(1);
     }
+
 
     &:hover {
       background-color: var(--color-tertiary-5);
