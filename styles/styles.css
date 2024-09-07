@@ -94,8 +94,6 @@ section {
 }
 
 .section {
-  transform: translateY(-100%) scale(0);
-  transition: var(--transition-default);
   background-color: transparent;
 }
 
@@ -163,7 +161,7 @@ section {
   transition: color 0.25s ease-in-out;
 }
 .controls .control span:hover {
-  color: var(--color-secondary);
+  color: var(--color-tertiary-0);
 }
 
 .theme-btn {
@@ -310,7 +308,7 @@ section {
 }
 
 .port-text {
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
 }
 
@@ -427,6 +425,7 @@ section {
   border-radius: var(--borderRadiusLo);
   box-shadow: var(--box-shadow-1);
   background-color: var(--color-tertiary-5);
+  margin-top: 3rem;
 }
 .contact-container .contact-icons .contact-icon {
   display: flex;
@@ -543,7 +542,7 @@ section {
   .home-container {
     padding: 2rem;
     line-height: 2rem;
-    height: 620px;
+    height: 80vh;
   }
   .home-container .home-overlay h1 {
     font-size: 2.5rem;
@@ -563,11 +562,20 @@ section {
     font-size: 4rem;
   }
 }
+.portfolio-container {
+  overflow-y: scroll;
+  max-height: 75vh;
+}
+
+.other-info-container .bg-text {
+  width: 100%;
+}
+
 @media screen and (max-width: 1375px) {
   .home-container {
     padding: 2rem;
     line-height: 2rem;
-    height: 620px;
+    height: 75vh;
   }
   .home-container .home-overlay h1 {
     font-size: 2rem;
@@ -583,6 +591,7 @@ section {
   }
   .portfolio-container {
     grid-gap: 1rem;
+    max-height: 70vh;
     overflow-y: scroll;
   }
   .portfolio-container .hover-item ul {
@@ -595,35 +604,54 @@ section {
   .bg-text {
     display: none;
   }
+  .other-info-container,
+  .contact-container {
+    margin-top: 0.5rem;
+  }
 }
 @media screen and (max-width: 1360px) {
   .home-container {
     padding: 1rem;
     line-height: 0.8rem;
-    height: 570px;
+    height: 70vh;
+  }
+  .portfolio-container {
+    max-height: 70vh;
   }
   .portfolio-container .portfolio-item h3 {
     font-size: 1rem;
     margin-bottom: 1rem;
+  }
+  .other-info-container {
+    margin-top: 0.5rem;
   }
 }
 @media screen and (max-width: 1320px) {
   .home-container {
     padding: 0.8rem;
     line-height: 0.7rem;
-    height: 550px;
+    height: 65vh;
   }
   .portfolio-container {
     grid-template-columns: repeat(2, 1fr);
+    max-height: 70vh;
+  }
+  .other-info-container,
+  .contact-container {
+    margin-top: 0.5rem;
   }
 }
 @media screen and (max-width: 1100px) {
+  .portfolio-container {
+    max-height: 70vh;
+  }
   .home-overlay h4 {
     display: none;
   }
   .other-info-container {
     grid-template-columns: 1fr;
     margin-bottom: 3rem;
+    max-height: 55vh;
   }
   .controls {
     top: auto;
@@ -646,6 +674,11 @@ section {
   .portfolio-container {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
+    max-height: 70vh;
+  }
+  .other-info-container,
+  .contact-container {
+    margin-top: 0.5rem;
   }
   .theme-btn {
     right: 1%;
@@ -664,7 +697,8 @@ section {
 @media screen and (max-width: 560px) {
   .home-container {
     display: block;
-    height: 250px;
+    height: 40vh;
+    margin: 150px auto;
     background-image: none;
   }
   .home-container .home-overlay {
@@ -689,27 +723,46 @@ section {
   .main-title h2 {
     font-size: 2rem;
   }
-  .portfolio-container,
   .other-info-container,
   .contact-container {
     margin-top: 1rem;
   }
-  .contact-container {
-    padding-top: 0;
+  .portfolio-container {
+    max-height: 90vh;
   }
-  .port-text,
-  .other-info-text,
-  .contact-text {
+  .other-info-text {
     display: none;
   }
 }
+.contact-container {
+  padding-top: 0;
+}
+
+.port-text,
+.other-info-text,
+.contact-text {
+  display: none;
+}
+
 @media screen and (max-width: 420px) {
+  .home-container {
+    width: 15rem;
+  }
   .portfolio-container {
     grid-gap: 0.5rem;
   }
   .portfolio-container .portfolio-item img {
     width: 200px;
     height: 200px;
+  }
+  .other-info-container {
+    overflow-y: scroll;
+    max-height: 80vh;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .other-info-container .other-info-item {
+    padding: 0.75rem;
   }
   .controls .control {
     width: 80px;

@@ -7,7 +7,6 @@ body {
   font-family: 'Cairo', sans-serif;
   font-size: 1.1rem;
   color: var(--color-white);
-  // transition: var(--transition-default);
   transition: all 1s ease-in-out;
   animation: gradientShift 15s ease-in-out infinite;
 }

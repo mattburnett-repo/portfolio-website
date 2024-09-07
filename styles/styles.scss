@@ -2,8 +2,8 @@
 @import './_elements.scss';
 
 .section {
-  transform: translateY(-100%) scale(0);
-  transition: var(--transition-default);
+  // transform: translateY(-100%) scale(0);
+  // transition: var(--transition-default);
   background-color: transparent;
 }
 
@@ -18,7 +18,7 @@
 @import './section-opacity-animation.scss';
 
 // Nav buttons
-@import './_controls.scss';
+@import './nav-btns.scss';
 // Dark/light mode toggle button
 @import './_theme-btn.scss';
 

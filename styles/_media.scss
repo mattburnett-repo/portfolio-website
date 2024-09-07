@@ -9,7 +9,7 @@
     padding: 2rem;
     line-height: 2rem;
 
-    height: 620px;
+    height: 80vh;
 
     .home-overlay {
       h1 {
@@ -36,12 +36,23 @@
   }
 }
 
+.portfolio-container {
+  overflow-y: scroll;
+  max-height: 75vh;
+}
+
+.other-info-container {
+  .bg-text {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1375px) {
   .home-container {
     padding: 2rem;
     line-height: 2rem;
 
-    height: 620px;
+    height: 75vh;
 
     .home-overlay {
       h1 {
@@ -63,6 +74,7 @@
 
   .portfolio-container {
     grid-gap: 1rem;
+    max-height: 70vh;
     overflow-y: scroll;
 
     .hover-item {
@@ -80,6 +92,11 @@
   .bg-text {
     display: none;
   }
+
+  .other-info-container,
+  .contact-container {
+    margin-top: 0.5rem;
+  }
 }
 
 @media screen and (max-width: 1360px) {
@@ -87,10 +104,12 @@
     padding: 1rem;
     line-height: .8rem;
 
-    height: 570px;
+    height: 70vh;
   }
 
   .portfolio-container {
+    max-height: 70vh;
+
     .portfolio-item {
       h3 {
         font-size: 1rem;
@@ -98,22 +117,35 @@
       }
     }
   }
+
+  .other-info-container {
+    margin-top: 0.5rem;
+  }
 }
 
 @media screen and (max-width: 1320px) {
   .home-container {
     padding: .8rem;
     line-height: .7rem;
-
-    height: 550px;
+    height: 65vh;
   }
 
   .portfolio-container {
     grid-template-columns: repeat(2, 1fr);
+    max-height: 70vh;
+  }
+
+  .other-info-container,
+  .contact-container {
+    margin-top: 0.5rem;
   }
 }
 
 @media screen and (max-width: 1100px) {
+  .portfolio-container {
+    max-height: 70vh;
+  }
+
   .home-overlay {
     h4 {
       display: none;
@@ -123,6 +155,7 @@
   .other-info-container {
     grid-template-columns: 1fr;
     margin-bottom: 3rem;
+    max-height: 55vh;
   }
 
   .controls {
@@ -146,10 +179,15 @@
 }
 
 @media screen and (max-width: 860px) {
-
   .portfolio-container {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
+    max-height: 70vh;
+  }
+
+  .other-info-container,
+  .contact-container {
+    margin-top: 0.5rem;
   }
 
   .theme-btn {
@@ -172,7 +210,8 @@
 @media screen and (max-width: 560px) {
   .home-container {
     display: block;
-    height: 250px;
+    height: 40vh;
+    margin: 150px auto;
     background-image: none;
 
     .home-overlay {
@@ -203,24 +242,35 @@
     font-size: 2rem;
   }
 
-  .portfolio-container,
   .other-info-container,
   .contact-container {
     margin-top: 1rem;
   }
 
-  .contact-container {
-    padding-top: 0;
+  .portfolio-container {
+    max-height: 90vh;
   }
 
-  .port-text,
-  .other-info-text,
-  .contact-text {
+  .other-info-text {
     display: none;
   }
 }
 
+.contact-container {
+  padding-top: 0;
+}
+
+.port-text,
+.other-info-text,
+.contact-text {
+  display: none;
+}
+
 @media screen and (max-width: 420px) {
+  .home-container {
+    width: 15rem;
+  }
+
   .portfolio-container {
     grid-gap: .5rem;
 
@@ -229,6 +279,17 @@
         width: 200px;
         height: 200px;
       }
+    }
+  }
+
+  .other-info-container {
+    overflow-y: scroll;
+    max-height: 80vh;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    .other-info-item {
+      padding: 0.75rem;
     }
   }
 
