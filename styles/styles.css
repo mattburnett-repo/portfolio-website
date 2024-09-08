@@ -259,7 +259,6 @@ section {
   grid-template-columns: repeat(3, 1fr);
   padding-right: 1.5rem;
   height: 68vh;
-
 }
 .portfolio-container .portfolio-item {
   position: relative;
@@ -391,7 +390,286 @@ section {
 .close-dialog:hover {
   background-color: var(--color-secondary);
   color: var(--color-white);
+}
 
+.skill-summary-container {
+  display: grid;
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 8rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.skill-summary-container .skill-summary-item {
+  position: relative;
+  padding: 2rem 0;
+  box-shadow: var(--box-shadow-1);
+  border-radius: var(--borderRadiusLo);
+  background-color: var(--color-tertiary-5);
+  border-left: 1px solid var(--color-tertiary-5);
+}
+.skill-summary-container .skill-summary-item .skill-summary-title {
+  padding: 0.2rem 0.6rem;
+  color: var(--color-tertiary-2);
+  background-color: var(--color-tertiary-4);
+  border-radius: var(--borderRadiusHi);
+  display: inline-block;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.skill-summary-container .skill-summary-item .skill-summary-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.skill-summary-container .skill-summary-item .skill-summary-list ul {
+  text-align: left;
+  line-height: 2rem;
+  padding: 1rem;
+  color: var(--color-tertiary-1);
+}
+.skill-summary-container .skill-summary-item p {
+  color: var(--color-tertiary-2);
+}
+
+.skill-summary-text {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.other-info-container {
+  display: grid;
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 8rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+.other-info-container .other-info-item {
+  position: relative;
+  padding: 2rem 0;
+  box-shadow: var(--box-shadow-1);
+  border-radius: var(--borderRadiusLo);
+  background-color: var(--color-tertiary-5);
+  border-left: 1px solid var(--color-tertiary-5);
+}
+.other-info-container .other-info-item .other-info-title {
+  padding: 0.2rem 0.6rem;
+  color: var(--color-tertiary-2);
+  background-color: var(--color-tertiary-4);
+  border-radius: var(--borderRadiusHi);
+  display: inline-block;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.other-info-container .other-info-item .other-info-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.other-info-container .other-info-item .other-info-list ul {
+  text-align: left;
+  line-height: 2rem;
+  padding: 1rem;
+  color: var(--color-tertiary-1);
+}
+.other-info-container .other-info-item p {
+  color: var(--color-tertiary-2);
+}
+
+.other-info-text {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+.contact-container h4 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.contact-container p {
+  margin: 1rem 0;
+  line-height: 2rem;
+}
+.contact-container .contact-icons {
+  padding: 3rem 6rem;
+  border-radius: var(--borderRadiusLo);
+  box-shadow: var(--box-shadow-1);
+  background-color: var(--color-tertiary-5);
+  margin-top: 3rem;
+}
+.contact-container .contact-icons .contact-icon {
+  display: flex;
+  margin-top: 2rem;
+}
+.contact-container .contact-icons .contact-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+}
+.main-btn {
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 30px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 1px solid var(--color-secondary);
+}
+.main-btn .btn-text {
+  padding: 0 2rem;
+}
+.main-btn .btn-icon {
+  color: var(--color-tertiary-5);
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1rem;
+}
+.main-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: var(--transition-default);
+  z-index: -1;
+}
+.main-btn:hover::before {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-secondary);
+  transform: translateX(0);
+}
+
+.main-title {
+  text-align: center;
+}
+.main-title h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.main-title h2 span {
+  color: var(--color-secondary);
+}
+.main-title h2 .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--color-tertiary-5);
+  transition: var(--transition-default);
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  font-weight: 800;
+  font-size: 6.3rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1750px) {
+  .sec5 .main-title .bg-text {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1565px) {
+  .home-container {
+    padding: 2rem;
+    line-height: 2rem;
+    height: 80vh;
+  }
+  .home-container .home-overlay h1 {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+  }
+  .home-container .home-overlay h2 {
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+  }
+  .home-container .home-overlay h4 {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .sec5 .main-title .bg-text {
+    font-size: 4rem;
+  }
+}
+.portfolio-container {
+  overflow-y: scroll;
+  max-height: 75vh;
+}
+
+.other-info-container .bg-text,
+.skill-summary-container .bg-text {
+  width: 100%;
+}
+
+@media screen and (max-width: 1375px) {
+  .home-container {
+    padding: 2rem;
+    line-height: 2rem;
+    height: 75vh;
+  }
+  .home-container .home-overlay h1 {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+  }
+  .home-container .home-overlay h2 {
+    font-size: 1rem;
+    padding-bottom: 2rem;
+  }
+  .home-container .home-overlay h4 {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  .portfolio-container {
+    grid-gap: 1rem;
+    max-height: 70vh;
+    overflow-y: scroll;
+  }
+  .portfolio-container .hover-item ul {
+    font-size: 1rem;
+  }
+  .portfolio-detail {
+    top: 5vh;
+    width: 100%;
+  }
+  .bg-text {
+    display: none;
+  }
+  .other-info-container,
+  .skill-summary-container,
+  .contact-container {
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 1360px) {
+  .home-container {
+    padding: 1rem;
+    line-height: 0.8rem;
+    height: 70vh;
+  }
+  .portfolio-container {
+    max-height: 70vh;
+  }
+  .portfolio-container .portfolio-item h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
   .other-info-container,
   .skill-summary-container {
     margin-top: 0.5rem;
