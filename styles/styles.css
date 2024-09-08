@@ -253,18 +253,20 @@ section {
 
 .portfolio-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
-  padding-right: 1rem;
-  height: 60vh;
+  margin-bottom: 8rem;
+  grid-template-columns: repeat(3, 1fr);
+  padding-right: 1.5rem;
+  height: 68vh;
 }
 .portfolio-container .portfolio-item {
   position: relative;
-  padding: 1rem 0;
-  border-radius: var(--borderRadiusLo);
+  padding: 2rem 0;
   box-shadow: var(--box-shadow-1);
+  border-radius: var(--borderRadiusLo);
   background-color: var(--color-tertiary-5);
+  border-left: 1px solid var(--color-tertiary-5);
 }
 .portfolio-container .portfolio-item img {
   width: 300px;
@@ -280,6 +282,7 @@ section {
   width: 100%;
   height: 100%;
   color: var(--color-tertiary-5);
+  line-height: 1.75rem;
   border: var(--innerBorder);
   background-color: var(--color-secondary);
   left: 0;
@@ -336,7 +339,7 @@ section {
 }
 
 .port-text {
-  padding: 1rem 0;
+  padding: 2rem 0;
   text-align: center;
 }
 
@@ -391,18 +394,18 @@ section {
 
 .skill-summary-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
   margin-bottom: 8rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 .skill-summary-container .skill-summary-item {
   position: relative;
   padding: 2rem 0;
-  border-left: 1px solid var(--color-tertiary-5);
   box-shadow: var(--box-shadow-1);
   border-radius: var(--borderRadiusLo);
   background-color: var(--color-tertiary-5);
+  border-left: 1px solid var(--color-tertiary-5);
 }
 .skill-summary-container .skill-summary-item .skill-summary-title {
   padding: 0.2rem 0.6rem;
@@ -436,18 +439,18 @@ section {
 
 .other-info-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
   margin-bottom: 8rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 .other-info-container .other-info-item {
   position: relative;
   padding: 2rem 0;
-  border-left: 1px solid var(--color-tertiary-5);
   box-shadow: var(--box-shadow-1);
   border-radius: var(--borderRadiusLo);
   background-color: var(--color-tertiary-5);
+  border-left: 1px solid var(--color-tertiary-5);
 }
 .other-info-container .other-info-item .other-info-title {
   padding: 0.2rem 0.6rem;
@@ -462,7 +465,7 @@ section {
 .other-info-container .other-info-item .other-info-list {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .other-info-container .other-info-item .other-info-list ul {
   text-align: left;

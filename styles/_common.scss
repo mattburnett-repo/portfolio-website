@@ -1,8 +1,13 @@
 // Common variables
 $border-radius-lo: var(--borderRadiusLo);
+$border-radius-hi: var(--borderRadiusHi);
 $box-shadow-1: var(--box-shadow-1);
 $inner-border: var(--innerBorder);
 $opacity-lo: var(--opacityLo);
+$color-tertiary-1: var(--color-tertiary-1);
+$color-tertiary-2: var(--color-tertiary-2);
+$color-tertiary-4: var(--color-tertiary-4);
+$color-tertiary-5: var(--color-tertiary-5);
 
 // Common mixins
 @mixin flex-center {
@@ -22,4 +27,56 @@ $opacity-lo: var(--opacityLo);
   border: $inner-border;
   border-radius: $border-radius-lo;
   opacity: $opacity-lo;
+}
+
+// content-container (eg portfolio/skillset/other-info. Contact is flex, others are grid.
+@mixin content-container {
+  display: grid;
+  grid-gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 8rem;
+}
+
+@mixin content-container-item {
+  position: relative;
+  padding: 2rem 0;
+  box-shadow: $box-shadow-1;
+  border-radius: $border-radius-lo;
+  background-color: $color-tertiary-5;
+  border-left: 1px solid var(--color-tertiary-5);
+}
+
+@mixin content-container-item-title {
+  padding: .2rem .6rem;
+  color: $color-tertiary-2;
+  background-color: $color-tertiary-4;
+  border-radius: $border-radius-hi;
+  display: inline-block;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@mixin content-container-item-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  ul {
+    text-align: left;
+    line-height: 2rem;
+    padding: 1rem;
+    color: $color-tertiary-1;
+  }
+}
+
+@mixin content-container-p-tag {
+  p {
+    color: $color-tertiary-2;
+  }
+}
+
+@mixin content-container-text {
+  padding: 2rem 0;
+  text-align: center;
 }

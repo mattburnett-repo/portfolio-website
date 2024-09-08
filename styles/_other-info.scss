@@ -1,52 +1,22 @@
-// Classes for other-info-*
-
 .other-info-container {
-  display: grid;
+  @include content-container;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
-  margin-top: 3rem;
-  margin-bottom: 8rem;
 
   .other-info-item {
-    position: relative;
-    padding: 2rem 0;
-    border-left: 1px solid var(--color-tertiary-5);
-    box-shadow: var(--box-shadow-1);
-    border-radius: var(--borderRadiusLo);
-
-    background-color: var(--color-tertiary-5);
+    @include content-container-item;
 
     .other-info-title {
-      padding: .2rem .6rem;
-      color: var(--color-tertiary-2);
-      background-color: var(--color-tertiary-4);
-      border-radius: var(--borderRadiusHi);
-      display: inline-block;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      font-weight: 500;
+      @include content-container-item-title;
     }
 
     .other-info-list {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      ul {
-        text-align: left;
-        line-height: 2rem;
-        padding: 1rem;
-        color: var(--color-tertiary-1);
-      }
+      @include content-container-item-list;
     }
 
-    p {
-      color: var(--color-tertiary-2);
-    }
+    @include content-container-p-tag;
   }
 }
 
 .other-info-text {
-  padding: 2rem 0;
-  text-align: center;
+  @include content-container-text;
 }
