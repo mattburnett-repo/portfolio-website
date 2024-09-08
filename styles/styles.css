@@ -339,7 +339,7 @@ section {
 }
 
 .port-text {
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
 }
 
@@ -513,40 +513,7 @@ section {
   align-items: center;
   justify-content: center;
   color: var(--color-white);
-  background-color: var(--color-tertiary-4);
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin: 0 0.4rem;
-  transition: var(--transition-default);
 }
-.contact-container .contact-icons .contact-icon a:hover {
-  background-color: var(--color-secondary);
-}
-.contact-container .contact-icons .contact-icon a:hover i {
-  color: var(--color-primary);
-}
-.contact-container .contact-icons .contact-icon a i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-}
-
-.contact-text {
-  padding: 2rem 0;
-  text-align: center;
-}
-
-/* independent components */
-.btn-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-}
-
 .main-btn {
   display: flex;
   align-self: flex-start;
