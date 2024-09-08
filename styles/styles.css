@@ -5,17 +5,17 @@
 }
 
 :root {
-  --color-primary: rgb(25, 29, 43);
-  --color-secondary: rgb(102, 205, 170);
-  --color-white: rgb(255, 255, 255);
+  --color-primary: rgb(45, 55, 72);
+  --color-secondary: rgb(129, 230, 217);
+  --color-white: rgb(245, 245, 245);
   --color-black: #000;
-  --color-tertiary-0: rgb(248, 248, 248);
-  --color-tertiary-1: rgb(219, 225, 232);
-  --color-tertiary-2: rgb(178, 190, 205);
-  --color-tertiary-3: rgb(108, 121, 131);
-  --color-tertiary-4: rgb(69, 78, 86);
-  --color-tertiary-5: rgb(42, 46, 53);
-  --color-tertiary-6: rgb(18, 24, 27);
+  --color-tertiary-0: rgb(240, 240, 245);
+  --color-tertiary-1: rgb(220, 225, 235);
+  --color-tertiary-2: rgb(190, 200, 215);
+  --color-tertiary-3: rgb(130, 140, 155);
+  --color-tertiary-4: rgb(90, 100, 115);
+  --color-tertiary-5: rgb(65, 75, 90);
+  --color-tertiary-6: rgb(40, 50, 65);
   --borderRadiusLo: 3px;
   --borderRadiusMed: 10px;
   --borderRadiusHi: 15px;
@@ -35,6 +35,7 @@
   --color-primary: rgb(240, 239, 239);
   --color-secondary: rgb(39, 147, 255);
   --color-white: #454e56;
+  --color-black: #000;
   --color-tertiary-0: #f8f8f8;
   --color-tertiary-1: rgb(18, 24, 27);
   --color-tertiary-2: rgb(42, 46, 53);
@@ -46,7 +47,7 @@
 
 /* Webkit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -64,8 +65,12 @@
 
 /* Firefox */
 * {
-  scrollbar-width: thin;
+  scrollbar-width: auto;
   scrollbar-color: var(--color-secondary) var(--color-primary);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -251,6 +256,8 @@ section {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
+  padding-right: 1rem;
+  height: 60vh;
 }
 .portfolio-container .portfolio-item {
   position: relative;
