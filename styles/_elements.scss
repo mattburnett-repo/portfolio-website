@@ -1,4 +1,8 @@
 // Elements: body, section, etc.
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
   background-image: radial-gradient(var(--color-tertiary-3), var(--color-primary));

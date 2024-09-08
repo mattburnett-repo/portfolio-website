@@ -1,28 +1,17 @@
-@import './_setup.scss';
-@import './_elements.scss';
+@import './setup';
+@import './elements';
 
-.home,
-.portfolio,
-.other-info,
-.contact {
-  display: none;
-  transform: translateY(0) scale(1);
-}
+@import './section-transition-animation';
+@import './nav-btns';
+@import './theme-btn';
 
-@import './section-transition-animation.scss';
-
-// Nav buttons
-@import './nav-btns.scss';
-// Dark/light mode toggle button
-@import './_theme-btn.scss';
-
-// Common section pieces
-@import './_common.scss';
 // Sections
-@import './_home.scss';
-@import './_portfolio.scss';
-@import './_other-info.scss';
-@import './_contact.scss';
-@import './_independent-components.scss';
+@import './common';
+@import './home';
+@import './portfolio';
+@import './skill-summary';
+@import './other-info';
+@import './contact';
+@import './independent-components';
 
 @import './media';

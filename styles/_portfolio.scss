@@ -4,6 +4,8 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
+  padding-right: 1rem;
+  height: 60vh;
 
   .portfolio-item {
     position: relative;

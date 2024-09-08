@@ -41,7 +41,8 @@
   max-height: 75vh;
 }
 
-.other-info-container {
+.other-info-container,
+.skill-summary-container {
   .bg-text {
     width: 100%;
   }
@@ -94,6 +95,7 @@
   }
 
   .other-info-container,
+  .skill-summary-container,
   .contact-container {
     margin-top: 0.5rem;
   }
@@ -118,7 +120,8 @@
     }
   }
 
-  .other-info-container {
+  .other-info-container,
+  .skill-summary-container {
     margin-top: 0.5rem;
   }
 }
@@ -136,6 +139,7 @@
   }
 
   .other-info-container,
+  .skill-summary-container,
   .contact-container {
     margin-top: 0.5rem;
   }
@@ -152,7 +156,8 @@
     }
   }
 
-  .other-info-container {
+  .other-info-container,
+  .skill-summary-container {
     grid-template-columns: 1fr;
     margin-bottom: 3rem;
     max-height: 55vh;
@@ -186,6 +191,7 @@
   }
 
   .other-info-container,
+  .skill-summary-container,
   .contact-container {
     margin-top: 0.5rem;
   }
@@ -196,7 +202,9 @@
 }
 
 @media screen and (max-width: 600px) {
-  .other-info-container {
+
+  .other-info-container,
+  .skill-summary-container {
     grid-template-columns: 1fr;
   }
 
@@ -243,6 +251,7 @@
   }
 
   .other-info-container,
+  .skill-summary-container,
   .contact-container {
     margin-top: 1rem;
   }
@@ -282,7 +291,8 @@
     }
   }
 
-  .other-info-container {
+  .other-info-container,
+  .skill-summary-container {
     overflow-y: scroll;
     max-height: 80vh;
     margin-top: 1rem;
