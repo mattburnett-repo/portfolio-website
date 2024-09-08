@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     bindEvents() {
       this.sectBtns.forEach(btn => btn.addEventListener('click', this.handleNavigation.bind(this)));
+      this.sectBtns.forEach(btn => btn.addEventListener('touchstart', this.handleNavigation.bind(this)));
       this.themeBtn.addEventListener('click', this.toggleTheme.bind(this));
       this.portfolioContainer.addEventListener('click', this.handlePortfolioClick.bind(this));
       document.addEventListener('click', this.handleDialogClose.bind(this));
