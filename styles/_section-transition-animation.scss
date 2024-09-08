@@ -9,10 +9,10 @@
   opacity: 1;
   transform: translateY(0);
   display: block;
-  animation: fadeIn 0.9s ease-in-out;
+  animation: fadeInUp 0.9s ease-in-out;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInUp {
   0% {
     opacity: 0;
     // transform: translateY(50px);

@@ -121,6 +121,14 @@ section {
   min-height: 100vh;
 }
 
+.home,
+.portfolio,
+.other-info,
+.contact {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
 .section {
   transition: all 0.4s ease-in-out;
   opacity: 0;
@@ -700,6 +708,7 @@ section {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
+  
   .other-info-container,
   .skill-summary-container {
     margin-top: 0.5rem;
@@ -839,6 +848,7 @@ section {
     width: 200px;
     height: 200px;
   }
+
   .other-info-container,
   .skill-summary-container {
     overflow-y: scroll;
@@ -846,6 +856,7 @@ section {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+
   .other-info-container .other-info-item,
   .skill-summary-container .other-info-item {
     padding: 0.75rem;
