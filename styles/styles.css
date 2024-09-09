@@ -671,11 +671,15 @@ section {
   }
   .portfolio-container {
     grid-gap: 1rem;
-    max-height: 70vh;
+    max-height: 65vh;
     overflow-y: scroll;
   }
   .portfolio-container .hover-item ul {
     font-size: 1rem;
+  }
+  .skill-summary-container {
+    max-height: 70vh;
+    overflow-y: auto;
   }
   .portfolio-detail {
     top: 5vh;
@@ -683,11 +687,6 @@ section {
   }
   .bg-text {
     display: none;
-  }
-  .other-info-container,
-  .skill-summary-container,
-  .contact-container {
-    margin-top: 0.5rem;
   }
 }
 @media screen and (max-width: 1360px) {
@@ -714,9 +713,10 @@ section {
     line-height: 0.7rem;
     height: 65vh;
   }
-  .portfolio-container {
+  .portfolio-container,
+  .skill-summary-container {
     grid-template-columns: repeat(2, 1fr);
-    max-height: 70vh;
+    height: 67vh;
   }
   .other-info-container,
   .skill-summary-container,
@@ -726,13 +726,12 @@ section {
 }
 @media screen and (max-width: 1100px) {
   .portfolio-container {
-    max-height: 70vh;
+    height: 65vh;
   }
   .home-overlay h4 {
     display: none;
   }
-  .other-info-container,
-  .skill-summary-container {
+  .other-info-container {
     grid-template-columns: 1fr;
     margin-bottom: 3rem;
     max-height: 55vh;
@@ -755,13 +754,13 @@ section {
   }
 }
 @media screen and (max-width: 860px) {
-  .portfolio-container {
+  .portfolio-container,
+  .skill-summary-container {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
     max-height: 70vh;
   }
   .other-info-container,
-  .skill-summary-container,
   .contact-container {
     margin-top: 0.5rem;
   }
@@ -770,6 +769,11 @@ section {
   }
 }
 @media screen and (max-width: 600px) {
+  .section {
+    margin-top: 1rem;
+    padding: 0px 0px;
+    width: 35rem;
+  }
   .other-info-container,
   .skill-summary-container {
     grid-template-columns: 1fr;
@@ -781,9 +785,14 @@ section {
   }
 }
 @media screen and (max-width: 560px) {
+  .section {
+    margin-top: 1rem;
+    padding: 0px 0px;
+    width: 25rem;
+  }
   .home-container {
     display: block;
-    height: 40vh;
+    height: 30vh;
     margin: 150px auto;
     background-image: none;
   }
@@ -809,14 +818,6 @@ section {
   .main-title h2 {
     font-size: 2rem;
   }
-  .other-info-container,
-  .skill-summary-container,
-  .contact-container {
-    margin-top: 1rem;
-  }
-  .portfolio-container {
-    max-height: 90vh;
-  }
   .other-info-text {
     display: none;
   }
@@ -829,37 +830,4 @@ section {
 .other-info-text,
 .contact-text {
   display: none;
-}
-
-@media screen and (max-width: 420px) {
-  .home-container {
-    width: 15rem;
-  }
-  .portfolio-container {
-    grid-gap: 0.5rem;
-  }
-  .portfolio-container .portfolio-item img {
-    width: 200px;
-    height: 200px;
-  }
-  .other-info-container,
-  .skill-summary-container {
-    overflow-y: scroll;
-    max-height: 80vh;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  .other-info-container .other-info-item,
-  .skill-summary-container .other-info-item {
-    padding: 0.75rem;
-  }
-  .controls .control {
-    width: 80px;
-    height: 40px;
-    margin: 0px;
-    padding: 0px;
-  }
-  .theme-btn {
-    right: 0.5%;
-  }
 }/*# sourceMappingURL=styles.css.map */
