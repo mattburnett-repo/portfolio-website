@@ -108,7 +108,7 @@
   }
 
   .portfolio-container {
-    max-height: 70vh;
+    height: 70vh;
 
     .portfolio-item {
       h3 {
@@ -118,6 +118,7 @@
     }
   }
 
+  .portfolio-container,
   .other-info-container,
   .skill-summary-container {
     margin-top: 0.5rem;
@@ -145,21 +146,17 @@
 }
 
 @media screen and (max-width: 1100px) {
+  .portfolio-container,
+  .skill-summary-container,
+  .other-info-container {
+    height: 56vh;
 
-  .portfolio-container {
-    height: 65vh;
   }
 
   .home-overlay {
     h4 {
       display: none;
     }
-  }
-
-  .other-info-container {
-    grid-template-columns: 1fr;
-    margin-bottom: 3rem;
-    max-height: 55vh;
   }
 
   .controls {
@@ -188,7 +185,6 @@
   .skill-summary-container {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
-    max-height: 70vh;
   }
 
   .other-info-container,
