@@ -147,21 +147,34 @@
 
 @media screen and (max-width: 1100px) {
 
-  .portfolio-container,
-  .skill-summary-container,
-  .other-info-container {
-    height: 56vh;
-  }
-
   .home-overlay {
     h4 {
       display: none;
     }
   }
 
+  .portfolio-container,
+  .skill-summary-container,
+  .other-info-container,
+  .contact-container {
+    margin-top: 3rem;
+  }
+
+  .portfolio-container {
+    height: 40vh;
+  }
+
+  .skill-summary-container {
+    height: 44vh;
+  }
+
+  .skill-summary-container {
+    padding-right: 15px;
+  }
+
   .controls {
     top: auto;
-    bottom: 0;
+    bottom: 5rem;
     flex-direction: row;
     justify-content: center;
     left: 50%;
