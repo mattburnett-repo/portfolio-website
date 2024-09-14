@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
       this.allSections = document.querySelector('.main-content');
       this.themeBtn = document.querySelector('.theme-btn');
       this.portfolioContainer = document.querySelector('.portfolio-container');
+      // Media query support. Icons replace text in smaller screens.
+      this.mediaQuery_mw_600 = window.matchMedia('(max-width: 600px)');
+      this.el_home = document.querySelector('span[data-id="home"]');
+      this.el_portfolio = document.querySelector('span[data-id="portfolio"]');
+      this.el_skillset = document.querySelector('span[data-id="skill-summary"]');
+      this.el_other_info = document.querySelector('span[data-id="other-info"]');
+      this.el_contact = document.querySelector('span[data-id="contact"]');
     },
 
     bindEvents() {
@@ -21,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.themeBtn.addEventListener('click', this.toggleTheme.bind(this));
       this.portfolioContainer.addEventListener('click', this.handlePortfolioClick.bind(this));
       document.addEventListener('click', this.handleDialogClose.bind(this));
+      this.mediaQuery_mw_600.addEventListener('change', this.handleMediaQueryChange.bind(this));
     },
 
     setInitialState() {
@@ -72,6 +80,30 @@ document.addEventListener('DOMContentLoaded', () => {
           dialog.close();
         }
       }
+    },
+
+    handleMediaQueryChange(e) {
+      if (e.matches) {
+        // If media query matches, replace text with icon
+        this.replaceTextWithIcon();
+      } else {
+        // If it does not match, reset to original text
+        this.resetSpanText();
+      }
+    },
+    replaceTextWithIcon(e) {
+      this.el_home.innerHTML = '<i class="fas fa-home"></i>';
+      this.el_portfolio.innerHTML = '<i class="fas fa-briefcase"></i>';
+      this.el_skillset.innerHTML = '<i class="fas fa-code"></i>';
+      this.el_other_info.innerHTML = '<i class="fas fa-info-circle"></i>';
+      this.el_contact.innerHTML = '<i class="fas fa-envelope"></i>';
+    },
+    resetSpanText() {
+      this.el_home.innerHTML = 'Home';
+      this.el_portfolio.innerHTML = 'Portfolio';
+      this.el_skillset.innerHTML = 'Skill Set';
+      this.el_other_info.innerHTML = 'Other Info';
+      this.el_contact.innerHTML = 'Contact';
     },
   };
 
