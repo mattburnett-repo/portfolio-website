@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.allSections = document.querySelector('.main-content');
       this.themeBtn = document.querySelector('.theme-btn');
       this.portfolioContainer = document.querySelector('.portfolio-container');
-      // Media query support. Icons replace text in smaller screens.
+      // Media query support for nav buttons. Icons replace text on smaller screens.
       this.mediaQuery_mw_600 = window.matchMedia('(max-width: 600px)');
       this.el_home = document.querySelector('span[data-id="home"]');
       this.el_portfolio = document.querySelector('span[data-id="portfolio"]');
@@ -84,14 +84,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     handleMediaQueryChange(e) {
       if (e.matches) {
-        // If media query matches, replace text with icon
         this.replaceTextWithIcon();
       } else {
-        // If it does not match, reset to original text
         this.resetSpanText();
       }
     },
-    replaceTextWithIcon(e) {
+    replaceTextWithIcon() {
       this.el_home.innerHTML = '<i class="fas fa-home"></i>';
       this.el_portfolio.innerHTML = '<i class="fas fa-briefcase"></i>';
       this.el_skillset.innerHTML = '<i class="fas fa-code"></i>';
