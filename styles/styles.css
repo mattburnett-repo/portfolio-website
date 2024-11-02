@@ -729,7 +729,6 @@ section {
   .home-overlay h4 {
     display: none;
   }
-  
   .home-container,
   .portfolio-container,
   .skill-summary-container,
@@ -788,7 +787,6 @@ section {
     overflow-y: scroll;
     height: 40vh;
   }
-
   .other-info-container,
   .skill-summary-container {
     grid-template-columns: 1fr;
@@ -799,7 +797,6 @@ section {
     right: 1%;
   }
 }
-
 @media screen and (max-width: 420px) {
   .section {
     margin-top: 5rem;
