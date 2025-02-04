@@ -1,11 +1,17 @@
 .portfolio-container {
   @include content-container;
-  grid-template-columns: repeat(3, 1fr);
   padding-right: 1.5rem;
+  padding-top: 10px;
   height: 68vh;
 
   .portfolio-item {
     @include content-container-item;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
 
     img {
       width: 300px;
@@ -35,16 +41,15 @@
       transform: scale(0);
       transition: var(--transition-default);
 
-      ul {
-        text-align: left;
-        margin-bottom: 2rem;
-      }
-
       h3 {
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
+        color: var(--color-tertiary-6);
+      }
 
-        color: var(--color-tertiary-6)
+      ul {
+        text-align: left;
+        margin-bottom: 2rem;
       }
 
       .icons {
@@ -64,20 +69,21 @@
           height: 50px;
           margin: 0 1rem;
           cursor: pointer;
-          transition: var(--transition-default);
-
-          i {
-            font-size: 1.5rem;
-            color: var(--color-white);
-            margin: 0 1rem;
-          }
+          transition: transform 0.2s ease, background-color 0.2s ease;
 
           &:hover {
+            transform: scale(1.1);
             background-color: var(--color-white);
 
             i {
               color: var(--color-primary);
             }
+          }
+
+          i {
+            font-size: 1.5rem;
+            color: var(--color-white);
+            margin: 0 1rem;
           }
         }
       }

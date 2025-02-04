@@ -16,7 +16,11 @@
   cursor: pointer;
 
   box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
-  transition: all .1s ease-in-out;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   &:active {
     transform: scale(var(--button-scale-default));
@@ -26,5 +30,6 @@
     font-size: 1.4rem;
     color: var(--color-tertiary-5);
     pointer-events: none;
+    transition: color 0.3s ease;
   }
 }
