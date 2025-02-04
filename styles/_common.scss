@@ -32,9 +32,9 @@ $color-tertiary-5: var(--color-tertiary-5);
 // content-container (eg portfolio/skillset/other-info. Contact is flex, others are grid.
 @mixin content-container {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
-  margin-bottom: 8rem;
 }
 
 @mixin content-container-item {
@@ -79,4 +79,18 @@ $color-tertiary-5: var(--color-tertiary-5);
 @mixin content-container-text {
   padding: 2rem 0;
   text-align: center;
+}
+
+.main-title {
+  h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    .bg-text {
+      display: none; // Remove the background text for cleaner look
+    }
+  }
 }

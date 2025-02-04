@@ -20,36 +20,49 @@
     padding: 1rem;
     cursor: pointer;
     background-color: var(--color-tertiary-4);
-    width: 120px;
-    height: 55px;
-    border-radius: var(--borderRadiusHi);
+    width: 130px;
+    height: 50px;
+    border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: .7rem 0;
-    box-shadow: var(--box-shadow-1);
-    transition: all 0.1s ease-out;
-
-    &:active {
-      transform: scale(0.75);
-    }
+    margin: 0.5rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-out;
 
     &.active-btn {
       background-color: var(--color-secondary);
-      transform: scale(1);
+      transform: translateX(-10px);
+
+      span {
+        color: var(--color-tertiary-0);
+      }
     }
 
     &:hover {
-      background-color: var(--color-tertiary-5);
+      transform: translateX(-5px);
+      background-color: var(--color-secondary);
+
+      span {
+        color: var(--color-primary);
+        transition: color 0.2s ease-out;
+      }
     }
 
     span {
+      font-weight: 500;
+      letter-spacing: 0.5px;
       color: var(--color-white);
-      transition: color 0.25s ease-in-out;
-
-      &:hover {
-        color: var(--color-tertiary-2);
-      }
+      transition: color 0.2s ease-out;
     }
   }
+}
+
+// Light mode overrides
+.light-mode .control:hover:not(.active-btn) span {
+  color: #ffffff !important;
+}
+
+.light-mode .control.active-btn span {
+  color: #ffffff !important;
 }

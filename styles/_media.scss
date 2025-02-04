@@ -251,6 +251,17 @@
     height: 40vh;
   }
 
+  .section {
+    margin-top: 5rem;
+    padding: 0px;
+    width: 35rem;
+  }
+
+  .other-info-container {
+    overflow-y: scroll;
+    height: 40vh;
+  }
+
   .other-info-container,
   .skill-summary-container {
     grid-template-columns: 1fr;

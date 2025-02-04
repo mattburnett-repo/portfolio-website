@@ -28,7 +28,8 @@
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
   --transition-default: all .4s ease-in-out;
   --transition-anim-default: scaleAnim .9s ease-in-out;
-  --button-scale-default: .9 ;
+  --button-scale-default: .9 transition: background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .light-mode {
@@ -43,6 +44,7 @@
   --color-tertiary-4: rgb(178, 190, 205);
   --color-tertiary-5: rgb(219, 225, 232);
   --color-tertiary-6: rgb(248, 248, 248);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Webkit browsers (Chrome, Safari) */
@@ -74,31 +76,38 @@ html {
 }
 
 body {
-  background-image: radial-gradient(var(--color-tertiary-3), var(--color-primary));
+  background-image: radial-gradient(circle at center, var(--color-tertiary-3) 0%, var(--color-primary) 100%);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Cairo", sans-serif;
   font-size: 1.1rem;
   color: var(--color-white);
-  transition: all 1s ease-in-out;
-  animation: gradientShift 15s ease-in-out infinite;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: gradientShift 25s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
 }
 
 @keyframes gradientShift {
   0% {
     background-size: 100% 100%;
+    background-position: center center;
   }
   25% {
-    background-size: 150% 150%;
+    background-size: 250% 250%;
+    background-position: left center;
   }
   50% {
-    background-size: 300% 300%;
+    background-size: 400% 400%;
+    background-position: center center;
   }
   75% {
-    background-size: 150% 150%;
+    background-size: 250% 250%;
+    background-position: right center;
   }
   100% {
     background-size: 100% 100%;
+    background-position: center center;
   }
 }
 a {
@@ -132,7 +141,7 @@ section {
   opacity: 1;
   transform: translateY(0);
   display: block;
-  animation: fadeIn 0.9s ease-in-out;
+  animation: fadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes fadeIn {
@@ -162,32 +171,44 @@ section {
   padding: 1rem;
   cursor: pointer;
   background-color: var(--color-tertiary-4);
-  width: 120px;
-  height: 55px;
-  border-radius: var(--borderRadiusHi);
+  width: 130px;
+  height: 50px;
+  border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0.7rem 0;
-  box-shadow: var(--box-shadow-1);
-  transition: all 0.1s ease-out;
-}
-.controls .control:active {
-  transform: scale(0.75);
+  margin: 0.5rem 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-out;
 }
 .controls .control.active-btn {
   background-color: var(--color-secondary);
-  transform: scale(1);
+  transform: translateX(-10px);
+}
+.controls .control.active-btn span {
+  color: var(--color-tertiary-0);
 }
 .controls .control:hover {
-  background-color: var(--color-tertiary-5);
+  transform: translateX(-5px);
+  background-color: var(--color-secondary);
+}
+.controls .control:hover span {
+  color: var(--color-primary);
+  transition: color 0.2s ease-out;
 }
 .controls .control span {
+  font-weight: 500;
+  letter-spacing: 0.5px;
   color: var(--color-white);
-  transition: color 0.25s ease-in-out;
+  transition: color 0.2s ease-out;
 }
-.controls .control span:hover {
-  color: var(--color-tertiary-2);
+
+.light-mode .control:hover:not(.active-btn) span {
+  color: #ffffff !important;
+}
+
+.light-mode .control.active-btn span {
+  color: #ffffff !important;
 }
 
 .theme-btn {
@@ -203,7 +224,10 @@ section {
   background-color: var(--color-secondary);
   cursor: pointer;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.1s ease-in-out;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.theme-btn:hover {
+  transform: scale(1.1);
 }
 .theme-btn:active {
   transform: scale(var(--button-scale-default));
@@ -212,6 +236,18 @@ section {
   font-size: 1.4rem;
   color: var(--color-tertiary-5);
   pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.main-title h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.main-title h2 .bg-text {
+  display: none;
 }
 
 .home-container {
@@ -253,11 +289,11 @@ section {
 
 .portfolio-container {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
-  margin-bottom: 8rem;
-  grid-template-columns: repeat(3, 1fr);
   padding-right: 1.5rem;
+  padding-top: 10px;
   height: 68vh;
 }
 .portfolio-container .portfolio-item {
@@ -267,6 +303,11 @@ section {
   border-radius: var(--borderRadiusLo);
   background-color: var(--color-tertiary-5);
   border-left: 1px solid var(--color-tertiary-5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio-container .portfolio-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .portfolio-container .portfolio-item img {
   width: 300px;
@@ -292,14 +333,14 @@ section {
   transform: scale(0);
   transition: var(--transition-default);
 }
-.portfolio-container .portfolio-item .hover-item ul {
-  text-align: left;
-  margin-bottom: 2rem;
-}
 .portfolio-container .portfolio-item .hover-item h3 {
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
   color: var(--color-tertiary-6);
+}
+.portfolio-container .portfolio-item .hover-item ul {
+  text-align: left;
+  margin-bottom: 2rem;
 }
 .portfolio-container .portfolio-item .hover-item .icons {
   display: flex;
@@ -317,18 +358,19 @@ section {
   height: 50px;
   margin: 0 1rem;
   cursor: pointer;
-  transition: var(--transition-default);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.portfolio-container .portfolio-item .hover-item .icons .icon:hover {
+  transform: scale(1.1);
+  background-color: var(--color-white);
+}
+.portfolio-container .portfolio-item .hover-item .icons .icon:hover i {
+  color: var(--color-primary);
 }
 .portfolio-container .portfolio-item .hover-item .icons .icon i {
   font-size: 1.5rem;
   color: var(--color-white);
   margin: 0 1rem;
-}
-.portfolio-container .portfolio-item .hover-item .icons .icon:hover {
-  background-color: var(--color-white);
-}
-.portfolio-container .portfolio-item .hover-item .icons .icon:hover i {
-  color: var(--color-primary);
 }
 
 .portfolio-item:hover .hover-item {
@@ -394,9 +436,9 @@ section {
 
 .skill-summary-container {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
-  margin-bottom: 8rem;
   grid-template-columns: repeat(2, 1fr);
 }
 .skill-summary-container .skill-summary-item {
@@ -439,9 +481,9 @@ section {
 
 .other-info-container {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
-  margin-bottom: 8rem;
   grid-template-columns: repeat(2, 1fr);
 }
 .other-info-container .other-info-item {
