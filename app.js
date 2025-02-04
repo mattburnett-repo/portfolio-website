@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.allSections = document.querySelector('.main-content');
       this.themeBtn = document.querySelector('.theme-btn');
       this.portfolioContainer = document.querySelector('.portfolio-container');
+
       // Media query support for nav buttons. Icons replace text on smaller screens.
       this.mediaQuery_mw_600 = window.matchMedia('(max-width: 600px)');
       this.el_home = document.querySelector('span[data-id="home"]');
