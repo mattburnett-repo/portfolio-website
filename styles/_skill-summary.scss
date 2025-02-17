@@ -4,13 +4,25 @@
 
   .skill-summary-item {
     @include content-container-item;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
 
     .skill-summary-title {
       @include content-container-item-title;
+      margin-bottom: 1rem;
     }
 
     .skill-summary-list {
       @include content-container-item-list;
+
+      ul {
+        padding: 1rem 2rem;
+        line-height: 2.2rem;
+      }
     }
 
     @include content-container-p-tag;
