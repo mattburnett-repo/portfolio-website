@@ -26,10 +26,10 @@
   --opacityLo: 0.8;
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
-  --transition-default: all .4s ease-in-out;
+  --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-anim-default: scaleAnim .9s ease-in-out;
-  --button-scale-default: .9 transition: background-color 0.3s ease,
-    color 0.3s ease;
+  --button-scale-default: .9;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .light-mode {
@@ -44,7 +44,7 @@
   --color-tertiary-4: rgb(178, 190, 205);
   --color-tertiary-5: rgb(219, 225, 232);
   --color-tertiary-6: rgb(248, 248, 248);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Webkit browsers (Chrome, Safari) */
@@ -152,6 +152,10 @@ section {
     opacity: 1;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
 .controls {
   position: fixed;
   z-index: 10;
@@ -239,6 +243,16 @@ section {
   color: var(--color-tertiary-5);
   pointer-events: none;
   transition: color 0.3s ease;
+}
+.theme-btn .light-icon {
+  display: none;
+}
+
+.light-mode .theme-btn .dark-icon {
+  display: none;
+}
+.light-mode .theme-btn .light-icon {
+  display: block;
 }
 
 .main-title h2 {
@@ -588,7 +602,10 @@ section {
   padding: 3rem 6rem;
   border-radius: var(--borderRadiusLo);
   box-shadow: var(--box-shadow-1);
-  background-color: var(--color-tertiary-5);
+  background: linear-gradient(to bottom, var(--color-tertiary-5), var(--color-tertiary-4));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(0);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: 2rem;
 }
 .contact-container .contact-icons a {
@@ -606,6 +623,10 @@ section {
 .contact-container .contact-icons .contact-icon a {
   font-size: 2rem;
   margin: 0 1rem;
+}
+.contact-container .contact-icons:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .contact-text {

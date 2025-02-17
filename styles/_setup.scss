@@ -59,10 +59,10 @@
 
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
-  --transition-default: all .4s ease-in-out;
+  --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-anim-default: scaleAnim .9s ease-in-out;
-  --button-scale-default: .9 transition: background-color 0.3s ease,
-    color 0.3s ease;
+  --button-scale-default: .9;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .light-mode {
@@ -77,8 +77,7 @@
   --color-tertiary-4: rgb(178, 190, 205);
   --color-tertiary-5: rgb(219, 225, 232);
   --color-tertiary-6: rgb(248, 248, 248);
-  transition: background-color 0.3s ease,
-    color 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Webkit browsers (Chrome, Safari) */

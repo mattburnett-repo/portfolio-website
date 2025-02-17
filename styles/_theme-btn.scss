@@ -32,4 +32,18 @@
     pointer-events: none;
     transition: color 0.3s ease;
   }
+
+  .light-icon {
+    display: none;
+  }
+}
+
+.light-mode .theme-btn {
+  .dark-icon {
+    display: none;
+  }
+
+  .light-icon {
+    display: block;
+  }
 }
