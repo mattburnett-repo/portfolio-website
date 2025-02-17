@@ -173,17 +173,19 @@ section {
   background-color: var(--color-tertiary-4);
   width: 130px;
   height: 50px;
-  border-radius: 25px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0.5rem 0;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.2s ease-out;
 }
 .controls .control.active-btn {
   background-color: var(--color-secondary);
   transform: translateX(-10px);
+  border-color: var(--color-secondary);
 }
 .controls .control.active-btn span {
   color: var(--color-tertiary-0);
@@ -304,6 +306,7 @@ section {
   background-color: var(--color-tertiary-5);
   border-left: 1px solid var(--color-tertiary-5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--color-tertiary-6);
 }
 .portfolio-container .portfolio-item:hover {
   transform: translateY(-8px);

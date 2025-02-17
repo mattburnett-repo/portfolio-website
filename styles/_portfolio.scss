@@ -7,6 +7,7 @@
   .portfolio-item {
     @include content-container-item;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--color-tertiary-6);
 
     &:hover {
       transform: translateY(-8px);
@@ -33,7 +34,6 @@
 
       border: var(--innerBorder);
       background-color: var(--color-secondary);
-
       left: 0;
       top: 0;
       border-radius: var(--borderRadiusLo);
@@ -119,7 +119,6 @@
   box-shadow: var(--box-shadow-1);
   overflow-y: auto;
 }
-
 
 .portfolio-detail::backdrop {
   background-color: rgba(0, 0, 0, 0.7);
