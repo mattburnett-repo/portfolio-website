@@ -451,6 +451,11 @@ section {
   border-radius: var(--borderRadiusLo);
   background-color: var(--color-tertiary-5);
   border-left: 1px solid var(--color-tertiary-5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-summary-container .skill-summary-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 .skill-summary-container .skill-summary-item .skill-summary-title {
   padding: 0.2rem 0.6rem;
@@ -461,6 +466,7 @@ section {
   font-size: 1.1rem;
   text-transform: uppercase;
   font-weight: 500;
+  margin-bottom: 1rem;
 }
 .skill-summary-container .skill-summary-item .skill-summary-list {
   display: flex;
@@ -472,6 +478,10 @@ section {
   line-height: 2rem;
   padding: 1rem;
   color: var(--color-tertiary-1);
+}
+.skill-summary-container .skill-summary-item .skill-summary-list ul {
+  padding: 1rem 2rem;
+  line-height: 2.2rem;
 }
 .skill-summary-container .skill-summary-item p {
   color: var(--color-tertiary-2);
@@ -487,7 +497,7 @@ section {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 .other-info-container .other-info-item {
   position: relative;
@@ -496,6 +506,11 @@ section {
   border-radius: var(--borderRadiusLo);
   background-color: var(--color-tertiary-5);
   border-left: 1px solid var(--color-tertiary-5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.other-info-container .other-info-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 .other-info-container .other-info-item .other-info-title {
   padding: 0.2rem 0.6rem;
@@ -506,6 +521,7 @@ section {
   font-size: 1.1rem;
   text-transform: uppercase;
   font-weight: 500;
+  margin-bottom: 1rem;
 }
 .other-info-container .other-info-item .other-info-list {
   display: flex;
@@ -518,6 +534,10 @@ section {
   padding: 1rem;
   color: var(--color-tertiary-1);
 }
+.other-info-container .other-info-item .other-info-list ul {
+  padding: 1rem 2rem;
+  line-height: 2.2rem;
+}
 .other-info-container .other-info-item p {
   color: var(--color-tertiary-2);
 }
@@ -527,6 +547,27 @@ section {
   text-align: center;
 }
 
+@media screen and (max-width: 1200px) {
+  .other-info-container {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    height: 60vh;
+    overflow-y: auto;
+    padding-right: 1.5rem;
+    margin: 2rem auto;
+    scrollbar-width: thin;
+  }
+  .other-info-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  .other-info-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .other-info-container::-webkit-scrollbar-thumb {
+    background-color: var(--color-tertiary-4);
+    border-radius: 4px;
+  }
+}
 .contact-container {
   display: flex;
   align-items: center;
@@ -548,35 +589,23 @@ section {
   border-radius: var(--borderRadiusLo);
   box-shadow: var(--box-shadow-1);
   background-color: var(--color-tertiary-5);
+  margin-top: 2rem;
+}
+.contact-container .contact-icons a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+.contact-container .contact-icons a:hover {
+  color: var(--color-secondary);
+  transform: translateY(-4px);
+  text-shadow: 0 4px 12px rgba(129, 230, 217, 0.2);
 }
 .contact-container .contact-icons .contact-icon {
-  display: flex;
   margin-top: 2rem;
 }
 .contact-container .contact-icons .contact-icon a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-white);
-  background-color: var(--color-tertiary-4);
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin: 0 0.4rem;
-  transition: var(--transition-default);
-}
-.contact-container .contact-icons .contact-icon a:hover {
-  background-color: var(--color-secondary);
-}
-.contact-container .contact-icons .contact-icon a:hover i {
-  color: var(--color-primary);
-}
-.contact-container .contact-icons .contact-icon a i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
+  font-size: 2rem;
+  margin: 0 1rem;
 }
 
 .contact-text {
