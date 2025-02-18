@@ -288,7 +288,7 @@ html {
   border: 2px double silver;
   border-radius: var(--borderRadiusLo);
   height: 840px;
-  background-image: url("../images/techImage_02.jpeg");
+  background-image: url("../images/pexels-fauxels-3184639.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -863,6 +863,9 @@ html {
   }
   .skill-summary-container {
     height: 44vh;
+  }
+  .skill-summary-container {
+    padding-right: 15px;
   }
   .skill-summary-container {
     padding-right: 15px;
