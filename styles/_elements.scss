@@ -9,8 +9,9 @@ body {
       var(--color-primary) 100%);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.1rem;
+  font-weight: 400;
   color: var(--color-white);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   animation: gradientShift 25s cubic-bezier(0.4, 0, 0.2, 1) infinite;
@@ -63,4 +64,15 @@ section {
   padding: 20px 60px;
   width: 80%;
   min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }

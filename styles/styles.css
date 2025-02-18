@@ -79,8 +79,9 @@ body {
   background-image: radial-gradient(circle at center, var(--color-tertiary-3) 0%, var(--color-primary) 100%);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "Cairo", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.1rem;
+  font-weight: 400;
   color: var(--color-white);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   animation: gradientShift 25s cubic-bezier(0.4, 0, 0.2, 1) infinite;
@@ -128,6 +129,17 @@ section {
   padding: 20px 60px;
   width: 80%;
   min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 .section {
@@ -203,6 +215,7 @@ html {
   transition: color 0.2s ease-out;
 }
 .controls .control span {
+  font-family: "Manrope", sans-serif;
   font-weight: 500;
   letter-spacing: 0.5px;
   color: var(--color-white);
@@ -286,22 +299,35 @@ html {
   border-radius: var(--borderRadiusLo);
   opacity: var(--opacityLo);
   margin: 0 auto;
-  padding: 3rem;
+  padding: 2rem 3rem;
   line-height: 3rem;
   color: lightgray;
   width: 75%;
+  height: 50vh;
+}
+.home-container .home-overlay h1,
+.home-container .home-overlay h2,
+.home-container .home-overlay h4 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
 }
 .home-container .home-overlay h1 {
   font-size: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1.8rem;
+  letter-spacing: 0.02em;
 }
 .home-container .home-overlay h2 {
   font-size: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
+  letter-spacing: 0.01em;
+  opacity: 0.95;
 }
 .home-container .home-overlay h4 {
   font-size: 1.3rem;
-  line-height: 3rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.01em;
+  opacity: 0.9;
 }
 
 .portfolio-container {
