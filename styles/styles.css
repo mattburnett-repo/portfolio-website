@@ -257,6 +257,7 @@ html {
   pointer-events: none;
   transition: color 0.3s ease;
 }
+
 .theme-btn .light-icon {
   display: none;
 }
@@ -866,6 +867,10 @@ html {
   .skill-summary-container {
     padding-right: 15px;
   }
+  .skill-summary-container {
+    padding-right: 15px;
+  }
+
   .controls {
     top: auto;
     bottom: 5rem;
