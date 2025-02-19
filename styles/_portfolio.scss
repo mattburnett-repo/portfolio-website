@@ -98,8 +98,19 @@
   will-change: opacity, transform;
 }
 
-.port-text {
-  @include content-container-text;
+.section.portfolio {
+  .main-title {
+    .port-text {
+      color: var(--color-white);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      display: block;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 0.5rem 0;
+    }
+  }
 }
 
 .portfolio-detail {
