@@ -23,6 +23,9 @@
     width: 130px;
     height: 50px;
     border-radius: 8px;
+    width: 130px;
+    height: 50px;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,6 +38,7 @@
       background-color: var(--color-secondary);
       transform: translateX(-10px);
       border-color: var(--color-secondary);
+
       span {
         color: var(--color-tertiary-0);
       }
