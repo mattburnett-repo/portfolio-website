@@ -21,14 +21,12 @@
     padding: 3rem 6rem;
     border-radius: var(--borderRadiusLo);
     box-shadow: var(--box-shadow-1);
-
     background: linear-gradient(to bottom,
         var(--color-tertiary-5),
         var(--color-tertiary-4));
     border: 1px solid rgba(255, 255, 255, 0.1);
     transform: translateY(0);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
     margin-top: 2rem;
 
     a {

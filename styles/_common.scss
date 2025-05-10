@@ -33,6 +33,7 @@ $color-tertiary-5: var(--color-tertiary-5);
 @mixin content-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
 }
