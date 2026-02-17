@@ -84,11 +84,6 @@
     }
   }
 
-  .skill-summary-container {
-    max-height: 70vh;
-    overflow-y: auto;
-  }
-
   .portfolio-detail {
     top: 5vh;
     width: 100%;
@@ -135,6 +130,9 @@
   .portfolio-container,
   .skill-summary-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-container {
     height: 67vh;
   }
 
@@ -163,10 +161,6 @@
 
   .portfolio-container {
     height: 40vh;
-  }
-
-  .skill-summary-container {
-    height: 44vh;
   }
 
   .skill-summary-container {
