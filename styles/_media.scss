@@ -386,8 +386,4 @@
   padding-top: 0;
 }
 
-.port-text,
-.other-info-text,
-.contact-text {
-  display: none;
-}
+// Text helpers are visible by default; hide per-section in layouts if needed.
