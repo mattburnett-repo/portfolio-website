@@ -126,7 +126,7 @@ section {
   justify-content: center;
   text-align: center;
   margin: 0 auto;
-  padding: 20px 60px;
+  padding: 80px 60px 20px;
   width: 80%;
   min-height: 100vh;
 }
@@ -171,46 +171,51 @@ html {
 .controls {
   position: fixed;
   z-index: 10;
-  top: 50%;
-  right: 3%;
+  top: 1.75rem;
+  left: 50%;
+  right: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  transform: translateY(-50%);
+  transform: translateX(-50%);
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background-color: rgba(0, 0, 0, 0.35);
+  box-shadow: var(--shadow-elevated);
+  backdrop-filter: blur(10px);
+  gap: 0.5rem;
   will-change: opacity, transform;
 }
 .controls .active-btn {
   background-color: var(--color-secondary) !important;
 }
 .controls .control {
-  padding: 1rem;
+  padding: 0.6rem 1.2rem;
   cursor: pointer;
   background-color: var(--color-tertiary-4);
-  width: 130px;
-  height: 50px;
-  border-radius: 8px;
-  width: 130px;
-  height: 50px;
-  border-radius: 8px;
+  min-width: 90px;
+  height: 42px;
+  border-radius: 999px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0.5rem 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.2s ease-out;
+  margin: 0 0.35rem;
+  box-shadow: var(--shadow-card);
+  border: var(--border-subtle);
+  transition: transform 0.2s ease-out, background-color 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 .controls .control.active-btn {
   background-color: var(--color-secondary);
-  transform: translateX(-10px);
+  transform: translateY(-3px);
   border-color: var(--color-secondary);
+  box-shadow: var(--shadow-card-hover);
 }
 .controls .control.active-btn span {
   color: var(--color-tertiary-0);
 }
 .controls .control:hover {
-  transform: translateX(-5px);
+  transform: translateY(-2px);
   background-color: var(--color-secondary);
 }
 .controls .control:hover span {
@@ -290,7 +295,8 @@ html {
   box-shadow: var(--box-shadow-1);
   border: 2px double silver;
   border-radius: var(--borderRadiusLo);
-  height: 840px;
+  margin-top: 2rem;
+  height: 720px;
   background-image: url("../images/techImage_02.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -341,7 +347,8 @@ html {
   margin-top: 3rem;
   padding-right: 1.5rem;
   padding-top: 10px;
-  height: 68vh;
+  max-height: 70vh;
+  overflow-y: auto;
 }
 .portfolio-container .portfolio-item {
   position: relative;
@@ -431,12 +438,11 @@ html {
 .section.portfolio .main-title .port-text {
   color: var(--color-white);
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 0.8rem;
   display: block;
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 0.5rem 0;
 }
 
 .portfolio-detail {
@@ -498,6 +504,11 @@ html {
 }
 .skill-summary-container .skill-summary-item {
   position: relative;
+  padding: 2rem 0;
+  box-shadow: var(--box-shadow-1);
+  border-radius: var(--borderRadiusLo);
+  background-color: var(--color-tertiary-5);
+  border-left: 1px solid var(--color-tertiary-5);
   padding: 1rem 0;
   min-height: 280px;
   box-shadow: var(--shadow-card);
@@ -508,7 +519,7 @@ html {
 }
 .skill-summary-container .skill-summary-item:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 .skill-summary-container .skill-summary-item .skill-summary-title {
   padding: 0.2rem 0.6rem;
@@ -516,9 +527,10 @@ html {
   background-color: var(--color-tertiary-4);
   border-radius: var(--borderRadiusHi);
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   font-weight: 500;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 .skill-summary-container .skill-summary-item .skill-summary-list {
@@ -528,9 +540,13 @@ html {
 }
 .skill-summary-container .skill-summary-item .skill-summary-list ul {
   text-align: left;
+  line-height: 2rem;
+  padding: 1rem;
+  color: var(--color-tertiary-1);
+}
+.skill-summary-container .skill-summary-item .skill-summary-list ul {
   padding: 0.5rem 1rem;
   line-height: 1.5rem;
-  color: var(--color-tertiary-1);
   font-size: 1rem;
 }
 .skill-summary-container .skill-summary-item p {
@@ -773,11 +789,6 @@ html {
     font-size: 4rem;
   }
 }
-.portfolio-container {
-  overflow-y: scroll;
-  max-height: 75vh;
-}
-
 .other-info-container .bg-text,
 .skill-summary-container .bg-text {
   width: 100%;
@@ -803,15 +814,9 @@ html {
   }
   .portfolio-container {
     grid-gap: 1rem;
-    max-height: 65vh;
-    overflow-y: scroll;
   }
   .portfolio-container .hover-item ul {
     font-size: 1rem;
-  }
-  .skill-summary-container {
-    max-height: 70vh;
-    overflow-y: auto;
   }
   .portfolio-detail {
     top: 5vh;
@@ -825,9 +830,6 @@ html {
   .home-container {
     padding: 1rem;
     line-height: 0.8rem;
-    height: 70vh;
-  }
-  .portfolio-container {
     height: 70vh;
   }
   .portfolio-container .portfolio-item h3 {
@@ -849,6 +851,8 @@ html {
   .portfolio-container,
   .skill-summary-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .portfolio-container {
     height: 67vh;
   }
   .other-info-container,
@@ -870,9 +874,6 @@ html {
   }
   .portfolio-container {
     height: 40vh;
-  }
-  .skill-summary-container {
-    height: 44vh;
   }
   .skill-summary-container {
     padding-right: 15px;

@@ -2,7 +2,8 @@
   @include content-container;
   padding-right: 1.5rem;
   padding-top: 10px;
-  height: 68vh;
+  max-height: 70vh;
+  overflow-y: auto;
 
   .portfolio-item {
     @include content-container-item;
@@ -103,12 +104,11 @@
     .port-text {
       color: var(--color-white);
       font-size: 1.1rem;
-      line-height: 1.6;
+      line-height: 0.8rem;
       display: block;
       position: relative;
       z-index: 1;
       text-align: center;
-      padding: 0.5rem 0;
     }
   }
 }
