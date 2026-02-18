@@ -1,0 +1,30 @@
+// Responsive breakpoint baseline
+// Use these variables for media queries across the project.
+
+// Width-based (portrait / general)
+$bp-xl: 1400px;  // Large desktop: bg-text hide, grid tweaks
+$bp-lg: 1100px;  // Desktop: nav moves to bottom, margins
+$bp-md: 860px;   // Tablet: grids to 1 col
+$bp-sm: 600px;   // Mobile portrait: tighter spacing
+$bp-xs: 420px;   // Small phones
+
+// Height-based (short/landscape viewports — use with orientation)
+$bp-height-short: 500px;   // Phone landscape, short viewport
+$bp-height-medium: 700px;  // Tablet landscape, medium height
+
+// Width-based (landscape orientation — narrow vs wide)
+$bp-landscape-narrow: 768px;   // Phone landscape (narrow)
+$bp-landscape-wide: 1024px;   // Tablet/laptop landscape (wide)
+
+// Orientation mixins
+@mixin landscape {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin portrait {
+  @media (orientation: portrait) {
+    @content;
+  }
+}
