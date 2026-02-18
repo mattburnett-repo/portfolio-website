@@ -157,25 +157,6 @@
   .skill-summary-container {
     padding-right: 15px;
   }
-
-  .controls {
-    top: auto;
-    bottom: 5rem;
-    flex-direction: row;
-    justify-content: center;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-
-    .control {
-      margin: .6rem 1rem !important;
-    }
-  }
-
-  .theme-btn {
-    width: 50px;
-    height: 50px;
-  }
 }
 
 @media screen and (max-width: 860px) {
@@ -189,10 +170,6 @@
   .other-info-container,
   .contact-container {
     margin-top: 0.5rem;
-  }
-
-  .theme-btn {
-    right: 1%;
   }
 }
 
@@ -328,12 +305,6 @@
   .skill-summary-container {
     grid-template-columns: 1fr;
   }
-
-  .theme-btn {
-    width: 35px;
-    height: 35px;
-    right: 1%;
-  }
 }
 
 @media screen and (max-width: 420px) {
@@ -379,6 +350,90 @@
 
   .other-info-text {
     display: none;
+  }
+}
+
+// Nav bar / controls responsiveness (breakpoint baseline)
+// Shorter labels for Skill Set / Other Info at 1100px and below
+.label-short {
+  display: none;
+}
+
+@media screen and (max-width: $bp-lg) {
+  .controls .control .label-full[data-id="skill-summary"],
+  .controls .control .label-full[data-id="other-info"] {
+    display: none;
+  }
+
+  .controls .control .label-short {
+    display: inline;
+  }
+  .controls {
+    top: auto;
+    bottom: 5rem;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    max-width: calc(100% - 2rem);
+
+    .control {
+      margin: 0.6rem 1rem !important;
+    }
+  }
+
+  .theme-btn {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: $bp-md) {
+  .theme-btn {
+    right: 1%;
+  }
+}
+
+@media screen and (max-width: $bp-sm) {
+  // JS replaces text with icons at 600px; show that span, hide short labels
+  .controls .control .label-full[data-id="skill-summary"],
+  .controls .control .label-full[data-id="other-info"] {
+    display: inline;
+  }
+
+  .controls .control .label-short {
+    display: none;
+  }
+
+  .controls .control {
+    min-width: 70px;
+    padding: 0.5rem 0.8rem;
+    margin: 0.5rem 0.4rem !important;
+  }
+
+  .theme-btn {
+    width: 44px;
+    height: 44px;
+    right: 1%;
+  }
+}
+
+@media screen and (max-width: $bp-xs) {
+  .controls {
+    width: calc(100% - 1.5rem);
+    padding: 0.25rem 0.5rem;
+    gap: 0.25rem;
+
+    .control {
+      min-width: 55px;
+      padding: 0.4rem 0.5rem;
+      margin: 0.4rem 0.25rem !important;
+
+      span {
+        font-size: 0.8rem;
+      }
+    }
   }
 }
 
