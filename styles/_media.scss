@@ -62,7 +62,16 @@
   }
 
   .portfolio-container {
-    height: 67vh;
+    max-height: 550px;
+
+    .portfolio-item {
+      padding: 1.25rem 0;
+
+      img {
+        width: 260px;
+        height: 173px;
+      }
+    }
   }
 
   .other-info-container,
@@ -79,10 +88,6 @@
   .other-info-container,
   .contact-container {
     margin-top: 3rem;
-  }
-
-  .portfolio-container {
-    height: 40vh;
   }
 
   .skill-summary-container {
@@ -105,6 +110,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .section.portfolio {
+    padding: 50px 60px 20px;
+  }
+
   .section {
     margin-top: 1rem;
     padding: 0px 0px;
@@ -239,6 +248,10 @@
 }
 
 @media screen and (max-width: 420px) {
+  .section.portfolio {
+    width: calc(25rem + 20px);
+  }
+
   .section {
     margin-top: 5rem;
     padding: 0px 0px;

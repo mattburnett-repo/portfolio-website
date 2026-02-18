@@ -343,11 +343,21 @@ html {
   opacity: 0.9;
 }
 
+.section.portfolio {
+  height: 100vh;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 80px 60px 20px;
+}
+
 .portfolio-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
+  flex: 1;
+  min-height: 0;
   padding-right: 1.5rem;
   padding-top: 10px;
   max-height: 70vh;
@@ -438,10 +448,15 @@ html {
   will-change: opacity, transform;
 }
 
+.section.portfolio .main-title h2 {
+  margin-bottom: 0.5rem;
+}
 .section.portfolio .main-title .port-text {
   color: var(--color-white);
   font-size: 1.1rem;
   line-height: 0.8rem;
+  margin: 0;
+  padding: 0;
   display: block;
   position: relative;
   z-index: 1;
@@ -807,7 +822,14 @@ html {
     grid-template-columns: repeat(2, 1fr);
   }
   .portfolio-container {
-    height: 67vh;
+    max-height: 550px;
+  }
+  .portfolio-container .portfolio-item {
+    padding: 1.25rem 0;
+  }
+  .portfolio-container .portfolio-item img {
+    width: 260px;
+    height: 173px;
   }
   .other-info-container,
   .skill-summary-container,
@@ -822,9 +844,6 @@ html {
   .other-info-container,
   .contact-container {
     margin-top: 3rem;
-  }
-  .portfolio-container {
-    height: 40vh;
   }
   .skill-summary-container {
     padding-right: 15px;
@@ -842,6 +861,9 @@ html {
   }
 }
 @media screen and (max-width: 600px) {
+  .section.portfolio {
+    padding: 50px 60px 20px;
+  }
   .section {
     margin-top: 1rem;
     padding: 0px 0px;
@@ -952,6 +974,9 @@ html {
   }
 }
 @media screen and (max-width: 420px) {
+  .section.portfolio {
+    width: calc(25rem + 20px);
+  }
   .section {
     margin-top: 5rem;
     padding: 0px 0px;
