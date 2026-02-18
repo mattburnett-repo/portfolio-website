@@ -848,6 +848,9 @@ html {
   .skill-summary-container {
     padding-right: 15px;
   }
+  .other-info-container {
+    height: calc(60vh - 100px);
+  }
 }
 @media screen and (max-width: 860px) {
   .section.skill-summary {
@@ -888,7 +891,7 @@ html {
   }
   .other-info-container {
     overflow-y: scroll;
-    height: 40vh;
+    height: calc(55vh - 45px);
   }
   .section {
     margin-top: 5rem;
@@ -897,7 +900,7 @@ html {
   }
   .other-info-container {
     overflow-y: scroll;
-    height: 40vh;
+    height: calc(55vh - 45px);
   }
   .section {
     margin-top: 5rem;
@@ -906,7 +909,7 @@ html {
   }
   .other-info-container {
     overflow-y: scroll;
-    height: 40vh;
+    height: calc(55vh - 45px);
   }
   .section {
     margin-top: 5rem;
@@ -915,7 +918,7 @@ html {
   }
   .other-info-container {
     overflow-y: scroll;
-    height: 40vh;
+    height: calc(55vh - 45px);
   }
   .section {
     margin-top: 5rem;
@@ -924,7 +927,7 @@ html {
   }
   .other-info-container {
     overflow-y: scroll;
-    height: 40vh;
+    height: calc(55vh - 45px);
   }
   .section {
     margin-top: 5rem;
@@ -933,7 +936,7 @@ html {
   }
   .other-info-container {
     overflow-y: scroll;
-    height: 40vh;
+    height: calc(55vh - 45px);
   }
   .section {
     margin-top: 5rem;
@@ -942,7 +945,7 @@ html {
   }
   .other-info-container {
     overflow-y: scroll;
-    height: 40vh;
+    height: calc(55vh - 45px);
   }
   .section {
     margin-top: 5rem;
@@ -951,7 +954,7 @@ html {
   }
   .other-info-container {
     overflow-y: scroll;
-    height: 40vh;
+    height: calc(55vh - 45px);
   }
   .section {
     margin-top: 5rem;
@@ -960,7 +963,7 @@ html {
   }
   .other-info-container {
     overflow-y: scroll;
-    height: 40vh;
+    height: calc(55vh - 45px);
   }
   .section {
     margin-top: 5rem;
@@ -969,7 +972,7 @@ html {
   }
   .other-info-container {
     overflow-y: scroll;
-    height: 40vh;
+    height: calc(55vh - 45px);
   }
   .section {
     margin-top: 5rem;
@@ -978,7 +981,7 @@ html {
   }
   .other-info-container {
     overflow-y: scroll;
-    height: 40vh;
+    height: calc(55vh - 45px);
   }
   .other-info-container,
   .skill-summary-container {
