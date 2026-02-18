@@ -850,10 +850,22 @@ html {
   }
 }
 @media screen and (max-width: 860px) {
+  .section.skill-summary {
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+  }
   .portfolio-container,
   .skill-summary-container {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
+  }
+  .skill-summary-container {
+    flex: 1;
+    min-height: 0;
+    max-height: 590px;
+    overflow-y: auto;
   }
   .other-info-container,
   .contact-container {
