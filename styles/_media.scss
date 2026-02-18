@@ -4,32 +4,6 @@
   }
 }
 
-@media screen and (max-width: 1565px) {
-  .home-container {
-    padding: 2rem;
-    line-height: 2rem;
-
-    height: 80vh;
-
-    .home-overlay {
-      h1 {
-        font-size: 2.5rem;
-        padding-bottom: 2rem;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-        padding-bottom: 2rem;
-      }
-
-      h4 {
-        font-size: 1rem;
-        line-height: 2rem;
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 1500px) {
   .sec5 .main-title .bg-text {
     font-size: 4rem;
@@ -44,29 +18,6 @@
 }
 
 @media screen and (max-width: 1375px) {
-  .home-container {
-    padding: 2rem;
-    line-height: 2rem;
-    height: 75vh;
-
-    .home-overlay {
-      h1 {
-        font-size: 2rem;
-        padding-bottom: 2rem;
-      }
-
-      h2 {
-        font-size: 1rem;
-        padding-bottom: 2rem;
-      }
-
-      h4 {
-        font-size: 1rem;
-        line-height: 2rem;
-      }
-    }
-  }
-
   .portfolio-container {
     grid-gap: 1rem;
 
@@ -88,13 +39,6 @@
 }
 
 @media screen and (max-width: 1360px) {
-  .home-container {
-    padding: 1rem;
-    line-height: .8rem;
-
-    height: 70vh;
-  }
-
   .portfolio-container {
     .portfolio-item {
       h3 {
@@ -112,12 +56,6 @@
 }
 
 @media screen and (max-width: 1320px) {
-  .home-container {
-    padding: .8rem;
-    line-height: .7rem;
-    height: 65vh;
-  }
-
   .portfolio-container,
   .skill-summary-container {
     grid-template-columns: repeat(2, 1fr);
@@ -135,13 +73,6 @@
 }
 
 @media screen and (max-width: 1100px) {
-
-  .home-overlay {
-    h4 {
-      display: none;
-    }
-  }
-
   .home-container,
   .portfolio-container,
   .skill-summary-container,
@@ -314,36 +245,6 @@
     width: 25rem;
   }
 
-  .home-container {
-    display: block;
-    height: 30vh;
-    margin: 150px auto;
-    background-image: none;
-
-    .home-overlay {
-      padding: 0;
-      line-height: .5rem;
-      width: 100%;
-      height: 100%;
-
-      h1 {
-        margin-top: 2rem;
-        font-size: 1.5rem;
-        line-height: 1rem;
-      }
-
-      h2 {
-        margin-top: 2rem;
-        font-size: 1rem;
-        line-height: 1.5rem;
-      }
-
-      h4 {
-        display: none;
-      }
-    }
-  }
-
   .main-title h2 {
     font-size: 2rem;
   }
@@ -432,6 +333,98 @@
 
       span {
         font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+// Home section responsiveness (breakpoint baseline)
+@media screen and (max-width: $bp-xl) {
+  .home-container {
+    padding: 2rem;
+    line-height: 2rem;
+    height: 75vh;
+
+    .home-overlay {
+      h1 {
+        font-size: 2rem;
+        padding-bottom: 2rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+        padding-bottom: 2rem;
+      }
+
+      h4 {
+        font-size: 1rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $bp-lg) {
+  .home-container {
+    padding: 0.8rem;
+    line-height: 1.5rem;
+    height: 65vh;
+
+    .home-overlay {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.35rem;
+      }
+
+      h4 {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $bp-xs) {
+  .home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    margin: 150px auto;
+    overflow: hidden;
+
+    .home-overlay {
+      padding: 0;
+      line-height: 1.25rem;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        line-height: 1rem;
+      }
+
+      h2 {
+        margin-top: 2rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+
+      h4 {
+        display: none;
       }
     }
   }
