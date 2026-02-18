@@ -1,0 +1,8 @@
+// Responsive breakpoint baseline
+// Use these variables for media queries across the project.
+
+$bp-xl: 1400px;  // Large desktop: bg-text hide, grid tweaks
+$bp-lg: 1100px; // Desktop: nav moves to bottom, margins
+$bp-md: 860px;  // Tablet: grids to 1 col
+$bp-sm: 600px;  // Mobile portrait: tighter spacing
+$bp-xs: 420px;  // Small phones

@@ -229,11 +229,6 @@ html {
   color: var(--color-white);
   transition: color 0.2s ease-out;
 }
-.controls .control:focus-visible {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 3px;
-  box-shadow: var(--shadow-card-hover);
-}
 
 .light-mode .control:hover:not(.active-btn) span {
   color: #ffffff !important;
@@ -257,11 +252,6 @@ html {
   cursor: pointer;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.theme-btn:focus-visible {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 3px;
-  box-shadow: var(--shadow-elevated);
 }
 .theme-btn:hover {
   transform: scale(1.1);
@@ -355,7 +345,6 @@ html {
 
 .portfolio-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
@@ -511,7 +500,6 @@ html {
 .skill-summary-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
   grid-template-columns: repeat(2, 1fr);
@@ -573,7 +561,6 @@ html {
 
 .other-info-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
@@ -689,10 +676,6 @@ html {
 .contact-container .contact-icons .contact-icon a {
   font-size: 2rem;
   margin: 0 1rem;
-}
-.contact-container .contact-icons .contact-icon a:focus-visible {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 3px;
 }
 .contact-container .contact-icons:hover {
   transform: translateY(-4px);
@@ -1081,10 +1064,4 @@ html {
 }
 .contact-container {
   padding-top: 0;
-}
-
-.port-text,
-.other-info-text,
-.contact-text {
-  display: none;
 }/*# sourceMappingURL=styles.css.map */
