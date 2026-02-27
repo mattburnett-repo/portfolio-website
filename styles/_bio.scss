@@ -1,0 +1,29 @@
+// Bio section
+
+.section.bio {
+  flex-direction: column;
+}
+
+.bio-container {
+  @include section-container;
+
+  max-width: 800px;
+  margin: 2rem auto 0;
+  padding: 2rem 2.5rem;
+
+  background-color: var(--color-tertiary-5);
+
+  p {
+    @include content-container-p-tag;
+
+    color: var(--color-tertiary-1);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: left;
+
+    &:not(:last-child) {
+      margin-bottom: 1.25rem;
+    }
+  }
+}
+

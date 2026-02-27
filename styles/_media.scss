@@ -293,6 +293,14 @@
   display: none;
 }
 
+// Position nav at bottom from 1400px downward, without changing labels yet
+@media screen and (max-width: $bp-xl) {
+  .controls {
+    top: auto;
+    bottom: 5rem;
+  }
+}
+
 @media screen and (max-width: $bp-lg) {
 
   .controls .control .label-full[data-id="skill-summary"],
@@ -305,8 +313,6 @@
   }
 
   .controls {
-    top: auto;
-    bottom: 5rem;
     flex-direction: row;
     justify-content: center;
     left: 50%;
@@ -358,19 +364,40 @@
 
 @media screen and (max-width: $bp-xs) {
   .controls {
-    width: calc(100% - 1.5rem);
-    padding: 0.25rem 0.5rem;
-    gap: 0.25rem;
+    width: calc(100% - 0.5rem);
+    padding: 0.2rem 0.4rem;
+    gap: 0.2rem;
 
     .control {
-      min-width: 55px;
-      padding: 0.4rem 0.5rem;
-      margin: 0.4rem 0.25rem !important;
+      min-width: 50px;
+      padding: 0.3rem 0.4rem;
+      margin: 0.35rem 0.2rem !important;
 
       span {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+
+        i {
+          font-size: 0.85rem;
+        }
       }
     }
+  }
+
+  // Bio section scroll behavior on small screens
+  .section.bio {
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+  }
+
+  .bio-container {
+    flex: 1;
+    min-height: 0;
+    max-height: calc(60vh - 50px);
+    overflow-y: auto;
+    padding-right: 1rem;
+    margin-top: 1.5rem;
   }
 }
 
