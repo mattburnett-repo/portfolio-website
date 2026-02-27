@@ -97,7 +97,7 @@
   }
 
   .other-info-container {
-    height: calc(60vh - 100px);
+    height: calc(60vh - 200px);
   }
 }
 
@@ -135,130 +135,14 @@
   }
 
   .section {
-    margin-top: 1rem;
-    padding: 0px 0px;
-    width: 35rem;
-  }
-
-  .section {
     margin-top: 5rem;
-    padding: 0px;
+    padding: 0;
     width: 35rem;
   }
 
   .other-info-container {
     overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
+    height: calc(55vh - 150px);
   }
 
   .other-info-container,
@@ -284,6 +168,10 @@
 
   .other-info-text {
     display: none;
+  }
+
+  .other-info-container {
+    height: calc(55vh - 100px);
   }
 }
 
@@ -381,6 +269,11 @@
         }
       }
     }
+  }
+
+  .section.skill-summary {
+    width: 100%;
+    padding: 0;
   }
 
   // Bio section scroll behavior on small screens

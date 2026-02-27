@@ -229,11 +229,6 @@ html {
   color: var(--color-white);
   transition: color 0.2s ease-out;
 }
-.controls .control:focus-visible {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 3px;
-  box-shadow: var(--shadow-card-hover);
-}
 
 .light-mode .control:hover:not(.active-btn) span {
   color: #ffffff !important;
@@ -257,11 +252,6 @@ html {
   cursor: pointer;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.theme-btn:focus-visible {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 3px;
-  box-shadow: var(--shadow-elevated);
 }
 .theme-btn:hover {
   transform: scale(1.1);
@@ -598,6 +588,9 @@ html {
   padding: 1rem;
   color: var(--color-tertiary-1);
 }
+.skill-summary-container .skill-summary-item .skill-summary-list {
+  align-items: flex-start;
+}
 .skill-summary-container .skill-summary-item .skill-summary-list ul {
   padding: 0.5rem 1rem;
   line-height: 1.5rem;
@@ -730,10 +723,6 @@ html {
 .contact-container .contact-icons .contact-icon a {
   font-size: 2rem;
   margin: 0 1rem;
-}
-.contact-container .contact-icons .contact-icon a:focus-visible {
-  outline: 2px solid var(--color-secondary);
-  outline-offset: 3px;
 }
 .contact-container .contact-icons:hover {
   transform: translateY(-4px);
@@ -892,7 +881,7 @@ html {
     padding-right: 15px;
   }
   .other-info-container {
-    height: calc(60vh - 100px);
+    height: calc(60vh - 200px);
   }
 }
 @media screen and (max-width: 860px) {
@@ -923,108 +912,13 @@ html {
     padding: 50px 60px 20px;
   }
   .section {
-    margin-top: 1rem;
-    padding: 0px 0px;
-    width: 35rem;
-  }
-  .section {
     margin-top: 5rem;
-    padding: 0px;
+    padding: 0;
     width: 35rem;
   }
   .other-info-container {
     overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
-  }
-  .section {
-    margin-top: 5rem;
-    padding: 0px;
-    width: 35rem;
-  }
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 45px);
+    height: calc(55vh - 150px);
   }
   .other-info-container,
   .skill-summary-container {
@@ -1045,6 +939,9 @@ html {
   }
   .other-info-text {
     display: none;
+  }
+  .other-info-container {
+    height: calc(55vh - 100px);
   }
 }
 .label-short {
@@ -1122,6 +1019,10 @@ html {
   }
   .controls .control span i {
     font-size: 0.85rem;
+  }
+  .section.skill-summary {
+    width: 100%;
+    padding: 0;
   }
   .section.bio {
     height: 100vh;
