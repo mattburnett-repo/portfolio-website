@@ -353,6 +353,32 @@ html {
   opacity: 0.9;
 }
 
+.section.bio {
+  flex-direction: column;
+}
+
+.bio-container {
+  box-shadow: var(--box-shadow-1);
+  border: 2px double silver;
+  border-radius: var(--borderRadiusLo);
+  max-width: 800px;
+  margin: 2rem auto 0;
+  padding: 2rem 2.5rem;
+  background-color: var(--color-tertiary-5);
+}
+.bio-container p p {
+  color: var(--color-tertiary-2);
+}
+.bio-container p {
+  color: var(--color-tertiary-1);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: left;
+}
+.bio-container p:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
 .section.portfolio {
   height: 100vh;
   min-height: 100vh;
@@ -1025,6 +1051,12 @@ html {
   display: none;
 }
 
+@media screen and (max-width: 1400px) {
+  .controls {
+    top: auto;
+    bottom: 5rem;
+  }
+}
 @media screen and (max-width: 1100px) {
   .controls .control .label-full[data-id=skill-summary],
   .controls .control .label-full[data-id=other-info] {
@@ -1034,8 +1066,6 @@ html {
     display: inline;
   }
   .controls {
-    top: auto;
-    bottom: 5rem;
     flex-direction: row;
     justify-content: center;
     left: 50%;
@@ -1078,17 +1108,34 @@ html {
 }
 @media screen and (max-width: 420px) {
   .controls {
-    width: calc(100% - 1.5rem);
-    padding: 0.25rem 0.5rem;
-    gap: 0.25rem;
+    width: calc(100% - 0.5rem);
+    padding: 0.2rem 0.4rem;
+    gap: 0.2rem;
   }
   .controls .control {
-    min-width: 55px;
-    padding: 0.4rem 0.5rem;
-    margin: 0.4rem 0.25rem !important;
+    min-width: 50px;
+    padding: 0.3rem 0.4rem;
+    margin: 0.35rem 0.2rem !important;
   }
   .controls .control span {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+  }
+  .controls .control span i {
+    font-size: 0.85rem;
+  }
+  .section.bio {
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+  }
+  .bio-container {
+    flex: 1;
+    min-height: 0;
+    max-height: calc(60vh - 50px);
+    overflow-y: auto;
+    padding-right: 1rem;
+    margin-top: 1.5rem;
   }
 }
 @media screen and (max-width: 1400px) {

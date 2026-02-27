@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Media query support for nav buttons. Icons replace text on smaller screens.
       this.mediaQuery_mw_600 = window.matchMedia('(max-width: 600px)');
       this.el_home = document.querySelector('span[data-id="home"]');
+      this.el_bio = document.querySelector('span[data-id="bio"]');
       this.el_portfolio = document.querySelector('span[data-id="portfolio"]');
       this.el_skillset = document.querySelector('span[data-id="skill-summary"]');
       this.el_other_info = document.querySelector('span[data-id="other-info"]');
@@ -91,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     replaceTextWithIcon() {
       this.el_home.innerHTML = '<i class="fas fa-home"></i>';
+      this.el_bio.innerHTML = '<i class="fas fa-user"></i>';
       this.el_portfolio.innerHTML = '<i class="fas fa-briefcase"></i>';
       this.el_skillset.innerHTML = '<i class="fas fa-code"></i>';
       this.el_other_info.innerHTML = '<i class="fas fa-info-circle"></i>';
@@ -98,6 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     resetSpanText() {
       this.el_home.innerHTML = 'Home';
+      this.el_bio.innerHTML = 'Bio';
       this.el_portfolio.innerHTML = 'Portfolio';
       this.el_skillset.innerHTML = 'Skill Set';
       this.el_other_info.innerHTML = 'Other Info';
