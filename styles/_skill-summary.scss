@@ -25,6 +25,7 @@
 
     .skill-summary-list {
       @include content-container-item-list;
+      align-items: flex-start;
 
       ul {
         padding: 0.5rem 1rem;
