@@ -295,14 +295,24 @@ html {
   box-shadow: var(--box-shadow-1);
   border: 2px double silver;
   border-radius: var(--borderRadiusLo);
+  position: relative;
+  overflow: hidden;
   margin-top: 2rem;
   height: 720px;
-  background-image: url("../images/techImage_02.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+}
+.home-container .home-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
 }
 .home-container .home-overlay {
+  position: relative;
+  z-index: 1;
   background-color: black;
   border: var(--innerBorder);
   border-radius: var(--borderRadiusLo);
