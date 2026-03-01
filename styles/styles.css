@@ -396,7 +396,7 @@ h6 {
   min-height: 0;
   padding-right: 1.5rem;
   padding-top: 10px;
-  max-height: 70vh;
+  max-height: 72vh;
   overflow-y: auto;
 }
 .portfolio-container .portfolio-item {
@@ -685,10 +685,6 @@ h6 {
 }
 
 @media screen and (max-width: 1400px) {
-  .controls {
-    top: auto;
-    bottom: 5rem;
-  }
   .home-container {
     padding: 2rem;
     line-height: 2rem;
@@ -702,41 +698,33 @@ h6 {
     font-size: 1rem;
     padding-bottom: 2rem;
   }
-}
-@media screen and (max-width: 1200px) {
-  .other-info-container {
-    grid-template-columns: 1fr;
-    max-width: 600px;
-    height: 60vh;
-    overflow-y: auto;
-    padding-right: 1.5rem;
-    margin: 2rem auto;
-    scrollbar-width: thin;
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 42vh;
   }
-  .other-info-container::-webkit-scrollbar {
-    width: 8px;
+  .portfolio-detail {
+    top: 10vh;
+    width: 90%;
   }
-  .other-info-container::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  .other-info-container::-webkit-scrollbar-thumb {
-    background-color: var(--color-tertiary-4);
-    border-radius: 4px;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .home-container,
-  .portfolio-container,
   .skill-summary-container,
-  .other-info-container,
-  .contact-container {
-    margin-top: 3rem;
-  }
-  .skill-summary-container {
-    padding-right: 15px;
+  .other-info-container {
+    grid-gap: 1rem;
+    margin-top: 2rem;
   }
   .other-info-container {
-    height: calc(60vh - 200px);
+    grid-template-columns: repeat(2, 1fr);
+    flex: 1;
+    padding-top: 10px;
+    padding-right: 1.5rem;
+    min-height: 0;
+    max-height: 55vh;
+    overflow-y: auto;
+  }
+  .section.other-info {
+    height: 100vh;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
   }
   .controls .control .label-full[data-id=skill-summary],
   .controls .control .label-full[data-id=other-info] {
@@ -745,17 +733,45 @@ h6 {
   .controls .control .label-short {
     display: inline;
   }
-  .controls {
-    flex-direction: row;
-    justify-content: center;
-    left: 50%;
-    transform: translateX(-50%);
-    width: -moz-fit-content;
-    width: fit-content;
-    max-width: calc(100% - 2rem);
+}
+@media screen and (max-width: 1100px) {
+  .home-container,
+  .bio-container,
+  .portfolio-container,
+  .skill-summary-container,
+  .other-info-container,
+  .contact-container {
+    margin-top: 1rem;
   }
-  .controls .control {
-    margin: 0.6rem 1rem !important;
+  .section.bio {
+    height: 100vh;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  .bio-container {
+    flex: 1;
+    max-height: 70vh;
+    margin: 1rem auto 0;
+    padding: 1rem;
+  }
+  .portfolio-container {
+    top: 5vh;
+    max-height: 55vh;
+  }
+  .skill-summary-container {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    flex: 1;
+    min-height: 0;
+    max-height: 48vh;
+    overflow-y: auto;
+    padding-top: 10px;
+    padding-right: 15px;
+  }
+  .other-info-container {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    max-height: 68vh;
   }
   .theme-btn {
     width: 50px;
@@ -780,47 +796,78 @@ h6 {
   }
 }
 @media screen and (max-width: 860px) {
-  .section.skill-summary {
-    height: 100vh;
-    min-height: 100vh;
-    overflow: hidden;
-    flex-direction: column;
+  .section {
+    padding-top: 0.5rem;
   }
-  .portfolio-container,
-  .skill-summary-container {
+  .controls {
+    top: auto;
+    bottom: 1rem;
+  }
+  .bio-container {
+    overflow: auto;
+    max-height: 60vh;
+  }
+  .section.portfolio {
+    padding-top: 0;
+  }
+  .portfolio-container {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
+    max-height: 53vh;
   }
-  .skill-summary-container {
-    flex: 1;
-    min-height: 0;
-    max-height: 590px;
-    overflow-y: auto;
+  .portfolio-container .portfolio-item {
+    padding: 1rem 0;
   }
-  .other-info-container,
-  .contact-container {
-    margin-top: 0.5rem;
+  .portfolio-container .portfolio-item img {
+    width: 240px;
+    height: 160px;
+  }
+  .portfolio-container .portfolio-item .hover-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .portfolio-container .portfolio-item .hover-item .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .portfolio-container .portfolio-item .hover-item .icon i {
+    font-size: 1.2rem;
+  }
+  .skill-summary-container,
+  .other-info-container {
+    max-height: 60vh;
   }
   .theme-btn {
-    right: 1%;
+    right: 3%;
   }
 }
 @media screen and (max-width: 600px) {
-  .section.portfolio {
-    padding: 50px 60px 20px;
-  }
   .section {
-    margin-top: 5rem;
+    margin-top: 2rem;
     padding: 0;
     width: 35rem;
   }
+  .theme-btn {
+    display: none;
+  }
+  .bio-container {
+    max-height: 70vh;
+  }
+  .portfolio-container {
+    max-height: 60vh;
+  }
+  .portfolio-detail {
+    top: 2vh;
+    width: 90%;
+  }
+  .skill-summary-container,
   .other-info-container {
     overflow-y: scroll;
-    height: calc(55vh - 150px);
-  }
-  .other-info-container,
-  .skill-summary-container {
     grid-template-columns: 1fr;
+    max-height: 70vh;
+  }
+  .other-info-container {
+    max-height: 50vh;
   }
   .controls .control .label-full[data-id=skill-summary],
   .controls .control .label-full[data-id=other-info] {
@@ -834,26 +881,25 @@ h6 {
     padding: 0.5rem 0.8rem;
     margin: 0.5rem 0.4rem !important;
   }
-  .theme-btn {
-    width: 44px;
-    height: 44px;
-    right: 1%;
-  }
 }
 @media screen and (max-width: 420px) {
-  .section.portfolio {
-    width: calc(25rem + 20px);
-  }
   .section {
-    margin-top: 5rem;
+    margin-top: 1rem;
     padding: 0px;
     width: 25rem;
+  }
+  .bio-container {
+    max-height: 75vh;
   }
   .main-title h2 {
     font-size: 2rem;
   }
+  .skill-summary-container {
+    width: 95%;
+    margin: 0 auto;
+  }
   .other-info-container {
-    height: calc(55vh - 100px);
+    max-height: 58vh;
   }
   .controls {
     width: calc(100% - 0.5rem);
@@ -874,20 +920,6 @@ h6 {
   .section.skill-summary {
     width: 100%;
     padding: 0;
-  }
-  .section.bio {
-    height: 100vh;
-    min-height: 100vh;
-    overflow: hidden;
-    flex-direction: column;
-  }
-  .bio-container {
-    flex: 1;
-    min-height: 0;
-    max-height: calc(60vh - 50px);
-    overflow-y: auto;
-    padding-right: 1rem;
-    margin-top: 1.5rem;
   }
   .home-container {
     display: flex;
