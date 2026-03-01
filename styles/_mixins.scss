@@ -25,7 +25,9 @@
   box-shadow: var(--box-shadow-1);
   border-radius: var(--borderRadiusLo);
   background-color: var(--color-tertiary-5);
-  border-left: 1px solid var(--color-tertiary-5);
+
+  border: var(--innerBorder);
+  transition: var(--transition-transform-shadow);
 }
 
 @mixin content-container-item-title {

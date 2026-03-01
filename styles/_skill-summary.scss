@@ -7,10 +7,8 @@
     // Skill summary specific tweaks
     padding: 1rem 0;
     min-height: 280px;
-    box-shadow: var(--shadow-card);
+    box-shadow: var(--box-shadow-1);
     background-color: var(--color-tertiary-5);
-    border: var(--border-subtle);
-    transition: var(--transition-transform-shadow);
 
     &:hover {
       transform: translateY(-4px);

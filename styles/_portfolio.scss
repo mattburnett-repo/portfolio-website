@@ -4,6 +4,24 @@
   flex-direction: column;
   overflow: hidden;
   padding: var(--padding-section);
+
+  .main-title {
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .port-text {
+      color: var(--color-white);
+      font-size: 1.1rem;
+      line-height: 0.8rem;
+      margin: 0;
+      padding: 0;
+      display: block;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+  }
 }
 
 .portfolio-container {
@@ -104,26 +122,6 @@
   transform: scale(1);
   cursor: pointer;
   will-change: opacity, transform;
-}
-
-.section.portfolio {
-  .main-title {
-    h2 {
-      margin-bottom: 0.5rem;
-    }
-
-    .port-text {
-      color: var(--color-white);
-      font-size: 1.1rem;
-      line-height: 0.8rem;
-      margin: 0;
-      padding: 0;
-      display: block;
-      position: relative;
-      z-index: 1;
-      text-align: center;
-    }
-  }
 }
 
 .portfolio-detail {
