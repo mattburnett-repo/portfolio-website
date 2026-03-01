@@ -782,66 +782,31 @@ h6 {
   transform: translateX(0);
 }
 
-@media screen and (max-width: 1750px) {
-  .sec5 .main-title .bg-text {
-    font-size: 5rem;
-  }
-}
-@media screen and (max-width: 1500px) {
-  .sec5 .main-title .bg-text {
-    font-size: 4rem;
-  }
-}
-.other-info-container .bg-text,
-.skill-summary-container .bg-text {
-  width: 100%;
+.label-short {
+  display: none;
 }
 
-@media screen and (max-width: 1375px) {
-  .portfolio-container {
-    grid-gap: 1rem;
+@media screen and (max-width: 1400px) {
+  .controls {
+    top: auto;
+    bottom: 5rem;
   }
-  .portfolio-container .hover-item ul {
+  .home-container {
+    padding: 2rem;
+    line-height: 2rem;
+    height: 75vh;
+  }
+  .home-container .home-overlay h1 {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+  }
+  .home-container .home-overlay h2 {
     font-size: 1rem;
+    padding-bottom: 2rem;
   }
-  .portfolio-detail {
-    top: 5vh;
-    width: 100%;
-  }
-  .bg-text {
-    display: none;
-  }
-}
-@media screen and (max-width: 1360px) {
-  .portfolio-container .portfolio-item h3 {
+  .home-container .home-overlay h4 {
     font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-  .portfolio-container,
-  .other-info-container,
-  .skill-summary-container {
-    margin-top: 0.5rem;
-  }
-}
-@media screen and (max-width: 1320px) {
-  .portfolio-container,
-  .skill-summary-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .portfolio-container {
-    max-height: 550px;
-  }
-  .portfolio-container .portfolio-item {
-    padding: 1.25rem 0;
-  }
-  .portfolio-container .portfolio-item img {
-    width: 260px;
-    height: 173px;
-  }
-  .other-info-container,
-  .skill-summary-container,
-  .contact-container {
-    margin-top: 0.5rem;
+    line-height: 2rem;
   }
 }
 @media screen and (max-width: 1100px) {
@@ -857,6 +822,49 @@ h6 {
   }
   .other-info-container {
     height: calc(60vh - 200px);
+  }
+  .controls .control .label-full[data-id=skill-summary],
+  .controls .control .label-full[data-id=other-info] {
+    display: none;
+  }
+  .controls .control .label-short {
+    display: inline;
+  }
+  .controls {
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: calc(100% - 2rem);
+  }
+  .controls .control {
+    margin: 0.6rem 1rem !important;
+  }
+  .theme-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .home-container {
+    padding: 0.8rem;
+    line-height: 1.5rem;
+    height: 65vh;
+  }
+  .home-container .home-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .home-container .home-overlay h1 {
+    font-size: 2.5rem;
+  }
+  .home-container .home-overlay h2 {
+    font-size: 1.35rem;
+  }
+  .home-container .home-overlay h4 {
+    display: none;
   }
 }
 @media screen and (max-width: 860px) {
@@ -881,6 +889,9 @@ h6 {
   .contact-container {
     margin-top: 0.5rem;
   }
+  .theme-btn {
+    right: 1%;
+  }
 }
 @media screen and (max-width: 600px) {
   .section.portfolio {
@@ -898,6 +909,23 @@ h6 {
   .other-info-container,
   .skill-summary-container {
     grid-template-columns: 1fr;
+  }
+  .controls .control .label-full[data-id=skill-summary],
+  .controls .control .label-full[data-id=other-info] {
+    display: inline;
+  }
+  .controls .control .label-short {
+    display: none;
+  }
+  .controls .control {
+    min-width: 70px;
+    padding: 0.5rem 0.8rem;
+    margin: 0.5rem 0.4rem !important;
+  }
+  .theme-btn {
+    width: 44px;
+    height: 44px;
+    right: 1%;
   }
 }
 @media screen and (max-width: 420px) {
@@ -918,67 +946,6 @@ h6 {
   .other-info-container {
     height: calc(55vh - 100px);
   }
-}
-.label-short {
-  display: none;
-}
-
-@media screen and (max-width: 1400px) {
-  .controls {
-    top: auto;
-    bottom: 5rem;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .controls .control .label-full[data-id=skill-summary],
-  .controls .control .label-full[data-id=other-info] {
-    display: none;
-  }
-  .controls .control .label-short {
-    display: inline;
-  }
-  .controls {
-    flex-direction: row;
-    justify-content: center;
-    left: 50%;
-    transform: translateX(-50%);
-    width: -moz-fit-content;
-    width: fit-content;
-    max-width: calc(100% - 2rem);
-  }
-  .controls .control {
-    margin: 0.6rem 1rem !important;
-  }
-  .theme-btn {
-    width: 50px;
-    height: 50px;
-  }
-}
-@media screen and (max-width: 860px) {
-  .theme-btn {
-    right: 1%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .controls .control .label-full[data-id=skill-summary],
-  .controls .control .label-full[data-id=other-info] {
-    display: inline;
-  }
-  .controls .control .label-short {
-    display: none;
-  }
-  .controls .control {
-    min-width: 70px;
-    padding: 0.5rem 0.8rem;
-    margin: 0.5rem 0.4rem !important;
-  }
-  .theme-btn {
-    width: 44px;
-    height: 44px;
-    right: 1%;
-  }
-}
-@media screen and (max-width: 420px) {
   .controls {
     width: calc(100% - 0.5rem);
     padding: 0.2rem 0.4rem;
@@ -1013,49 +980,6 @@ h6 {
     padding-right: 1rem;
     margin-top: 1.5rem;
   }
-}
-@media screen and (max-width: 1400px) {
-  .home-container {
-    padding: 2rem;
-    line-height: 2rem;
-    height: 75vh;
-  }
-  .home-container .home-overlay h1 {
-    font-size: 2rem;
-    padding-bottom: 2rem;
-  }
-  .home-container .home-overlay h2 {
-    font-size: 1rem;
-    padding-bottom: 2rem;
-  }
-  .home-container .home-overlay h4 {
-    font-size: 1rem;
-    line-height: 2rem;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .home-container {
-    padding: 0.8rem;
-    line-height: 1.5rem;
-    height: 65vh;
-  }
-  .home-container .home-overlay {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .home-container .home-overlay h1 {
-    font-size: 2.5rem;
-  }
-  .home-container .home-overlay h2 {
-    font-size: 1.35rem;
-  }
-  .home-container .home-overlay h4 {
-    display: none;
-  }
-}
-@media screen and (max-width: 420px) {
   .home-container {
     display: flex;
     align-items: center;
