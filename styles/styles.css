@@ -27,9 +27,14 @@
   --opacityMed: 0.65;
   --opacityLo: 0.8;
   --br-sm-2: 14px;
+  --radius-circle: 50%;
+  --padding-section: 80px 60px 20px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
+  --box-shadow-card-hover: 0 8px 16px rgba(0, 0, 0, 0.1);
   --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-transform-default: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-anim-default: scaleAnim .9s ease-in-out;
+  --transition-transform-shadow: transform 0.3s ease, box-shadow 0.3s ease;
   --button-scale-default: .9;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -79,7 +84,7 @@ body {
   font-size: 1.1rem;
   font-weight: 400;
   color: var(--color-white);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-default);
   animation: gradientShift 25s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   line-height: 1.6;
   letter-spacing: 0.2px;
@@ -120,7 +125,7 @@ section {
   justify-content: center;
   text-align: center;
   margin: 0 auto;
-  padding: 80px 60px 20px;
+  padding: var(--padding-section);
   width: 80%;
   min-height: 100vh;
 }
@@ -246,11 +251,11 @@ h6 {
   right: 2.55%;
   width: 70px;
   height: 70px;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   background-color: var(--color-secondary);
   cursor: pointer;
   box-shadow: var(--box-shadow-1);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-transform-default);
 }
 .theme-btn:hover {
   transform: scale(1.1);
@@ -379,7 +384,7 @@ h6 {
   min-height: 100vh;
   flex-direction: column;
   overflow: hidden;
-  padding: 80px 60px 20px;
+  padding: var(--padding-section);
 }
 
 .portfolio-container {
@@ -401,7 +406,7 @@ h6 {
   border-radius: var(--borderRadiusLo);
   background-color: var(--color-tertiary-5);
   border-left: 1px solid var(--color-tertiary-5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: var(--transition-transform-shadow);
   background-color: var(--color-tertiary-6);
 }
 .portfolio-container .portfolio-item:hover {
@@ -452,7 +457,7 @@ h6 {
   align-items: center;
   justify-content: center;
   background-color: var(--color-primary);
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   width: 50px;
   height: 50px;
   margin: 0 1rem;
@@ -562,11 +567,11 @@ h6 {
   box-shadow: var(--shadow-card);
   background-color: var(--color-tertiary-5);
   border: var(--border-subtle);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: var(--transition-transform-shadow);
 }
 .skill-summary-container .skill-summary-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow-card-hover);
 }
 .skill-summary-container .skill-summary-item .skill-summary-title {
   padding: 0.2rem 0.6rem;
@@ -621,11 +626,11 @@ h6 {
   border-radius: var(--borderRadiusLo);
   background-color: var(--color-tertiary-5);
   border-left: 1px solid var(--color-tertiary-5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: var(--transition-transform-shadow);
 }
 .other-info-container .other-info-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow-card-hover);
 }
 .other-info-container .other-info-item .other-info-title {
   padding: 0.2rem 0.6rem;
@@ -706,11 +711,11 @@ h6 {
   background: linear-gradient(to bottom, var(--color-tertiary-5), var(--color-tertiary-4));
   border: 1px solid rgba(255, 255, 255, 0.1);
   transform: translateY(0);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-transform-default);
   margin-top: 2rem;
 }
 .contact-container .contact-icons a {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-default);
   display: inline-block;
 }
 .contact-container .contact-icons a:hover {
@@ -763,7 +768,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   padding: 1rem;
 }
 .main-btn::before {

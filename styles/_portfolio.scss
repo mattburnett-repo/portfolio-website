@@ -3,7 +3,7 @@
   min-height: 100vh;
   flex-direction: column;
   overflow: hidden;
-  padding: 80px 60px 20px;
+  padding: var(--padding-section);
 }
 
 .portfolio-container {
@@ -17,7 +17,7 @@
 
   .portfolio-item {
     @include content-container-item;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: var(--transition-transform-shadow);
     background-color: var(--color-tertiary-6);
 
     &:hover {
@@ -75,7 +75,7 @@
           justify-content: center;
 
           background-color: var(--color-primary);
-          border-radius: 50%;
+          border-radius: var(--radius-circle);
           width: 50px;
           height: 50px;
           margin: 0 1rem;

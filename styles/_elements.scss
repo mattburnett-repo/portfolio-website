@@ -13,7 +13,7 @@ body {
   font-size: 1.1rem;
   font-weight: 400;
   color: var(--color-white);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-default);
   animation: gradientShift 25s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   line-height: 1.6;
   letter-spacing: 0.2px;
@@ -59,7 +59,7 @@ section {
   justify-content: center;
   text-align: center;
   margin: 0 auto;
-  padding: 80px 60px 20px;
+  padding: var(--padding-section);
   width: 80%;
   min-height: 100vh;
 }

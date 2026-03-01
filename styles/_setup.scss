@@ -45,9 +45,14 @@ $bp-xs: 420px; // Small phones
   --opacityLo: 0.8;
 
   --br-sm-2: 14px;
+  --radius-circle: 50%;
+  --padding-section: 80px 60px 20px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
+  --box-shadow-card-hover: 0 8px 16px rgba(0, 0, 0, 0.1);
   --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-transform-default: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-anim-default: scaleAnim .9s ease-in-out;
+  --transition-transform-shadow: transform 0.3s ease, box-shadow 0.3s ease;
   --button-scale-default: .9;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

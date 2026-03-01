@@ -3,11 +3,11 @@
 
   .other-info-item {
     @include content-container-item;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: var(--transition-transform-shadow);
 
     &:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--box-shadow-card-hover);
     }
 
     .other-info-title {

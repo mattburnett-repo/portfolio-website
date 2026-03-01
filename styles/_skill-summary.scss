@@ -10,11 +10,11 @@
     box-shadow: var(--shadow-card);
     background-color: var(--color-tertiary-5);
     border: var(--border-subtle);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: var(--transition-transform-shadow);
 
     &:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--box-shadow-card-hover);
     }
 
     .skill-summary-title {
