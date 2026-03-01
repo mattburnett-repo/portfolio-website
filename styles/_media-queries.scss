@@ -63,6 +63,31 @@ $bp-xs: 420px; // Small phones
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .other-info-container {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    height: 60vh;
+    overflow-y: auto;
+    padding-right: 1.5rem;
+    margin: 2rem auto;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--color-tertiary-4);
+      border-radius: 4px;
+    }
+  }
+}
+
 // --- $bp-lg (1100px) ---
 @media screen and (max-width: $bp-lg) {
 
