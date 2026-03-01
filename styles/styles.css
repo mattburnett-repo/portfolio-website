@@ -811,6 +811,22 @@ h6 {
   }
   .home-container .home-overlay h4 {
     font-size: 1rem;
+  }
+  .home-container {
+    padding: 2rem;
+    line-height: 2rem;
+    height: 75vh;
+  }
+  .home-container .home-overlay h1 {
+    font-size: 2rem;
+    padding-bottom: 2rem;
+  }
+  .home-container .home-overlay h2 {
+    font-size: 1rem;
+    padding-bottom: 2rem;
+  }
+  .home-container .home-overlay h4 {
+    font-size: 1rem;
     line-height: 2rem;
   }
 }
