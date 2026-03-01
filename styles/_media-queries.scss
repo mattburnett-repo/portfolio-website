@@ -3,6 +3,8 @@
   display: none;
 }
 
+//  Breakpoint vars ($bp-xxx) come from _setup.scss, at the top of the file.
+
 // --- $bp-xl (1400px) ---
 @media screen and (max-width: $bp-xl) {
   .controls {
@@ -36,6 +38,7 @@
 
 // --- $bp-lg (1100px) ---
 @media screen and (max-width: $bp-lg) {
+
   .home-container,
   .portfolio-container,
   .skill-summary-container,
