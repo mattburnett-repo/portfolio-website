@@ -1,3 +1,12 @@
+// https: //mattburnett-repo.github.io/blog/2026/03/01/Media-Query-Breakpoints-Test-Set.html
+// Chrome and Firefox recommended test 'device' dimensions (width × height)
+
+// bp-01-xl 1400px x 788px Large desktop 
+// bp-02-lg 1100px x 619px Desktop 
+// bp-03-md 860px x 484px Tablet 
+// bp-04-sm 600px x 844px Large phone 
+// bp-05-xs 420px x 844px Small phone
+
 // Responsive breakpoint variables
 $bp-xl: 1400px; // Large desktop: bg-text hide, grid tweaks
 $bp-lg: 1100px; // Desktop: nav moves to bottom, margins

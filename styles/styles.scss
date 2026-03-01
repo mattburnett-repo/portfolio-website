@@ -1,11 +1,13 @@
+// Foundation. Globals and base elements (shared page/section shell).
 @import './setup';
-@import './elements';
+@import './base-html-elements';
 
+// Global UI.
 @import './section-transition-animation';
 @import './nav-btns';
 @import './theme-btn';
 
-// Sections
+// Sections (content layout).
 @import './mixins';
 @import './home';
 @import './bio';
@@ -14,5 +16,5 @@
 @import './other-info';
 @import './contact';
 
-// Responsiveness stuff
+// Responsiveness.
 @import './media-queries';
