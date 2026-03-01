@@ -703,8 +703,8 @@ h6 {
     max-height: 42vh;
   }
   .portfolio-detail {
-    top: 5vh;
-    max-width: 100%;
+    top: 10vh;
+    width: 90%;
   }
   .skill-summary-container,
   .other-info-container {
@@ -734,52 +734,44 @@ h6 {
     display: inline;
   }
 }
-@media screen and (max-width: 1200px) {
-  .other-info-container {
-    grid-template-columns: 1fr;
-    max-width: 600px;
-    height: 60vh;
-    overflow-y: auto;
-    padding-right: 1.5rem;
-    margin: 2rem auto;
-    scrollbar-width: thin;
-  }
-  .other-info-container::-webkit-scrollbar {
-    width: 8px;
-  }
-  .other-info-container::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  .other-info-container::-webkit-scrollbar-thumb {
-    background-color: var(--color-tertiary-4);
-    border-radius: 4px;
-  }
-}
 @media screen and (max-width: 1100px) {
   .home-container,
+  .bio-container,
   .portfolio-container,
   .skill-summary-container,
   .other-info-container,
   .contact-container {
-    margin-top: 3rem;
+    margin-top: 1rem;
+  }
+  .section.bio {
+    height: 100vh;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  .bio-container {
+    flex: 1;
+    max-height: 70vh;
+    margin: 1rem auto 0;
+    padding: 1rem;
+  }
+  .portfolio-container {
+    top: 5vh;
+    max-height: 55vh;
   }
   .skill-summary-container {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    flex: 1;
+    min-height: 0;
+    max-height: 48vh;
+    overflow-y: auto;
+    padding-top: 10px;
     padding-right: 15px;
   }
   .other-info-container {
-    height: calc(60vh - 200px);
-  }
-  .controls {
-    flex-direction: row;
-    justify-content: center;
-    left: 50%;
-    transform: translateX(-50%);
-    width: -moz-fit-content;
-    width: fit-content;
-    max-width: calc(100% - 2rem);
-  }
-  .controls .control {
-    margin: 0.6rem 1rem !important;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    max-height: 68vh;
   }
   .theme-btn {
     width: 50px;
@@ -810,16 +802,9 @@ h6 {
     overflow: hidden;
     flex-direction: column;
   }
-  .portfolio-container,
-  .skill-summary-container {
+  .portfolio-container {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
-  }
-  .skill-summary-container {
-    flex: 1;
-    min-height: 0;
-    max-height: 590px;
-    overflow-y: auto;
   }
   .other-info-container,
   .contact-container {
@@ -898,20 +883,6 @@ h6 {
   .section.skill-summary {
     width: 100%;
     padding: 0;
-  }
-  .section.bio {
-    height: 100vh;
-    min-height: 100vh;
-    overflow: hidden;
-    flex-direction: column;
-  }
-  .bio-container {
-    flex: 1;
-    min-height: 0;
-    max-height: calc(60vh - 50px);
-    overflow-y: auto;
-    padding-right: 1rem;
-    margin-top: 1.5rem;
   }
   .home-container {
     display: flex;
