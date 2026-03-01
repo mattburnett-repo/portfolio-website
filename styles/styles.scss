@@ -6,7 +6,6 @@
 @import './theme-btn';
 
 // Sections
-@import './common'; // Sets vars used in mixins and elsewhere. Should come first.
 @import './mixins';
 @import './home';
 @import './bio';

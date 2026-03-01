@@ -74,3 +74,23 @@ h6 {
   font-weight: 500;
   letter-spacing: -0.01em;
 }
+
+.main-title {
+  h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+
+    // Might use in the future for header color accenting.
+    // span {
+    //   color: var(--color-secondary);
+    // }
+
+    .bg-text {
+      display: none;
+    }
+  }
+}
