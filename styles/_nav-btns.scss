@@ -12,9 +12,10 @@
   justify-content: center;
   transform: translateX(-50%);
   padding: 0.35rem 0.75rem;
-  border-radius: 999px;
+  border-radius: 28px 28px 14px 14px;
   background-color: rgba(0, 0, 0, 0.35);
-  box-shadow: var(--shadow-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: var(--shadow-elevated), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   gap: 0.5rem;
   will-change: opacity, transform;
@@ -29,14 +30,14 @@
     background-color: var(--color-tertiary-4);
     min-width: 90px;
     height: 42px;
-    border-radius: 999px;
+    border-radius: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 0.35rem;
-    box-shadow: var(--shadow-card);
-    border: var(--border-subtle);
-    transition: transform 0.2s ease-out, background-color 0.2s ease-out, box-shadow 0.2s ease-out;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--nav-control-border);
+    transition: transform 0.2s ease-out, background-color 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
 
     &.active-btn {
       background-color: var(--color-secondary);
@@ -46,6 +47,7 @@
 
       span {
         color: var(--color-tertiary-0);
+        font-weight: 600;
       }
     }
 
@@ -57,6 +59,15 @@
         color: var(--color-primary);
         transition: color 0.2s ease-out;
       }
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 2px var(--color-secondary);
+    }
+
+    &.active-btn:focus-visible {
+      box-shadow: var(--shadow-card-hover), 0 0 0 2px var(--color-secondary);
     }
 
     span {

@@ -52,32 +52,3 @@
     }
   }
 }
-
-.main-title {
-  text-align: center;
-
-  h2 {
-    position: relative;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 700;
-
-    span {
-      color: var(--color-secondary);
-    }
-
-    .bg-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      color: var(--color-tertiary-5);
-      transition: var(--transition-default);
-      z-index: -1;
-      transform: translate(-50%, -50%);
-      font-weight: 800;
-      font-size: 6.3rem;
-      width: 100%;
-      max-width: 100%;
-    }
-  }
-}

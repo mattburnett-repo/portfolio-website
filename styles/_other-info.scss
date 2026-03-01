@@ -1,6 +1,5 @@
 .other-info-container {
   @include content-container;
-  grid-template-columns: repeat(3, 1fr);
 
   .other-info-item {
     @include content-container-item;
