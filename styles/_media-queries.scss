@@ -33,10 +33,32 @@ $bp-xs: 420px; // Small phones
         padding-bottom: 2rem;
       }
 
-      h4 {
-        font-size: 1rem;
-        line-height: 2rem;
-      }
+    }
+  }
+}
+
+// FIXME: Not sure if we need this. It's left over from the old layout.
+@media screen and (max-width: 1200px) {
+  .other-info-container {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    height: 60vh;
+    overflow-y: auto;
+    padding-right: 1.5rem;
+    margin: 2rem auto;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--color-tertiary-4);
+      border-radius: 4px;
     }
   }
 }
@@ -126,10 +148,6 @@ $bp-xs: 420px; // Small phones
 
       h2 {
         font-size: 1.35rem;
-      }
-
-      h4 {
-        display: none;
       }
     }
   }
@@ -228,10 +246,6 @@ $bp-xs: 420px; // Small phones
     font-size: 2rem;
   }
 
-  .other-info-text {
-    display: none;
-  }
-
   .other-info-container {
     height: calc(55vh - 100px);
   }
@@ -305,12 +319,6 @@ $bp-xs: 420px; // Small phones
         font-size: 1rem;
         line-height: 1.5rem;
       }
-
-      h4 {
-        display: none;
-      }
     }
   }
 }
-
-// Text helpers are visible by default; hide per-section in layouts if needed.

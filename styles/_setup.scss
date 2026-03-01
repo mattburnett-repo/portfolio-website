@@ -1,13 +1,5 @@
 // reset, root, light mode and scrollbar styling
 
-// Responsive breakpoint variables (for media queries)
-// Use these variables for media queries across the project.
-$bp-xl: 1400px; // Large desktop: bg-text hide, grid tweaks
-$bp-lg: 1100px; // Desktop: nav moves to bottom, margins
-$bp-md: 860px; // Tablet: grids to 1 col
-$bp-sm: 600px; // Mobile portrait: tighter spacing
-$bp-xs: 420px; // Small phones
-
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +16,6 @@ $bp-xs: 420px; // Small phones
   --color-primary: rgb(45, 55, 72);
   --color-secondary: rgb(129, 230, 217);
   --color-white: rgb(245, 245, 245);
-  --color-black: #000;
   --color-tertiary-0: rgb(240, 240, 245);
   --color-tertiary-1: rgb(220, 225, 235);
   --color-tertiary-2: rgb(190, 200, 215);
@@ -40,18 +31,12 @@ $bp-xs: 420px; // Small phones
   --innerBorder: var(--borderRadiusLo) double silver;
   --outerBorder: 1px solid var(--color-secondary);
 
-  --opacityHi: 0.5;
-  --opacityMed: 0.65;
-  --opacityLo: 0.8;
-
-  --br-sm-2: 14px;
   --radius-circle: 50%;
   --padding-section: 80px 60px 20px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
   --box-shadow-card-hover: 0 8px 16px rgba(0, 0, 0, 0.1);
   --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-transform-default: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-anim-default: scaleAnim .9s ease-in-out;
   --transition-transform-shadow: transform 0.3s ease, box-shadow 0.3s ease;
   --button-scale-default: .9;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -61,7 +46,6 @@ $bp-xs: 420px; // Small phones
   --color-primary: rgb(240, 239, 239);
   --color-secondary: rgb(39, 147, 255);
   --color-white: #454e56;
-  --color-black: #000;
   --color-tertiary-0: #f8f8f8;
   --color-tertiary-1: rgb(18, 24, 27);
   --color-tertiary-2: rgb(42, 46, 53);

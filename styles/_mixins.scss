@@ -60,11 +60,6 @@
   }
 }
 
-@mixin content-container-text {
-  padding: 2rem 0;
-  text-align: center;
-}
-
 @mixin flex-center-column {
   display: flex;
   flex-direction: column;

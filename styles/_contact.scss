@@ -6,17 +6,6 @@
   margin-top: 3rem;
   margin-bottom: 8rem;
 
-  h4 {
-    margin-top: 1rem;
-    font-size: 2rem;
-    text-transform: uppercase;
-  }
-
-  p {
-    margin: 1rem 0;
-    line-height: 2rem;
-  }
-
   .contact-icons {
     padding: 3rem 6rem;
     border-radius: var(--borderRadiusLo);
@@ -54,8 +43,4 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     }
   }
-}
-
-.contact-text {
-  @include content-container-text;
 }
