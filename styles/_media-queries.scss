@@ -111,7 +111,6 @@ $bp-xs: 420px; // Small phones
   }
 
   .portfolio-container {
-    top: 5vh;
     max-height: 55vh;
   }
 
@@ -284,6 +283,36 @@ $bp-xs: 420px; // Small phones
     width: 25rem;
   }
 
+  .home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+    margin: 150px auto;
+    overflow: hidden;
+
+    .home-overlay {
+      padding: 0;
+      line-height: 1.25rem;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      @include flex-center-column;
+
+      h1 {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        line-height: 1rem;
+      }
+
+      h2 {
+        margin-top: 2rem;
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
   .bio-container {
     max-height: 75vh;
   }
@@ -317,41 +346,6 @@ $bp-xs: 420px; // Small phones
         i {
           font-size: 0.85rem;
         }
-      }
-    }
-  }
-
-  .section.skill-summary {
-    width: 100%;
-    padding: 0;
-  }
-
-  .home-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30vh;
-    margin: 150px auto;
-    overflow: hidden;
-
-    .home-overlay {
-      padding: 0;
-      line-height: 1.25rem;
-      width: 100%;
-      height: 100%;
-      box-sizing: border-box;
-      @include flex-center-column;
-
-      h1 {
-        margin-top: 2rem;
-        font-size: 1.5rem;
-        line-height: 1rem;
-      }
-
-      h2 {
-        margin-top: 2rem;
-        font-size: 1rem;
-        line-height: 1.5rem;
       }
     }
   }
