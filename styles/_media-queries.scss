@@ -160,50 +160,103 @@ $bp-xs: 420px; // Small phones
 
 // --- $bp-md (860px) ---
 @media screen and (max-width: $bp-md) {
-  .section.skill-summary {
-    height: 100vh;
-    min-height: 100vh;
-    overflow: hidden;
-    flex-direction: column;
+
+  .section {
+    padding-top: 0.5rem;
+  }
+
+  .controls {
+    top: auto;
+    bottom: 1rem;
+  }
+
+  .bio-container {
+    overflow: auto;
+    max-height: 60vh;
+  }
+
+  .section.portfolio {
+    padding-top: 0;
   }
 
   .portfolio-container {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
+    max-height: 53vh;
+
+    .portfolio-item {
+      padding: 1rem 0;
+
+      img {
+        width: 240px;
+        height: 160px;
+      }
+
+      .hover-item {
+        h3 {
+          font-size: 1.1rem;
+          margin-bottom: 1rem;
+        }
+
+        .icon {
+          width: 40px;
+          height: 40px;
+
+          i {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
   }
 
-
-
-  .other-info-container,
-  .contact-container {
-    margin-top: 0.5rem;
+  .skill-summary-container,
+  .other-info-container {
+    max-height: 60vh;
   }
+
+  // FIXME: contact-container styles are not working as expected (green color and transform up)
 
   .theme-btn {
-    right: 1%;
+    right: 3%;
   }
 }
 
 // --- $bp-sm (600px) ---
 @media screen and (max-width: $bp-sm) {
-  .section.portfolio {
-    padding: 50px 60px 20px;
-  }
-
   .section {
-    margin-top: 5rem;
+    margin-top: 2rem;
     padding: 0;
     width: 35rem;
   }
 
-  .other-info-container {
-    overflow-y: scroll;
-    height: calc(55vh - 150px);
+  .theme-btn {
+    display: none;
   }
 
-  .other-info-container,
-  .skill-summary-container {
+  .bio-container {
+    max-height: 70vh;
+  }
+
+  .portfolio-container {
+    max-height: 60vh;
+  }
+
+  .portfolio-detail {
+    top: 2vh;
+    width: 90%;
+  }
+
+  .skill-summary-container,
+  .other-info-container {
+    overflow-y: scroll;
+
     grid-template-columns: 1fr;
+    max-height: 70vh;
+  }
+
+  .other-info-container {
+    max-height: 50vh;
   }
 
   // app.js replaces text with icons at 600px (mediaQuery_mw_600); show that span, hide short labels
@@ -221,32 +274,31 @@ $bp-xs: 420px; // Small phones
     padding: 0.5rem 0.8rem;
     margin: 0.5rem 0.4rem !important;
   }
-
-  .theme-btn {
-    width: 44px;
-    height: 44px;
-    right: 1%;
-  }
 }
 
 // --- $bp-xs (420px) ---
 @media screen and (max-width: $bp-xs) {
-  .section.portfolio {
-    width: calc(25rem + 20px);
-  }
-
   .section {
-    margin-top: 5rem;
+    margin-top: 1rem;
     padding: 0px;
     width: 25rem;
+  }
+
+  .bio-container {
+    max-height: 75vh;
   }
 
   .main-title h2 {
     font-size: 2rem;
   }
 
+  .skill-summary-container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
   .other-info-container {
-    height: calc(55vh - 100px);
+    max-height: 58vh;
   }
 
   .controls {

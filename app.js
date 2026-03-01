@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setInitialState() {
       this.setActiveSection('home');
+      this.handleMediaQueryChange({ matches: this.mediaQuery_mw_600.matches });
     },
 
     handleNavigation(e) {
@@ -70,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target.closest('.hover-item') && !e.target.closest('.icons')) {
         const dialog = e.target.closest('.portfolio-item').querySelector('.portfolio-detail');
         dialog.showModal();
+        dialog.scrollTop = 0;
       }
     },
 
