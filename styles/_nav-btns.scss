@@ -1,5 +1,8 @@
 // Class for .controls etc.
 
+$nav-transition-color: color 0.2s ease-out;
+$nav-box-shadow-default: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
 .controls {
   position: fixed;
   z-index: 10;
@@ -12,9 +15,10 @@
   justify-content: center;
   transform: translateX(-50%);
   padding: 0.35rem 0.75rem;
-  border-radius: 999px;
+  border-radius: 14px;
   background-color: rgba(0, 0, 0, 0.35);
-  box-shadow: var(--shadow-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   gap: 0.5rem;
   will-change: opacity, transform;
@@ -29,23 +33,24 @@
     background-color: var(--color-tertiary-4);
     min-width: 90px;
     height: 42px;
-    border-radius: 999px;
+    border-radius: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 0.35rem;
-    box-shadow: var(--shadow-card);
-    border: var(--border-subtle);
-    transition: transform 0.2s ease-out, background-color 0.2s ease-out, box-shadow 0.2s ease-out;
+    box-shadow: $nav-box-shadow-default;
+    border: 1px solid var(--color-secondary);
+    transition: transform 0.2s ease-out, background-color 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
 
     &.active-btn {
       background-color: var(--color-secondary);
       transform: translateY(-3px);
       border-color: var(--color-secondary);
-      box-shadow: var(--shadow-card-hover);
+      box-shadow: var(--box-shadow-card-hover);
 
       span {
         color: var(--color-tertiary-0);
+        font-weight: 600;
       }
     }
 
@@ -55,8 +60,17 @@
 
       span {
         color: var(--color-primary);
-        transition: color 0.2s ease-out;
+        transition: $nav-transition-color;
       }
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: $nav-box-shadow-default, 0 0 0 2px var(--color-secondary);
+    }
+
+    &.active-btn:focus-visible {
+      box-shadow: var(--box-shadow-card-hover), 0 0 0 2px var(--color-secondary);
     }
 
     span {
@@ -64,7 +78,7 @@
       font-weight: 500;
       letter-spacing: 0.5px;
       color: var(--color-white);
-      transition: color 0.2s ease-out;
+      transition: $nav-transition-color;
     }
   }
 }

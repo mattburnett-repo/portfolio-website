@@ -4,40 +4,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  // Firefox-specific scrollbar styling
+  scrollbar-width: auto;
+  scrollbar-color: var(--color-secondary) var(--color-primary);
 }
 
 // Default / dark mode
 :root {
-  // black
-  // --color-primary: rgb(25, 29, 43);
-  // --color-secondary: rgb(102, 205, 170);
-  // --color-white: rgb(255, 255, 255);
-  // --color-black: #000;
-  // --color-tertiary-0: rgb(248, 248, 248);
-  // --color-tertiary-1: rgb(219, 225, 232);
-  // --color-tertiary-2: rgb(178, 190, 205);
-  // --color-tertiary-3: rgb(108, 121, 131);
-  // --color-tertiary-4: rgb(69, 78, 86);
-  // --color-tertiary-5: rgb(42, 46, 53);
-  // --color-tertiary-6: rgb(18, 24, 27);
-
-  // navy blue
-  // --color-primary: rgb(22, 28, 41);
-  // --color-secondary: rgb(86, 192, 224);
-  // --color-white: rgb(235, 235, 235);
-  // --color-tertiary-0: rgb(230, 230, 235);
-  // --color-tertiary-1: rgb(200, 205, 215);
-  // --color-tertiary-2: rgb(160, 170, 185);
-  // --color-tertiary-3: rgb(100, 110, 125);
-  // --color-tertiary-4: rgb(60, 70, 85);
-  // --color-tertiary-5: rgb(35, 45, 60);
-  // --color-tertiary-6: rgb(15, 25, 40);
-
   // slate blue
   --color-primary: rgb(45, 55, 72);
   --color-secondary: rgb(129, 230, 217);
   --color-white: rgb(245, 245, 245);
-  --color-black: #000;
   --color-tertiary-0: rgb(240, 240, 245);
   --color-tertiary-1: rgb(220, 225, 235);
   --color-tertiary-2: rgb(190, 200, 215);
@@ -53,14 +31,13 @@
   --innerBorder: var(--borderRadiusLo) double silver;
   --outerBorder: 1px solid var(--color-secondary);
 
-  --opacityHi: 0.5;
-  --opacityMed: 0.65;
-  --opacityLo: 0.8;
-
-  --br-sm-2: 14px;
+  --radius-circle: 50%;
+  --padding-section: 80px 60px 20px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
+  --box-shadow-card-hover: 0 8px 16px rgba(0, 0, 0, 0.1);
   --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-anim-default: scaleAnim .9s ease-in-out;
+  --transition-transform-default: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-transform-shadow: transform 0.3s ease, box-shadow 0.3s ease;
   --button-scale-default: .9;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -69,7 +46,6 @@
   --color-primary: rgb(240, 239, 239);
   --color-secondary: rgb(39, 147, 255);
   --color-white: #454e56;
-  --color-black: #000;
   --color-tertiary-0: #f8f8f8;
   --color-tertiary-1: rgb(18, 24, 27);
   --color-tertiary-2: rgb(42, 46, 53);
@@ -96,11 +72,5 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-secondary-2);
-}
-
-/* Firefox */
-* {
-  scrollbar-width: auto;
-  scrollbar-color: var(--color-secondary) var(--color-primary);
+  background: var(--color-secondary);
 }

@@ -1,0 +1,68 @@
+// Common mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin section-container {
+  box-shadow: var(--box-shadow-1);
+  border: 2px double silver;
+  border-radius: var(--borderRadiusLo);
+}
+
+// content-container (eg portfolio/skillset/other-info. Contact is flex, others are grid.
+@mixin content-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+}
+
+@mixin content-container-item {
+  position: relative;
+  padding: 2rem 0;
+  box-shadow: var(--box-shadow-1);
+  border-radius: var(--borderRadiusLo);
+  background-color: var(--color-tertiary-5);
+
+  border: var(--innerBorder);
+  transition: var(--transition-transform-shadow);
+}
+
+@mixin content-container-item-title {
+  padding: .2rem .6rem;
+  color: var(--color-tertiary-2);
+  background-color: var(--color-tertiary-4);
+  border-radius: var(--borderRadiusHi);
+  display: inline-block;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@mixin content-container-item-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  ul {
+    text-align: left;
+    line-height: 2rem;
+    padding: 1rem;
+    color: var(--color-tertiary-1);
+  }
+}
+
+@mixin content-container-p-tag {
+  p {
+    color: var(--color-tertiary-2);
+  }
+}
+
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

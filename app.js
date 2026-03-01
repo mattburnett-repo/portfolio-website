@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
       this.sections = document.querySelectorAll('.section');
       this.sectBtns = document.querySelectorAll('.controls');
       this.sectBtn = document.querySelectorAll('.control');
-      this.allSections = document.querySelector('.main-content');
       this.themeBtn = document.querySelector('.theme-btn');
       this.portfolioContainer = document.querySelector('.portfolio-container');
       // Media query support for nav buttons. Icons replace text on smaller screens.

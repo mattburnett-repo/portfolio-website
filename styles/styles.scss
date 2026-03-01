@@ -1,20 +1,18 @@
 @import './setup';
 @import './elements';
-@import './breakpoints';
 
 @import './section-transition-animation';
 @import './nav-btns';
 @import './theme-btn';
 
 // Sections
-@import './common';
+@import './mixins';
 @import './home';
 @import './bio';
 @import './portfolio';
 @import './skill-summary';
 @import './other-info';
 @import './contact';
-@import './independent-components';
 
-@import './media';
-// @import './mediaqueries';
+// Responsiveness stuff
+@import './media-queries';

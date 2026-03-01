@@ -22,10 +22,10 @@
   .home-overlay {
     position: relative;
     z-index: 1;
-    @include overlay-styles;
+
     // Home-specific refinements for a lighter, tighter hero
     background-color: rgba(0, 0, 0, 0.6);
-    border: var(--border-subtle);
+    border: var(--outerBorder);
     border-radius: var(--borderRadiusMed);
     opacity: 0.95;
 
@@ -37,8 +37,7 @@
     height: 50vh;
 
     h1,
-    h2,
-    h4 {
+    h2 {
       font-family: 'Manrope', sans-serif;
       font-weight: 900;
       line-height: 1.4;
@@ -55,13 +54,6 @@
       padding-bottom: 2rem;
       letter-spacing: 0.01em;
       opacity: 0.95;
-    }
-
-    h4 {
-      font-size: 1.2rem;
-      line-height: 1.8rem;
-      letter-spacing: 0.01em;
-      opacity: 0.9;
     }
   }
 }

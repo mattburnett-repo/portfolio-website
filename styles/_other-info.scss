@@ -1,14 +1,12 @@
 .other-info-container {
   @include content-container;
-  grid-template-columns: repeat(3, 1fr);
 
   .other-info-item {
     @include content-container-item;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
       transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      box-shadow: var(--box-shadow-card-hover);
     }
 
     .other-info-title {
@@ -26,34 +24,5 @@
     }
 
     @include content-container-p-tag;
-  }
-}
-
-.other-info-text {
-  @include content-container-text;
-}
-
-@media screen and (max-width: 1200px) {
-  .other-info-container {
-    grid-template-columns: 1fr;
-    max-width: 600px;
-    height: 60vh;
-    overflow-y: auto;
-    padding-right: 1.5rem;
-    margin: 2rem auto;
-    scrollbar-width: thin;
-
-    &::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: var(--color-tertiary-4);
-      border-radius: 4px;
-    }
   }
 }
