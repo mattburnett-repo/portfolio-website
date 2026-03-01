@@ -396,7 +396,7 @@ h6 {
   min-height: 0;
   padding-right: 1.5rem;
   padding-top: 10px;
-  max-height: 70vh;
+  max-height: 72vh;
   overflow-y: auto;
 }
 .portfolio-container .portfolio-item {
@@ -685,10 +685,6 @@ h6 {
 }
 
 @media screen and (max-width: 1400px) {
-  .controls {
-    top: auto;
-    bottom: 5rem;
-  }
   .home-container {
     padding: 2rem;
     line-height: 2rem;
@@ -701,6 +697,41 @@ h6 {
   .home-container .home-overlay h2 {
     font-size: 1rem;
     padding-bottom: 2rem;
+  }
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 42vh;
+  }
+  .portfolio-detail {
+    top: 5vh;
+    max-width: 100%;
+  }
+  .skill-summary-container,
+  .other-info-container {
+    grid-gap: 1rem;
+    margin-top: 2rem;
+  }
+  .other-info-container {
+    grid-template-columns: repeat(2, 1fr);
+    flex: 1;
+    padding-top: 10px;
+    padding-right: 1.5rem;
+    min-height: 0;
+    max-height: 55vh;
+    overflow-y: auto;
+  }
+  .section.other-info {
+    height: 100vh;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .controls .control .label-full[data-id=skill-summary],
+  .controls .control .label-full[data-id=other-info] {
+    display: none;
+  }
+  .controls .control .label-short {
+    display: inline;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -737,13 +768,6 @@ h6 {
   }
   .other-info-container {
     height: calc(60vh - 200px);
-  }
-  .controls .control .label-full[data-id=skill-summary],
-  .controls .control .label-full[data-id=other-info] {
-    display: none;
-  }
-  .controls .control .label-short {
-    display: inline;
   }
   .controls {
     flex-direction: row;
