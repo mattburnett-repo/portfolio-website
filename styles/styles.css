@@ -787,7 +787,6 @@ h6 {
   transform: translateX(0);
 }
 
-<<<<<<< HEAD
 .label-short {
   display: none;
 }
@@ -796,11 +795,6 @@ h6 {
   .controls {
     top: auto;
     bottom: 5rem;
-=======
-@media screen and (max-width: 1750px) {
-  .sec5 .main-title .bg-text {
-    font-size: 5rem;
->>>>>>> origin/main
   }
   .home-container {
     padding: 2rem;
