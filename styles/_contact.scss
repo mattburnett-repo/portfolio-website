@@ -26,11 +26,11 @@
         var(--color-tertiary-4));
     border: 1px solid rgba(255, 255, 255, 0.1);
     transform: translateY(0);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--transition-transform-default);
     margin-top: 2rem;
 
     a {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: var(--transition-default);
       display: inline-block;
 
       &:hover {

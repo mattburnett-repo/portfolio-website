@@ -1,5 +1,13 @@
 // reset, root, light mode and scrollbar styling
 
+// Responsive breakpoint variables (for media queries)
+// Use these variables for media queries across the project.
+$bp-xl: 1400px; // Large desktop: bg-text hide, grid tweaks
+$bp-lg: 1100px; // Desktop: nav moves to bottom, margins
+$bp-md: 860px; // Tablet: grids to 1 col
+$bp-sm: 600px; // Mobile portrait: tighter spacing
+$bp-xs: 420px; // Small phones
+
 * {
   margin: 0;
   padding: 0;
@@ -37,9 +45,14 @@
   --opacityLo: 0.8;
 
   --br-sm-2: 14px;
+  --radius-circle: 50%;
+  --padding-section: 80px 60px 20px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
+  --box-shadow-card-hover: 0 8px 16px rgba(0, 0, 0, 0.1);
   --transition-default: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-transform-default: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-anim-default: scaleAnim .9s ease-in-out;
+  --transition-transform-shadow: transform 0.3s ease, box-shadow 0.3s ease;
   --button-scale-default: .9;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -75,5 +88,5 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-secondary-2);
+  background: var(--color-secondary);
 }
