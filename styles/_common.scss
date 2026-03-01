@@ -22,17 +22,9 @@ $color-tertiary-5: var(--color-tertiary-5);
   border-radius: $border-radius-lo;
 }
 
-@mixin overlay-styles {
-  background-color: black;
-  border: $inner-border;
-  border-radius: $border-radius-lo;
-  opacity: $opacity-lo;
-}
-
 // content-container (eg portfolio/skillset/other-info. Contact is flex, others are grid.
 @mixin content-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
@@ -91,6 +83,9 @@ $color-tertiary-5: var(--color-tertiary-5);
     letter-spacing: 2px;
     margin-bottom: 1rem;
 
+    // span {
+    //   color: var(--color-secondary);
+    // }
     .bg-text {
       display: none;
     }

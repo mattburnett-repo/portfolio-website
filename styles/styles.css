@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: auto;
+  scrollbar-color: var(--color-secondary) var(--color-primary);
 }
 
 :root {
@@ -65,12 +67,6 @@
   background: var(--color-secondary-2);
 }
 
-/* Firefox */
-* {
-  scrollbar-width: auto;
-  scrollbar-color: var(--color-secondary) var(--color-primary);
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -121,8 +117,6 @@ a {
 section {
   display: flex;
   flex-flow: row;
-  flex-wrap: wrap;
-  flex-direction: row;
   justify-content: center;
   text-align: center;
   margin: 0 auto;
@@ -164,10 +158,6 @@ h6 {
     opacity: 1;
   }
 }
-html {
-  scroll-behavior: smooth;
-}
-
 .controls {
   position: fixed;
   z-index: 10;
@@ -180,9 +170,10 @@ html {
   justify-content: center;
   transform: translateX(-50%);
   padding: 0.35rem 0.75rem;
-  border-radius: 999px;
+  border-radius: 28px 28px 14px 14px;
   background-color: rgba(0, 0, 0, 0.35);
-  box-shadow: var(--shadow-elevated);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: var(--shadow-elevated), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   gap: 0.5rem;
   will-change: opacity, transform;
@@ -196,14 +187,14 @@ html {
   background-color: var(--color-tertiary-4);
   min-width: 90px;
   height: 42px;
-  border-radius: 999px;
+  border-radius: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 0.35rem;
-  box-shadow: var(--shadow-card);
-  border: var(--border-subtle);
-  transition: transform 0.2s ease-out, background-color 0.2s ease-out, box-shadow 0.2s ease-out;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--nav-control-border);
+  transition: transform 0.2s ease-out, background-color 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
 }
 .controls .control.active-btn {
   background-color: var(--color-secondary);
@@ -213,6 +204,7 @@ html {
 }
 .controls .control.active-btn span {
   color: var(--color-tertiary-0);
+  font-weight: 600;
 }
 .controls .control:hover {
   transform: translateY(-2px);
@@ -221,6 +213,13 @@ html {
 .controls .control:hover span {
   color: var(--color-primary);
   transition: color 0.2s ease-out;
+}
+.controls .control:focus-visible {
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 2px var(--color-secondary);
+}
+.controls .control.active-btn:focus-visible {
+  box-shadow: var(--shadow-card-hover), 0 0 0 2px var(--color-secondary);
 }
 .controls .control span {
   font-family: "Manrope", sans-serif;
@@ -250,7 +249,7 @@ html {
   border-radius: 50%;
   background-color: var(--color-secondary);
   cursor: pointer;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--box-shadow-1);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .theme-btn:hover {
@@ -313,10 +312,6 @@ html {
 .home-container .home-overlay {
   position: relative;
   z-index: 1;
-  background-color: black;
-  border: var(--innerBorder);
-  border-radius: var(--borderRadiusLo);
-  opacity: var(--opacityLo);
   background-color: rgba(0, 0, 0, 0.6);
   border: var(--border-subtle);
   border-radius: var(--borderRadiusMed);
@@ -389,7 +384,6 @@ html {
 
 .portfolio-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
@@ -552,7 +546,6 @@ html {
 .skill-summary-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
   grid-template-columns: repeat(2, 1fr);
@@ -618,10 +611,8 @@ html {
 .other-info-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
-  grid-template-columns: repeat(3, 1fr);
 }
 .other-info-container .other-info-item {
   position: relative;
@@ -789,32 +780,6 @@ html {
   height: 100%;
   background-color: var(--color-secondary);
   transform: translateX(0);
-}
-
-.main-title {
-  text-align: center;
-}
-.main-title h2 {
-  position: relative;
-  text-transform: uppercase;
-  font-size: 4rem;
-  font-weight: 700;
-}
-.main-title h2 span {
-  color: var(--color-secondary);
-}
-.main-title h2 .bg-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: var(--color-tertiary-5);
-  transition: var(--transition-default);
-  z-index: -1;
-  transform: translate(-50%, -50%);
-  font-weight: 800;
-  font-size: 6.3rem;
-  width: 100%;
-  max-width: 100%;
 }
 
 @media screen and (max-width: 1750px) {
