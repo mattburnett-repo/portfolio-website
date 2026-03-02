@@ -106,8 +106,9 @@
               <li>Click CLI Tool</li>
               <li>Tailwind CSS</li>
             </ul>
-            <dialog class="portfolio-detail">
-              <h3>create-flask-app</h3>
+            <dialog class="portfolio-detail" role="dialog" aria-modal="true"
+              aria-labelledby="create-flask-app-dialog-title">
+              <h3 id="create-flask-app-dialog-title">create-flask-app</h3>
               <p>
                 <code>create-flask-app</code> is a command-line tool designed to streamline the setup of small to
                 medium-sized
@@ -154,8 +155,9 @@
               <li>Tailwind CSS</li>
               <li>Django / DRF</li>
             </ul>
-            <dialog class="portfolio-detail">
-              <h3>Activist.org</h3>
+            <dialog class="portfolio-detail" role="dialog" aria-modal="true"
+              aria-labelledby="activist-dialog-title">
+              <h3 id="activist-dialog-title">Activist.org</h3>
               <p>Activist.org is a platform designed to connect activists with organizations and causes they care about.
                 As a member of the development team, I work on enhancing existing functionality and implementing new
                 features based on
@@ -199,8 +201,9 @@
               <li>Material UI / Formik</li>
               <li>3rd party API integration</li>
             </ul>
-            <dialog class="portfolio-detail">
-              <h3>Carbon Interface API Frontend</h3>
+            <dialog class="portfolio-detail" role="dialog" aria-modal="true"
+              aria-labelledby="carbon-interface-dialog-title">
+              <h3 id="carbon-interface-dialog-title">Carbon Interface API Frontend</h3>
               <p>This is a
                 user-friendly interface
                 that simplifies access to the Carbon Interface API. This API provides critical estimates for the carbon
@@ -249,8 +252,9 @@
               <li>3rd party API integration</li>
               <li>AWS Deployment</li>
             </ul>
-            <dialog class="portfolio-detail">
-              <h3>Solar Panel Output Estimation</h3>
+            <dialog class="portfolio-detail" role="dialog" aria-modal="true"
+              aria-labelledby="solar-output-dialog-title">
+              <h3 id="solar-output-dialog-title">Solar Panel Output Estimation</h3>
               <p>In developing the Solar Panel Output Estimation project, I created a tool that estimates solar panel
                 electricity
                 production based on precise location, time of day, and current weather conditions. By integrating raw
@@ -300,8 +304,9 @@
               <li>Stripe payment API integration</li>
               <li>Vercel deployment / API integration</li>
             </ul>
-            <dialog class="portfolio-detail">
-              <h3>GreenShop / E-commerce UI</h3>
+            <dialog class="portfolio-detail" role="dialog" aria-modal="true"
+              aria-labelledby="greenshop-dialog-title">
+              <h3 id="greenshop-dialog-title">GreenShop / E-commerce UI</h3>
               <p>The GreenShop project is a capstone e-commerce web application that centers on sustainable, renewable
                 consumer products.
                 Designed as a practical exercise in web development, this project allowed me to apply and deepen my
@@ -348,8 +353,9 @@
               <li>OpenAPI documentation</li>
               <li>CI/CD via GitHub Actions</li>
             </ul>
-            <dialog class="portfolio-detail">
-              <h3>E-commerce REST API</h3>
+            <dialog class="portfolio-detail" role="dialog" aria-modal="true"
+              aria-labelledby="ecomm-api-dialog-title">
+              <h3 id="ecomm-api-dialog-title">E-commerce REST API</h3>
               <p>The E-commerce REST API project is a robust backend solution designed to power the GreenShop
                 application. This API provides the essential infrastructure for managing product data, processing
                 transactions, and handling user authentication, ensuring that the front-end operates smoothly and
@@ -399,8 +405,9 @@
               <li>PassportJS Authentication</li>
               <li>CI/CD via GitHub Actions</li>
             </ul>
-            <dialog class="portfolio-detail">
-              <h3>NestJS REST API Template</h3>
+            <dialog class="portfolio-detail" role="dialog" aria-modal="true"
+              aria-labelledby="nestjs-template-dialog-title">
+              <h3 id="nestjs-template-dialog-title">NestJS REST API Template</h3>
               <p>The NestJS REST API Template is a foundational project that streamlines the development of NestJS-based
                 APIs, serving as
                 the backbone for the E-commerce REST API detailed elsewhere on this website. This template functions as
@@ -456,8 +463,9 @@
               <li>Front End / Back End Development</li>
               <li>Test Development</li>
             </ul>
-            <dialog class="portfolio-detail">
-              <h3>Resonate Music Streaming Service</h3>
+            <dialog class="portfolio-detail" role="dialog" aria-modal="true"
+              aria-labelledby="resonate-dialog-title">
+              <h3 id="resonate-dialog-title">Resonate Music Streaming Service</h3>
               <p>The Resonate Music Streaming Service is an open-source platform dedicated to music sharing, offering a
                 collaborative
                 space for users to explore and enjoy music. My role in this project involved developing a comprehensive
@@ -505,8 +513,9 @@
               <li>CSS</li>
               <li>SEO / Schema.org optimization</li>
             </ul>
-            <dialog class="portfolio-detail">
-              <h3>This website</h3>
+            <dialog class="portfolio-detail" role="dialog" aria-modal="true"
+              aria-labelledby="this-website-dialog-title">
+              <h3 id="this-website-dialog-title">This website</h3>
               <p>This website serves as my personal portfolio, built with HTML, JavaScript, and CSS/SASS to showcase my
                 skills and
                 projects. As an exercise in basic web development, it demonstrates my capability to create a functional
@@ -700,14 +709,16 @@
               target="_blank">burnett.mj@gmail.com</a>
           </div>
           <div class="contact-icon">
-            <a href="https://www.linkedin.com/in/matt-burnett-5768ab20a/" target="_blank" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/matt-burnett-5768ab20a/" target="_blank" title="LinkedIn"
+              aria-label="LinkedIn profile">
               <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://github.com/mattburnett-repo" target="_blank" title="GitHub">
+            <a href="https://github.com/mattburnett-repo" target="_blank" title="GitHub"
+              aria-label="GitHub profile">
               <i class="fab fa-github"></i>
             </a>
             <a href="mailto:burnett.mj@gmail.com?subject=Message from Matt Burnett portfolio website" target="_blank"
-              title="Email">
+              title="Email" aria-label="Send email to Matt Burnett">
               <i class="fas fa-envelope"></i>
             </a>
           </div>
@@ -715,30 +726,30 @@
       </div>
     </section>
     <!-- Mark: Nav buttons -->
-    <nav class="controls">
-      <div class="control active-btn" title="Home">
+    <nav class="controls" aria-label="Section navigation">
+      <div class="control active-btn" title="Home" aria-label="Home">
         <span title="Home" data-id="home">Home</span>
       </div>
-      <div class="control" title="Bio">
+      <div class="control" title="Bio" aria-label="Bio">
         <span title="Bio" data-id="bio">Bio</span>
       </div>
-      <div class="control" title="Porfolio">
+      <div class="control" title="Porfolio" aria-label="Portfolio">
         <span title="Porfolio" data-id="portfolio">Portfolio</span>
       </div>
-      <div class="control" title="Skill-Summary">
+      <div class="control" title="Skill-Summary" aria-label="Skill summary">
         <span class="label-full" title="Skill-Summary" data-id="skill-summary">Skill Set</span>
         <span class="label-short">Skills</span>
       </div>
-      <div class="control" title="Other Info">
+      <div class="control" title="Other Info" aria-label="Other information">
         <span class="label-full" title="Other Info" data-id="other-info">Other Info</span>
         <span class="label-short">Info</span>
       </div>
-      <div class="control" title="Contact">
+      <div class="control" title="Contact" aria-label="Contact">
         <span title="Contact" data-id="contact">Contact</span>
       </div>
     </nav>
     <!-- Mark: Theme toggle button -->
-    <div class="theme-btn">
+    <div class="theme-btn" role="button" aria-label="Switch to light mode" aria-pressed="false" tabindex="0">
       <i class="fas fa-moon dark-icon"></i>
       <i class="fas fa-sun light-icon"></i>
     </div>
