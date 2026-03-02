@@ -26,6 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
       this.sectBtns.forEach(btn => btn.addEventListener('click', this.handleNavigation.bind(this)));
       this.sectBtns.forEach(btn => btn.addEventListener('touchstart', this.handleNavigation.bind(this)));
       this.themeBtn.addEventListener('click', this.toggleTheme.bind(this));
+      this.themeBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.toggleTheme();
+        }
+      });
       this.portfolioContainer.addEventListener('click', this.handlePortfolioClick.bind(this));
       document.addEventListener('click', this.handleDialogClose.bind(this));
       this.mediaQuery_mw_600.addEventListener('change', this.handleMediaQueryChange.bind(this));
@@ -49,8 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     updateActiveButton(clickedBtn) {
-      this.sectBtn.forEach(btn => btn.classList.remove('active-btn'));
+      this.sectBtn.forEach(btn => {
+        btn.classList.remove('active-btn');
+        btn.removeAttribute('aria-current');
+      });
       clickedBtn.classList.add('active-btn');
+      clickedBtn.setAttribute('aria-current', 'page');
     },
 
     updateActiveSection(sectionId) {
@@ -65,6 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     toggleTheme() {
       document.body.classList.toggle('light-mode');
+      const isLightMode = document.body.classList.contains('light-mode');
+      if (this.themeBtn) {
+        this.themeBtn.setAttribute(
+          'aria-label',
+          isLightMode ? 'Switch to dark mode' : 'Switch to light mode'
+        );
+        this.themeBtn.setAttribute('aria-pressed', isLightMode ? 'true' : 'false');
+      }
     },
 
     handlePortfolioClick(e) {
