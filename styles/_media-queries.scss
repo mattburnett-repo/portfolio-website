@@ -214,6 +214,8 @@ $bp-xs: 420px; // Small phones
     max-height: 60vh;
   }
 
+  // FIXME: contact-container styles are not working as expected (green color and transform up)
+
   .theme-btn {
     right: 3%;
   }
