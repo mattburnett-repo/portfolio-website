@@ -916,7 +916,10 @@ h6 {
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  .bio-container {
+  .bio-container,
+  .portfolio-container,
+  .skill-summary-container,
+  .other-info-container {
     max-height: 75vh;
   }
   .main-title h2 {
@@ -925,7 +928,6 @@ h6 {
   .skill-summary-container {
     width: 90%;
     margin: 0 auto;
-    max-height: 75vh;
   }
   .section.skill-summary .skill-summary-list {
     flex-direction: column;
@@ -934,9 +936,6 @@ h6 {
   .section.skill-summary .skill-summary-list ul {
     list-style: none;
     text-align: center;
-  }
-  .other-info-container {
-    max-height: 58vh;
   }
   .controls {
     width: calc(100% - 0.5rem);

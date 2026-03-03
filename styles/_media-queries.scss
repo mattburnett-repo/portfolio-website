@@ -311,7 +311,10 @@ $bp-xs: 420px; // Small phones
     }
   }
 
-  .bio-container {
+  .bio-container,
+  .portfolio-container,
+  .skill-summary-container,
+  .other-info-container {
     max-height: 75vh;
   }
 
@@ -322,7 +325,6 @@ $bp-xs: 420px; // Small phones
   .skill-summary-container {
     width: 90%;
     margin: 0 auto;
-    max-height: 75vh;
   }
 
   // Make the text fit the screen at 420px.
@@ -334,10 +336,6 @@ $bp-xs: 420px; // Small phones
       list-style: none;
       text-align: center;
     }
-  }
-
-  .other-info-container {
-    max-height: 58vh;
   }
 
   .controls {
