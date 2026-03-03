@@ -11,7 +11,7 @@
   border-radius: var(--borderRadiusLo);
 }
 
-// content-container (eg portfolio/skillset/other-info. Contact is flex, others are grid.
+// content-container (eg for portfolio/skillset/other-info). Contact is flex, others are grid.
 @mixin content-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
