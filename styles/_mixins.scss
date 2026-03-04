@@ -7,7 +7,7 @@
 
 @mixin section-container {
   box-shadow: var(--box-shadow-1);
-  border: 2px double silver;
+  border: var(--border-2x-double-silver);
   border-radius: var(--borderRadiusLo);
 }
 
