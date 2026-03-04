@@ -22,6 +22,7 @@
   --borderRadiusHi: 15px;
   --innerBorder: var(--borderRadiusLo) double silver;
   --outerBorder: 1px solid var(--color-secondary);
+  --border-2x-double-silver: 2px double silver;
   --radius-circle: 50%;
   --padding-section: 80px 60px 20px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, .3);
@@ -182,7 +183,7 @@ h6 {
   padding: 0.35rem 0.75rem;
   border-radius: 14px;
   background-color: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: var(--border-2x-double-silver);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
   gap: 0.5rem;
@@ -290,7 +291,7 @@ h6 {
   align-items: center;
   justify-content: center;
   box-shadow: var(--box-shadow-1);
-  border: 2px double silver;
+  border: var(--border-2x-double-silver);
   border-radius: var(--borderRadiusLo);
   position: relative;
   overflow: hidden;
@@ -345,7 +346,7 @@ h6 {
 
 .bio-container {
   box-shadow: var(--box-shadow-1);
-  border: 2px double silver;
+  border: var(--border-2x-double-silver);
   border-radius: var(--borderRadiusLo);
   max-width: 800px;
   margin: 2rem auto 0;
