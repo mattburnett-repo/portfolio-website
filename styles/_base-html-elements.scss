@@ -48,9 +48,17 @@ body {
 
 a {
   display: inline-block;
-  text-decoration: none;
-  color: inherit;
   font-family: inherit;
+  color: var(--color-secondary); // subtle accent color for links
+  text-decoration: underline;    // light underline to indicate interactivity
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-tertiary-0); // gentle brighten on hover/focus
+  }
 }
 
 section {
