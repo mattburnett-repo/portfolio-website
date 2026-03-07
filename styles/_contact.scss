@@ -21,6 +21,7 @@
     a {
       transition: var(--transition-default);
       display: inline-block;
+      text-decoration: none;
 
       &:hover {
         color: var(--color-secondary);
