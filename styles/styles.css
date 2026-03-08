@@ -474,7 +474,7 @@ h6 {
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 .portfolio-container .portfolio-item .hover-item .icons .icon:hover {
-  transform: scale(1.1);
+  transform: translateY(-4px);
   background-color: var(--color-white);
 }
 .portfolio-container .portfolio-item .hover-item .icons .icon:hover i {
@@ -667,6 +667,9 @@ h6 {
   transition: var(--transition-transform-default);
   margin-top: 2rem;
 }
+.contact-container .contact-icons .contact-email a {
+  color: var(--color-white);
+}
 .contact-container .contact-icons a {
   transition: var(--transition-default);
   display: inline-block;
@@ -683,6 +686,20 @@ h6 {
 .contact-container .contact-icons .contact-icon a {
   font-size: 2rem;
   margin: 0 1rem;
+  text-decoration: none;
+  color: var(--color-white);
+  transition: var(--transition-default);
+}
+.contact-container .contact-icons .contact-icon a:hover {
+  color: var(--color-secondary);
+  transform: translateY(-4px);
+  text-shadow: 0 4px 12px rgba(129, 230, 217, 0.2);
+}
+.contact-container .contact-icons .contact-icon a:hover i {
+  color: var(--color-secondary) !important;
+}
+.contact-container .contact-icons .contact-icon a i {
+  color: inherit;
 }
 .contact-container .contact-icons:hover {
   transform: translateY(-4px);

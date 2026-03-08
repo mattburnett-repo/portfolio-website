@@ -18,6 +18,10 @@
     transition: var(--transition-transform-default);
     margin-top: 2rem;
 
+    .contact-email a {
+      color: var(--color-white);
+    }
+
     a {
       transition: var(--transition-default);
       display: inline-block;
@@ -36,6 +40,23 @@
       a {
         font-size: 2rem;
         margin: 0 1rem;
+        text-decoration: none;
+        color: var(--color-white);
+        transition: var(--transition-default);
+
+        &:hover {
+          color: var(--color-secondary);
+          transform: translateY(-4px);
+          text-shadow: 0 4px 12px rgba(129, 230, 217, 0.2);
+
+          i {
+            color: var(--color-secondary) !important;
+          }
+        }
+
+        i {
+          color: inherit;
+        }
       }
     }
 
