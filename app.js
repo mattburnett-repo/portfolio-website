@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.el_skillset = document.querySelector('span[data-id="skill-summary"]');
       this.el_other_info = document.querySelector('span[data-id="other-info"]');
       this.el_contact = document.querySelector('span[data-id="contact"]');
+      this.linkToPortfolio = document.querySelector('a[data-section="portfolio"]');
     },
 
     bindEvents() {
@@ -33,6 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
       this.portfolioContainer.addEventListener('click', this.handlePortfolioClick.bind(this));
+      this.linkToPortfolio?.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.setActiveSection('portfolio');
+      });
       document.addEventListener('click', this.handleDialogClose.bind(this));
       this.mediaQuery_mw_600.addEventListener('change', this.handleMediaQueryChange.bind(this));
     },
