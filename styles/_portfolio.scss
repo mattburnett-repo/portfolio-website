@@ -67,6 +67,14 @@
       transform: scale(0);
       transition: var(--transition-default);
 
+      .hover-body-full {
+        display: block;
+      }
+
+      .hover-body-xs {
+        display: none;
+      }
+
       h3 {
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
@@ -142,6 +150,14 @@
   opacity: 0.825;
   box-shadow: var(--box-shadow-1);
   overflow-y: auto;
+
+  .dialog-body-full {
+    display: block;
+  }
+
+  .dialog-body-compact {
+    display: none;
+  }
 }
 
 .portfolio-detail::backdrop {
