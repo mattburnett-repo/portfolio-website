@@ -445,6 +445,12 @@ h6 {
   transform: scale(0);
   transition: var(--transition-default);
 }
+.portfolio-container .portfolio-item .hover-item .hover-body-full {
+  display: block;
+}
+.portfolio-container .portfolio-item .hover-item .hover-body-xs {
+  display: none;
+}
 .portfolio-container .portfolio-item .hover-item h3 {
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
@@ -507,6 +513,12 @@ h6 {
   opacity: 0.825;
   box-shadow: var(--box-shadow-1);
   overflow-y: auto;
+}
+.portfolio-detail .dialog-body-full {
+  display: block;
+}
+.portfolio-detail .dialog-body-compact {
+  display: none;
 }
 
 .portfolio-detail::backdrop {
@@ -777,11 +789,18 @@ h6 {
   .bio-container {
     flex: 1;
     max-height: 70vh;
+    overflow-y: auto;
     margin: 1rem auto 0;
     padding: 1rem;
   }
   .portfolio-container {
     max-height: 55vh;
+  }
+  .portfolio-container .portfolio-item:nth-of-type(2) .hover-item .hover-body-full {
+    display: none;
+  }
+  .portfolio-container .portfolio-item:nth-of-type(2) .hover-item .hover-body-xs {
+    display: block;
   }
   .skill-summary-container {
     grid-template-columns: 1fr;
@@ -847,6 +866,12 @@ h6 {
     width: 240px;
     height: 160px;
   }
+  .portfolio-container .portfolio-item .hover-item .hover-body-full {
+    display: none;
+  }
+  .portfolio-container .portfolio-item .hover-item .hover-body-xs {
+    display: block;
+  }
   .portfolio-container .portfolio-item .hover-item h3 {
     font-size: 1.1rem;
     margin-bottom: 1rem;
@@ -857,6 +882,12 @@ h6 {
   }
   .portfolio-container .portfolio-item .hover-item .icon i {
     font-size: 1.2rem;
+  }
+  .portfolio-detail .dialog-body-full {
+    display: none;
+  }
+  .portfolio-detail .dialog-body-compact {
+    display: block;
   }
   .skill-summary-container,
   .other-info-container {
@@ -907,6 +938,13 @@ h6 {
     margin: 0.5rem 0.4rem !important;
   }
 }
+.bio-container .bio-body-full {
+  display: block;
+}
+.bio-container .bio-body-xs {
+  display: none;
+}
+
 @media screen and (max-width: 420px) {
   .section {
     margin-top: 1rem;
@@ -947,6 +985,18 @@ h6 {
   .skill-summary-container,
   .other-info-container {
     max-height: 75vh;
+  }
+  .portfolio-detail {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 80vh;
+    width: 90%;
+  }
+  .bio-container .bio-body-full {
+    display: none;
+  }
+  .bio-container .bio-body-xs {
+    display: block;
   }
   .main-title h2 {
     font-size: 2rem;
