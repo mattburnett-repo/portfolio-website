@@ -114,7 +114,8 @@ $bp-xs: 420px; // Small phones
   .portfolio-container {
     max-height: 55vh;
 
-    // ServePoint card only (2nd portfolio-item) uses short hover text at 1100px and below.
+    // Activist and ServePoint cards only use short hover text at 1100px and below.
+    .portfolio-item:nth-of-type(1) .hover-item,
     .portfolio-item:nth-of-type(2) .hover-item {
       .hover-body-full {
         display: none;

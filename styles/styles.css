@@ -796,9 +796,11 @@ h6 {
   .portfolio-container {
     max-height: 55vh;
   }
+  .portfolio-container .portfolio-item:nth-of-type(1) .hover-item .hover-body-full,
   .portfolio-container .portfolio-item:nth-of-type(2) .hover-item .hover-body-full {
     display: none;
   }
+  .portfolio-container .portfolio-item:nth-of-type(1) .hover-item .hover-body-xs,
   .portfolio-container .portfolio-item:nth-of-type(2) .hover-item .hover-body-xs {
     display: block;
   }
