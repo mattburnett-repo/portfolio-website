@@ -93,6 +93,11 @@
       "workExample": [
         {
           "@type": "CreativeWork",
+          "name": "Filescan (activist)",
+          "url": "https://github.com/activist-org/activist/tree/main/services/filescan"
+        },
+        {
+          "@type": "CreativeWork",
           "name": "Activist.org",
           "url": "https://activist.org/"
         },
@@ -212,6 +217,65 @@
         </p>
       </div>
       <div class="portfolio-container">
+        <!-- Mark: Filescan (activist upload scanning service) -->
+        <div class="portfolio-item">
+          <div class="image">
+            <img src="images/filescan.png" alt="Filescan service">
+          </div>
+          <div class="hover-item">
+            <h3>Filescan</h3>
+            <div class="hover-body hover-body-full">
+              <ul>
+                <li>FastAPI + Docker</li>
+                <li>ClamAV</li>
+                <li>Quarantine + event notification</li>
+                <li>Agentic coding</li>
+              </ul>
+            </div>
+            <div class="hover-body hover-body-xs">
+              <ul>
+                <li>FastAPI + ClamAV</li>
+                <li>Docker / quarantine</li>
+                <li>Agentic coding</li>
+              </ul>
+            </div>
+            <dialog class="portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="filescan-dialog-title">
+              <h3 id="filescan-dialog-title">Filescan</h3>
+              <div class="dialog-body dialog-body-full">
+                <p>
+                  I built Filescan as the FastAPI service that handles image uploads over HTTP and checks them for
+                  malware. <code>clamd</code> sits in the same container and talks over a Unix socket; the image
+                  refreshes the malware dictionary on startup, reads each upload into memory, and returns JSON with a
+                  clear
+                  clean-or-infected result.
+                </p>
+                <p>
+                  I leaned on agentic coding with real review (short, well-defined tasks) so Docker, <code>/scan</code>,
+                  quarantine, and the Django hooks shipped quickly. CSAM
+                  is still stubbed until a vetted hash or API is connected; ClamAV uses thread offload for concurrency;
+                  on a
+                  hit, files containing malware are quarantined and the service posts security events to the backend for
+                  alerting.
+                </p>
+              </div>
+              <div class="dialog-body dialog-body-compact">
+                <p>
+                  I built Filescan as a FastAPI + ClamAV microservice for malware scanning of image uploads. I relied on
+                  agentic coding with a real review
+                  loop to ship it quickly; CSAM scanning stays stubbed until we wire in a vetted integration.
+                </p>
+              </div>
+              <button class="close-dialog">Close</button>
+            </dialog>
+            <div class="icons">
+              <a href="https://github.com/activist-org/activist/tree/main/services/filescan" class="icon"
+                target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github" title="View filescan service on GitHub"></i>
+              </a>
+            </div>
+          </div>
+          <h3>Filescan</h3>
+        </div>
         <!-- Mark: Activist.org -->
         <div class="portfolio-item">
           <div class="image">
@@ -691,9 +755,9 @@
             <h3>Resonate Music Streaming Service</h3>
             <div class="hover-body hover-body-full">
               <ul>
-                <li>Open Source</li>
-                <li>Front End / Back End Development</li>
-                <li>Test Development</li>
+                <li>Open source</li>
+                <li>Frontend + backend</li>
+                <li>API + tests</li>
               </ul>
             </div>
             <div class="hover-body hover-body-xs">
