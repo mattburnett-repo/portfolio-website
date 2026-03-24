@@ -810,15 +810,11 @@ h6 {
   }
   .portfolio-container .portfolio-item:nth-of-type(1) .hover-item .hover-body-xs,
   .portfolio-container .portfolio-item:nth-of-type(2) .hover-item .hover-body-xs,
-<<<<<<< HEAD
   .portfolio-container .portfolio-item:nth-of-type(3) .hover-item .hover-body-xs,
   .portfolio-container .portfolio-item:nth-of-type(4) .hover-item .hover-body-xs,
   .portfolio-container .portfolio-item:nth-of-type(5) .hover-item .hover-body-xs,
   .portfolio-container .portfolio-item:nth-of-type(7) .hover-item .hover-body-xs,
   .portfolio-container .portfolio-item:nth-of-type(10) .hover-item .hover-body-xs {
-=======
-  .portfolio-container .portfolio-item:nth-of-type(3) .hover-item .hover-body-xs {
->>>>>>> 5c3eefec4e8dd99ef65dbcf2b6a69dc139a6adac
     display: block;
   }
   .skill-summary-container {
