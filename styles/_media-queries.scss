@@ -114,10 +114,14 @@ $bp-xs: 420px; // Small phones
   .portfolio-container {
     max-height: 55vh;
 
-    // First three portfolio cards use short hover text at 1100px and below.
+    // Use short hover text for cards that run long at 1100px and below.
     .portfolio-item:nth-of-type(1) .hover-item,
     .portfolio-item:nth-of-type(2) .hover-item,
-    .portfolio-item:nth-of-type(3) .hover-item {
+    .portfolio-item:nth-of-type(3) .hover-item,
+    .portfolio-item:nth-of-type(4) .hover-item,
+    .portfolio-item:nth-of-type(5) .hover-item,
+    .portfolio-item:nth-of-type(7) .hover-item,
+    .portfolio-item:nth-of-type(10) .hover-item {
       .hover-body-full {
         display: none;
       }
