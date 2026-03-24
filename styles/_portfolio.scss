@@ -185,6 +185,10 @@
   text-align: left;
 }
 
+.portfolio-detail ul li::marker {
+  color: var(--color-secondary);
+}
+
 .close-dialog {
   display: block;
   margin: 1rem auto 0;
