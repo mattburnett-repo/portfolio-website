@@ -226,44 +226,49 @@
             <h3>Filescan</h3>
             <div class="hover-body hover-body-full">
               <ul>
-                <li>FastAPI + Docker</li>
-                <li>ClamAV</li>
-                <li>Quarantine + event notification</li>
-                <li>Agentic coding</li>
+                <li>Scans image uploads for malware.</li>
+                <li>Stops unsafe files before app processing.</li>
               </ul>
             </div>
             <div class="hover-body hover-body-xs">
               <ul>
-                <li>FastAPI + ClamAV</li>
-                <li>Docker / quarantine</li>
-                <li>Agentic coding</li>
+                <li>Scans for malware.</li>
+                <li>Blocks unsafe files.</li>
               </ul>
             </div>
             <dialog class="portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="filescan-dialog-title">
               <h3 id="filescan-dialog-title">Filescan</h3>
               <div class="dialog-body dialog-body-full">
                 <p>
-                  I built Filescan as the FastAPI service that handles image uploads over HTTP and checks them for
-                  malware. <code>clamd</code> sits in the same container and talks over a Unix socket; the image
-                  refreshes the malware dictionary on startup, reads each upload into memory, and returns JSON with a
-                  clear
+                  Filescan is an upload-scanning service that checks submitted images for malware before they enter the
+                  main application flow. It receives files over HTTP, scans them with ClamAV, and returns a clear
                   clean-or-infected result.
                 </p>
                 <p>
-                  I leaned on agentic coding with real review (short, well-defined tasks) so Docker, <code>/scan</code>,
-                  quarantine, and the Django hooks shipped quickly. CSAM
-                  is still stubbed until a vetted hash or API is connected; ClamAV uses thread offload for concurrency;
-                  on a
-                  hit, files containing malware are quarantined and the service posts security events to the backend for
-                  alerting.
+                  The service adds a security gate at the point of entry. Unsafe files can be isolated early, which
+                  lowers downstream risk and strengthens confidence in the upload pipeline.
                 </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>FastAPI (scan service API)</li>
+                  <li>ClamAV / clamd (malware detection)</li>
+                  <li>Docker (service packaging/runtime)</li>
+                  <li>Quarantine + backend event notification</li>
+                </ul>
               </div>
               <div class="dialog-body dialog-body-compact">
                 <p>
-                  I built Filescan as a FastAPI + ClamAV microservice for malware scanning of image uploads. I relied on
-                  agentic coding with a real review
-                  loop to ship it quickly; CSAM scanning stays stubbed until we wire in a vetted integration.
+                  Scans image uploads for malware with a clear clean-or-infected result.
                 </p>
+                <p>
+                  Blocks unsafe files at upload time to protect the pipeline.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>FastAPI</li>
+                  <li>ClamAV</li>
+                  <li>Docker</li>
+                </ul>
               </div>
               <button class="close-dialog">Close</button>
             </dialog>
@@ -285,46 +290,49 @@
             <h3>Activist.org</h3>
             <div class="hover-body hover-body-full">
               <ul>
-                <li>Vue.js 3 / Typescript</li>
-                <li>Tailwind CSS</li>
-                <li>Django / DRF</li>
-                <li>Agentic coding / AI-assisted development</li>
+                <li>Connects activists to organizations and causes.</li>
+                <li>Makes civic participation easier.</li>
               </ul>
             </div>
             <div class="hover-body hover-body-xs">
               <ul>
-                <li>Vue 3, TypeScript</li>
-                <li>Django / DRF backend</li>
-                <li>Agentic coding</li>
+                <li>Links activists to causes.</li>
+                <li>Improves participation.</li>
               </ul>
             </div>
             <dialog class="portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="activist-dialog-title">
               <h3 id="activist-dialog-title">Activist.org</h3>
               <div class="dialog-body dialog-body-full">
                 <p>
-                  Activist.org is a platform that connects activists with organizations and causes they care about.
-                  As part of the development team, I work on improving existing functionality and implementing new
-                  features from broadly defined requirements.
+                  Activist.org is a web platform that connects activists with organizations, campaigns, and causes.
+                  I contribute across frontend and backend work to deliver features that help users discover and engage
+                  with relevant civic opportunities.
                 </p>
                 <p>
-                  My role focuses on refining user experience, improving performance, and integrating new
-                  capabilities in a way that fits the existing system. I collaborate closely with other developers
-                  and stakeholders to identify priorities and address issues early.
+                  This work supports stronger community participation by improving usability, performance, and
+                  maintainability in a mission-driven product used by organizers and volunteers.
                 </p>
-                <p>
-                  Using Vue 3, Django 5, TypeScript/JavaScript, and Tailwind CSS with Headless UI, I contribute across
-                  both front-end and backend code. I also use agentic coding and AI-assisted development to help
-                  translate broadly defined requirements into working features. My work helps keep the platform
-                  modern, maintainable, and responsive to the needs of its community.
-                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>Vue 3 + TypeScript</li>
+                  <li>Django + DRF</li>
+                  <li>Tailwind CSS + Headless UI</li>
+                  <li>Agentic / AI-assisted development</li>
+                </ul>
               </div>
               <div class="dialog-body dialog-body-compact">
                 <p>
-                  Activist.org is a Vue 3 + Django platform that connects activists with organizations and causes they
-                  care about. I help improve UX, performance, and new features across the stack with agentic coding
-                  and AI-assisted development while keeping the system modern, maintainable, and responsive to its
-                  community.
+                  Connects activists with organizations and causes across the stack.
                 </p>
+                <p>
+                  UX and performance work for mission-driven community use.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>Vue 3</li>
+                  <li>Django / DRF</li>
+                  <li>TypeScript</li>
+                </ul>
               </div>
               <button class="close-dialog">Close</button>
             </dialog>
@@ -348,40 +356,48 @@
             <h3>ServePoint</h3>
             <div class="hover-body hover-body-full">
               <ul>
-                <li>ColdFusion 2025 / ColdBox HMVC</li>
-                <li>ColdFusion ORM / PostgreSQL</li>
-                <li>Agentic coding / AI-assisted development</li>
+                <li>Manages citizen-service cases securely.</li>
+                <li>Supports reliable public-service delivery.</li>
               </ul>
             </div>
             <div class="hover-body hover-body-xs">
               <ul>
-                <li>ColdFusion + ColdBox</li>
-                <li>PostgreSQL + ORM</li>
-                <li>Agentic coding</li>
+                <li>Tracks service cases.</li>
+                <li>Supports secure delivery.</li>
               </ul>
             </div>
             <dialog class="portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="servepoint-dialog-title">
               <h3 id="servepoint-dialog-title">ServePoint</h3>
               <div class="dialog-body dialog-body-full">
                 <p>
-                  <code>ServePoint</code> is a focused effort to use agentic coding in a practical, real-world setting.
-                  I'm building it as a case management system for agencies that serve citizens at the federal and
-                  local level—the kind of place where clear workflows and strong privacy really matter—to show how
-                  modern ColdFusion and ColdBox can support serious social services while I develop with AI agents.
+                  <code>ServePoint</code> is a case management application for agencies that deliver public services.
+                  It is designed to support structured workflows, case tracking, and secure handling of sensitive data.
                 </p>
                 <p>
-                  I'm designing it around architecture, security, and deployment practices that would hold up
-                  in government and mission-driven environments. The goal is to make it a practical reference
-                  for teams evaluating ColdFusion for sensitive workloads, and a concrete example of agentic
-                  development applied to a real application.
+                  The project demonstrates how modern ColdFusion architecture can support high-trust environments where
+                  reliability, privacy, and operational clarity are critical.
                 </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>ColdFusion 2025 + ColdBox</li>
+                  <li>PostgreSQL + ORM</li>
+                  <li>Secure workflow design</li>
+                  <li>Agentic / AI-assisted development</li>
+                </ul>
               </div>
               <div class="dialog-body dialog-body-compact">
                 <p>
-                  ServePoint is a case management app built with modern ColdFusion and ColdBox for agencies that serve
-                  citizens. I use agentic coding to design secure, architecture‑focused workflows that could stand up in
-                  government and mission‑driven environments.
+                  Case management for public-service agencies with secure workflows.
                 </p>
+                <p>
+                  Modern ColdFusion for sensitive, mission-driven workloads.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>ColdFusion</li>
+                  <li>ColdBox</li>
+                  <li>PostgreSQL</li>
+                </ul>
               </div>
               <button class="close-dialog">Close</button>
             </dialog>
@@ -405,15 +421,14 @@
             <h3>Carbon Interface API Frontend</h3>
             <div class="hover-body hover-body-full">
               <ul>
-                <li>React / TypeScript</li>
-                <li>Material UI / Formik</li>
-                <li>3rd party API integration</li>
+                <li>Estimates travel emissions.</li>
+                <li>Supports lower-impact choices.</li>
               </ul>
             </div>
             <div class="hover-body hover-body-xs">
               <ul>
-                <li>React + TypeScript UI</li>
-                <li>Carbon Interface API</li>
+                <li>Estimates emissions.</li>
+                <li>Supports greener travel.</li>
               </ul>
             </div>
             <dialog class="portfolio-detail" role="dialog" aria-modal="true"
@@ -421,27 +436,34 @@
               <h3 id="carbon-interface-dialog-title">Carbon Interface API Frontend</h3>
               <div class="dialog-body dialog-body-full">
                 <p>
-                  This project is a lightweight, user-friendly frontend for the
-                  <code>Carbon Interface API</code>, which provides estimates of carbon emissions for activities such as
-                  air travel
-                  and ground transport. I focused on designing a responsive, intuitive interface that makes complex
-                  environmental data
-                  easier to understand.
+                  This project is a frontend for the <code>Carbon Interface API</code> that estimates emissions for
+                  travel and transport scenarios. It presents the input and result flow in a clear, user-friendly UI.
                 </p>
                 <p>
-                  Built with React, TypeScript, Material UI, and Formik, the application reflects my interest in
-                  climate-focused tools
-                  and in translating technical data into practical, user-centered experiences. It also serves as a
-                  foundation for
-                  future features aimed at helping users better understand—and reduce—their environmental impact.
+                  The interface turns technical carbon data into understandable outputs, helping users compare options
+                  and make better-informed decisions.
                 </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>React + TypeScript</li>
+                  <li>Material UI + Formik</li>
+                  <li>Carbon Interface API</li>
+                </ul>
               </div>
               <div class="dialog-body dialog-body-compact">
                 <p>
-                  This React + TypeScript frontend wraps the Carbon Interface API to estimate emissions for travel and
-                  transport. I focused on a clean UI that makes complex environmental data easier to understand and
-                  extend with future features.
+                  This frontend uses the Carbon Interface API to estimate emissions for travel and transport in a clear
+                  UI flow.
                 </p>
+                <p>
+                  It makes carbon data easier to interpret for practical decision-making.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>React</li>
+                  <li>TypeScript</li>
+                  <li>Carbon Interface API</li>
+                </ul>
               </div>
               <button class="close-dialog">Close</button>
             </dialog>
@@ -465,15 +487,14 @@
             <h3>create-flask-app</h3>
             <div class="hover-body hover-body-full">
               <ul>
-                <li>Python</li>
-                <li>Click CLI Tool</li>
-                <li>Tailwind CSS</li>
+                <li>Scaffolds Flask apps via CLI.</li>
+                <li>Reduces setup boilerplate.</li>
               </ul>
             </div>
             <div class="hover-body hover-body-xs">
               <ul>
-                <li>Python + Click CLI</li>
-                <li>Tailwind CSS scaffolding</li>
+                <li>Generates Flask starters.</li>
+                <li>Cuts setup boilerplate.</li>
               </ul>
             </div>
             <dialog class="portfolio-detail" role="dialog" aria-modal="true"
@@ -481,29 +502,34 @@
               <h3 id="create-flask-app-dialog-title">create-flask-app</h3>
               <div class="dialog-body dialog-body-full">
                 <p>
-                  <code>create-flask-app</code> is a command-line tool for quickly scaffolding small to medium-sized
-                  Flask
-                  applications. Built in Python with Click, it generates a clean, opinionated project structure that
-                  removes repetitive setup and lets developers focus on application logic.
+                  <code>create-flask-app</code> is a CLI tool that scaffolds Flask projects with a clean, opinionated
+                  structure. It automates common setup steps and creates a usable starter quickly.
                 </p>
                 <p>
-                  I designed and implemented the tool with speed, clarity, and scalability in mind. The generated
-                  architecture
-                  encourages best practices such as modular design, environment-specific configuration, and optional
-                  extensions for databases, testing, and templating.
+                  The tool reduces repetitive boilerplate and helps developers move faster into feature work with
+                  consistent project organization.
                 </p>
-                <p>
-                  By automating common setup tasks, <code>create-flask-app</code> improves developer flow and iteration
-                  speed.
-                  It reflects my focus on developer experience and on building maintainable, well-documented tools that
-                  support long-term work, not just quick starts.
-                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>Python</li>
+                  <li>Click CLI</li>
+                  <li>Flask project scaffolding</li>
+                  <li>Template-driven generation</li>
+                </ul>
               </div>
               <div class="dialog-body dialog-body-compact">
                 <p>
-                  create‑flask‑app is a Python + Click CLI that scaffolds opinionated Flask apps. It generates a clean
-                  structure and optional extensions so developers can skip boilerplate and focus on application logic.
+                  CLI scaffold for Flask projects with a clean starter layout.
                 </p>
+                <p>
+                  Cuts repetitive setup so you can focus on features.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>Python</li>
+                  <li>Click</li>
+                  <li>Flask</li>
+                </ul>
               </div>
               <button class="close-dialog">Close</button>
             </dialog>
@@ -524,32 +550,50 @@
             <h3>Solar Panel Output Estimation</h3>
             <div class="hover-body hover-body-full">
               <ul>
-                <li>TypeScript / React</li>
-                <li>3rd party API integration</li>
-                <li>AWS Deployment</li>
+                <li>Forecasts solar energy output.</li>
+                <li>Supports better energy planning.</li>
               </ul>
             </div>
             <div class="hover-body hover-body-xs">
               <ul>
-                <li>React + TypeScript UI</li>
-                <li>Forecast.solar API client</li>
+                <li>Forecasts solar output.</li>
+                <li>Aids energy planning.</li>
               </ul>
             </div>
             <dialog class="portfolio-detail" role="dialog" aria-modal="true"
               aria-labelledby="solar-output-dialog-title">
               <h3 id="solar-output-dialog-title">Solar Panel Output Estimation</h3>
-              <p>
-                The Solar Panel Output Estimation project provides real-time estimates of solar panel electricity
-                production
-                based on location, time, and weather data from the <code>forecast.solar</code> API. I built a responsive
-                web
-                interface that makes complex data accessible and actionable for users.
-              </p>
-              <p>
-                Developed with React, TypeScript, and AWS (S3, API Gateway, Lambda), this project reflects my interest
-                in
-                sustainable technologies and using real-time data to support informed energy decisions.
-              </p>
+              <div class="dialog-body dialog-body-full">
+                <p>
+                  This project estimates solar panel electricity production using location, time, and weather inputs from
+                  the <code>forecast.solar</code> API. It presents the results in a responsive interface for quick
+                  interpretation.
+                </p>
+                <p>
+                  The output helps users evaluate potential generation and plan usage with better visibility into likely
+                  energy performance.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>React + TypeScript</li>
+                  <li>forecast.solar API</li>
+                  <li>AWS (S3, API Gateway, Lambda)</li>
+                </ul>
+              </div>
+              <div class="dialog-body dialog-body-compact">
+                <p>
+                  Estimates solar output using <code>forecast.solar</code> in a responsive UI.
+                </p>
+                <p>
+                  Helps users gauge generation for better energy planning.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>React</li>
+                  <li>TypeScript</li>
+                  <li>AWS</li>
+                </ul>
+              </div>
               <button class="close-dialog">Close</button>
             </dialog>
             <div class="icons">
@@ -572,43 +616,48 @@
             <h3>GreenShop / E-commerce UI</h3>
             <div class="hover-body hover-body-full">
               <ul>
-                <li>React 18 / Redux Toolkit</li>
-                <li>TypeScript</li>
-                <li>Stripe payment API integration</li>
-                <li>Vercel deployment / API integration</li>
+                <li>Sells sustainable products.</li>
+                <li>Demonstrates checkout flow.</li>
               </ul>
             </div>
             <div class="hover-body hover-body-xs">
               <ul>
-                <li>React + TypeScript</li>
-                <li>Stripe</li>
-                <li>Custom API</li>
+                <li>Sells sustainable goods.</li>
+                <li>Shows checkout flow.</li>
               </ul>
             </div>
             <dialog class="portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="greenshop-dialog-title">
               <h3 id="greenshop-dialog-title">GreenShop / E-commerce UI</h3>
               <div class="dialog-body dialog-body-full">
                 <p>
-                  GreenShop is a capstone e-commerce web app focused on sustainable, renewable products. It offers a
-                  seamless
-                  shopping experience that highlights eco-friendly goods while serving as a practical exercise in
-                  full-stack web
-                  development.
+                  GreenShop is an e-commerce storefront focused on sustainable products. It supports browsing, cart
+                  flows, and checkout in a modern web shopping experience.
                 </p>
                 <p>
-                  The application integrates with a custom E-commerce REST API and Stripe for secure payments, ensuring
-                  smooth
-                  functionality and user confidence. Built with React, Redux Toolkit, TypeScript, and deployed on
-                  Vercel,
-                  GreenShop
-                  demonstrates my ability to build modern, responsive, and user-focused web applications with a purpose.
+                  The project shows end-to-end commerce integration with secure payments and API-backed product data,
+                  demonstrating practical full-stack delivery.
                 </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>React 18 + TypeScript</li>
+                  <li>Redux Toolkit</li>
+                  <li>Stripe payments</li>
+                  <li>Custom e-commerce API</li>
+                </ul>
               </div>
               <div class="dialog-body dialog-body-compact">
                 <p>
-                  GreenShop is a React + Redux Toolkit storefront for sustainable products. It uses a custom E‑commerce
-                  API and Stripe payments to demonstrate full‑stack skills and a smooth, modern shopping experience.
+                  Sustainable storefront with cart and checkout via API data.
                 </p>
+                <p>
+                  Practical e-commerce UX with secure payments.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>React</li>
+                  <li>Redux Toolkit</li>
+                  <li>Stripe</li>
+                </ul>
               </div>
               <button class="close-dialog">Close</button>
             </dialog>
@@ -632,47 +681,51 @@
             <h3>E-commerce REST API</h3>
             <div class="hover-body hover-body-full">
               <ul>
-                <li>NestJS / TypeScript</li>
-                <li>PostgreSQL database / TypeORM</li>
-                <li>OpenAPI documentation</li>
-                <li>CI/CD via GitHub Actions</li>
+                <li>Handles products, orders, and auth.</li>
+                <li>Keeps transactions reliable.</li>
               </ul>
             </div>
             <div class="hover-body hover-body-xs">
               <ul>
-                <li>NestJS + PostgreSQL</li>
-                <li>OpenAPI docs + CI/CD</li>
+                <li>Runs products and orders.</li>
+                <li>Keeps transactions stable.</li>
               </ul>
             </div>
             <dialog class="portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="ecomm-api-dialog-title">
               <h3 id="ecomm-api-dialog-title">E-commerce REST API</h3>
               <div class="dialog-body dialog-body-full">
                 <p>
-                  The E-commerce REST API powers the GreenShop application, providing infrastructure for managing
-                  products,
-                  transactions, and user authentication. I focused on building a scalable, reliable backend that
-                  supports
-                  modern
-                  e-commerce needs.
+                  The E-commerce REST API powers GreenShop by handling products, transactions, and authentication
+                  through a structured backend service.
                 </p>
                 <p>
-                  Built with NestJS, TypeScript, PostgreSQL, and TypeORM, the API is type-safe, well-structured, and
-                  performant.
-                  Comprehensive OpenAPI documentation makes it easy for developers to integrate and reduces friction in
-                  development. CI/CD pipelines using GitHub Actions ensure that updates are automatically tested and
-                  deployed,
-                  maintaining stability and reliability for the application.
+                  The service provides predictable endpoints, documentation, and deployment checks that support stable
+                  integrations and reliable commerce operations.
                 </p>
                 <p>
-                  For developers interested in exploring the API, the OpenAPI documentation is available and can be
-                  accessed with the username/password combination <code>e-comm/e-comm</code>.
+                  Developers can explore the OpenAPI docs using <code>e-comm/e-comm</code>.
                 </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>NestJS + TypeScript</li>
+                  <li>PostgreSQL + TypeORM</li>
+                  <li>OpenAPI docs</li>
+                  <li>GitHub Actions CI/CD</li>
+                </ul>
               </div>
               <div class="dialog-body dialog-body-compact">
                 <p>
-                  This NestJS + PostgreSQL REST API powers GreenShop, handling products, transactions, and auth. It is
-                  documented with OpenAPI and wired to CI/CD so updates are tested and deployed reliably.
+                  Backend for GreenShop: products, transactions, and auth.
                 </p>
+                <p>
+                  OpenAPI docs and CI/CD for reliable delivery.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>NestJS</li>
+                  <li>PostgreSQL</li>
+                  <li>OpenAPI</li>
+                </ul>
               </div>
               <button class="close-dialog">Close</button>
             </dialog>
@@ -696,16 +749,14 @@
             <h3>NestJS REST API Template</h3>
             <div class="hover-body hover-body-full">
               <ul>
-                <li>NestJS / TypeScript</li>
-                <li>TypeORM</li>
-                <li>PassportJS Authentication</li>
-                <li>CI/CD via GitHub Actions</li>
+                <li>Scaffolds NestJS APIs quickly.</li>
+                <li>Reduces backend setup time.</li>
               </ul>
             </div>
             <div class="hover-body hover-body-xs">
               <ul>
-                <li>NestJS API starter</li>
-                <li>Auth, DB, CI/CD</li>
+                <li>Starter for NestJS APIs.</li>
+                <li>Cuts setup time.</li>
               </ul>
             </div>
             <dialog class="portfolio-detail" role="dialog" aria-modal="true"
@@ -713,25 +764,34 @@
               <h3 id="nestjs-template-dialog-title">NestJS REST API Template</h3>
               <div class="dialog-body dialog-body-full">
                 <p>
-                  The NestJS REST API Template is a starter scaffold for building NestJS-based APIs, including the
-                  E-commerce
-                  REST API. It provides a ready-made structure with authentication, database integration, and modular
-                  architecture,
-                  helping developers focus on application-specific features instead of boilerplate.
+                  The NestJS REST API Template is a starter scaffold for building backend APIs with a production-ready
+                  structure for auth, database access, and modular organization.
                 </p>
                 <p>
-                  Built with NestJS, TypeScript, TypeORM, and PassportJS, the template includes CI/CD pipelines via
-                  GitHub
-                  Actions for automatic testing and deployment. OpenAPI documentation is available for developers with
-                  username/password <code>test/test</code>.
+                  It reduces setup effort and helps teams move directly into feature development with consistent
+                  conventions and deployment practices. OpenAPI docs are available with <code>test/test</code>.
                 </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>NestJS + TypeScript</li>
+                  <li>TypeORM + PostgreSQL</li>
+                  <li>PassportJS auth</li>
+                  <li>GitHub Actions CI/CD</li>
+                </ul>
               </div>
               <div class="dialog-body dialog-body-compact">
                 <p>
-                  The NestJS REST API Template is a starter for new APIs with auth, database integration, and CI/CD
-                  already set up. It lets teams focus on features instead of boilerplate, using NestJS, TypeORM, and
-                  PassportJS.
+                  This template bootstraps NestJS APIs with auth, database integration, and CI/CD already configured.
                 </p>
+                <p>
+                  It minimizes boilerplate and helps teams start building features faster.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>NestJS</li>
+                  <li>TypeORM</li>
+                  <li>PassportJS</li>
+                </ul>
               </div>
               <button class="close-dialog">Close</button>
             </dialog>
@@ -755,33 +815,48 @@
             <h3>Resonate Music Streaming Service</h3>
             <div class="hover-body hover-body-full">
               <ul>
-                <li>Open source</li>
-                <li>Frontend + backend</li>
-                <li>API + tests</li>
+                <li>Supports open-source streaming.</li>
+                <li>Improves reliability with tests.</li>
               </ul>
             </div>
             <div class="hover-body hover-body-xs">
               <ul>
-                <li>Open‑source</li>
-                <li>API test + feature work</li>
+                <li>Supports music streaming.</li>
+                <li>Improves stability.</li>
               </ul>
             </div>
             <dialog class="portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="resonate-dialog-title">
               <h3 id="resonate-dialog-title">Resonate Music Streaming Service</h3>
-              <p>
-                The Resonate Music Streaming Service is an open-source platform for collaborative music sharing. I
-                developed a
-                comprehensive test plan to audit the API, identify broken or missing functionality, and ensure core
-                features
-                worked reliably.
-              </p>
-              <p>
-                Using Mocha and Chai, I created detailed test cases, verified refactored features, and helped improve
-                the
-                platform’s stability and performance. This work highlights my ability to apply rigorous testing
-                practices to
-                enhance open-source projects.
-              </p>
+              <div class="dialog-body dialog-body-full">
+                <p>
+                  Resonate is an open-source music streaming platform where I contributed testing and feature support
+                  work across the codebase.
+                </p>
+                <p>
+                  The work improved API reliability and helped verify key functionality, strengthening the platform for
+                  contributors and users.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>Node.js API testing</li>
+                  <li>Mocha + Chai</li>
+                  <li>Open-source collaboration workflows</li>
+                </ul>
+              </div>
+              <div class="dialog-body dialog-body-compact">
+                <p>
+                  Open-source streaming work focused on API tests and fixes.
+                </p>
+                <p>
+                  Improved reliability for contributors and users.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>Node.js</li>
+                  <li>Mocha</li>
+                  <li>Chai</li>
+                </ul>
+              </div>
               <button class="close-dialog">Close</button>
             </dialog>
             <div class="icons">
@@ -804,35 +879,49 @@
             <h3>This website</h3>
             <div class="hover-body hover-body-full">
               <ul>
-                <li>HTML</li>
-                <li>Javascript</li>
-                <li>CSS</li>
-                <li>SEO / Schema.org optimization</li>
+                <li>Showcases projects and skills.</li>
+                <li>Improves professional visibility.</li>
               </ul>
             </div>
             <div class="hover-body hover-body-xs">
               <ul>
-                <li>HTML/CSS/JS</li>
-                <li>SEO</li>
-                <li>Google Analytics</li>
+                <li>Shows projects and skills.</li>
+                <li>Boosts visibility.</li>
               </ul>
             </div>
             <dialog class="portfolio-detail" role="dialog" aria-modal="true"
               aria-labelledby="this-website-dialog-title">
               <h3 id="this-website-dialog-title">This website</h3>
-              <p>
-                This website is my personal portfolio, built with HTML, JavaScript, and CSS/SASS to showcase my skills
-                and projects.
-                It demonstrates the ability to create a functional, visually appealing site without external libraries
-                or frameworks.
-              </p>
-              <p>
-                Designed with SEO and structured data following schema.org standards, the site ensures visibility and
-                relevance
-                in search results. This project highlights my proficiency in building professional, responsive, and
-                modern web
-                experiences.
-              </p>
+              <div class="dialog-body dialog-body-full">
+                <p>
+                  This site is my personal portfolio and central project showcase. It presents work samples, technical
+                  focus areas, and background information in a single navigable interface.
+                </p>
+                <p>
+                  The implementation prioritizes clarity, responsiveness, and discoverability so recruiters and teams can
+                  quickly review relevant experience and project outcomes.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>HTML + JavaScript</li>
+                  <li>CSS / SASS</li>
+                  <li>SEO + Schema.org structured data</li>
+                </ul>
+              </div>
+              <div class="dialog-body dialog-body-compact">
+                <p>
+                  Personal portfolio showcasing projects and background in one site.
+                </p>
+                <p>
+                  Built for clarity, responsiveness, and search visibility.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>HTML</li>
+                  <li>SASS</li>
+                  <li>SEO</li>
+                </ul>
+              </div>
               <button class="close-dialog">Close</button>
             </dialog>
             <div class="icons">

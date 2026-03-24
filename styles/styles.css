@@ -438,6 +438,9 @@ h6 {
   line-height: 1.75rem;
   border: var(--innerBorder);
   background-color: var(--color-secondary);
+  background-color: color-mix(in srgb, var(--color-secondary) 90%, transparent);
+  background-image: linear-gradient(165deg, rgba(255, 255, 255, 0.22) 0%, transparent 40%, rgba(0, 0, 0, 0.16) 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), inset 0 -14px 36px rgba(0, 0, 0, 0.12);
   left: 0;
   top: 0;
   border-radius: var(--borderRadiusLo);
@@ -798,12 +801,20 @@ h6 {
   }
   .portfolio-container .portfolio-item:nth-of-type(1) .hover-item .hover-body-full,
   .portfolio-container .portfolio-item:nth-of-type(2) .hover-item .hover-body-full,
-  .portfolio-container .portfolio-item:nth-of-type(3) .hover-item .hover-body-full {
+  .portfolio-container .portfolio-item:nth-of-type(3) .hover-item .hover-body-full,
+  .portfolio-container .portfolio-item:nth-of-type(4) .hover-item .hover-body-full,
+  .portfolio-container .portfolio-item:nth-of-type(5) .hover-item .hover-body-full,
+  .portfolio-container .portfolio-item:nth-of-type(7) .hover-item .hover-body-full,
+  .portfolio-container .portfolio-item:nth-of-type(10) .hover-item .hover-body-full {
     display: none;
   }
   .portfolio-container .portfolio-item:nth-of-type(1) .hover-item .hover-body-xs,
   .portfolio-container .portfolio-item:nth-of-type(2) .hover-item .hover-body-xs,
-  .portfolio-container .portfolio-item:nth-of-type(3) .hover-item .hover-body-xs {
+  .portfolio-container .portfolio-item:nth-of-type(3) .hover-item .hover-body-xs,
+  .portfolio-container .portfolio-item:nth-of-type(4) .hover-item .hover-body-xs,
+  .portfolio-container .portfolio-item:nth-of-type(5) .hover-item .hover-body-xs,
+  .portfolio-container .portfolio-item:nth-of-type(7) .hover-item .hover-body-xs,
+  .portfolio-container .portfolio-item:nth-of-type(10) .hover-item .hover-body-xs {
     display: block;
   }
   .skill-summary-container {
@@ -886,6 +897,14 @@ h6 {
   }
   .portfolio-container .portfolio-item .hover-item .icon i {
     font-size: 1.2rem;
+  }
+  .portfolio-detail {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 92%;
+    max-height: 75vh;
+    padding: 1.25rem;
+    box-sizing: border-box;
   }
   .portfolio-detail .dialog-body-full {
     display: none;
