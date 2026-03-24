@@ -237,6 +237,13 @@ $bp-xs: 420px; // Small phones
 
   // At md and below, use compact dialog copy instead of full text.
   .portfolio-detail {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 92%;
+    max-height: 75vh;
+    padding: 1.25rem;
+    box-sizing: border-box;
+
     .dialog-body-full {
       display: none;
     }
