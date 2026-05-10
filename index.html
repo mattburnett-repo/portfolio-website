@@ -93,6 +93,11 @@
       "workExample": [
         {
           "@type": "CreativeWork",
+          "name": "Chat MVP",
+          "url": "https://github.com/mattburnett-repo/chat-mvp"
+        },
+        {
+          "@type": "CreativeWork",
           "name": "Filescan (activist)",
           "url": "https://github.com/activist-org/activist/tree/main/services/filescan"
         },
@@ -217,6 +222,72 @@
         </p>
       </div>
       <div class="portfolio-container">
+        <!-- Mark: Chat MVP (RAG chat over ingested sources) -->
+        <div class="portfolio-item">
+          <div class="image">
+            <img src="images/chat-mvp.png" alt="Chat MVP">
+          </div>
+          <div class="hover-item">
+            <h3>Chat MVP</h3>
+            <div class="hover-body hover-body-full">
+              <ul>
+                <li>RAG chat over ingested documents.</li>
+                <li>FastAPI + Streamlit + PostgreSQL/pgvector.</li>
+              </ul>
+            </div>
+            <div class="hover-body hover-body-xs">
+              <ul>
+                <li>Doc-grounded RAG.</li>
+                <li>FastAPI + Streamlit.</li>
+              </ul>
+            </div>
+            <dialog class="portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="chat-mvp-dialog-title">
+              <h3 id="chat-mvp-dialog-title">Chat MVP</h3>
+              <div class="dialog-body dialog-body-full">
+                <p>
+                  Chat MVP is a minimal RAG application: sources are crawled and chunked into PostgreSQL with the
+                  pgvector extension, embeddings are generated via the OpenAI API, and answers are produced with
+                  LangChain using retrieved context plus a trimmed chat history.
+                </p>
+                <p>
+                  A FastAPI service exposes health and query endpoints; a Streamlit frontend posts questions and shows
+                  answers with cited source chunks. The stack is suited to demos and iterative work on ingestion,
+                  retrieval quality, and prompt behavior.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul
+                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>Python 3.13, FastAPI, Uvicorn, Streamlit</li>
+                  <li>PostgreSQL, pgvector, LangChain, OpenAI (chat + embeddings)</li>
+                  <li>Trafilatura, BeautifulSoup (HTML extraction)</li>
+                </ul>
+              </div>
+              <div class="dialog-body dialog-body-compact">
+                <p>
+                  RAG chat: ingest sources into PostgreSQL/pgvector, retrieve top-k chunks, answer with an OpenAI model.
+                </p>
+                <p>
+                  FastAPI for <code>/query</code>; Streamlit UI; LangChain for retrieval and generation.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul
+                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>FastAPI, Streamlit</li>
+                  <li>PostgreSQL, pgvector</li>
+                  <li>LangChain, OpenAI</li>
+                </ul>
+              </div>
+              <button class="close-dialog">Close</button>
+            </dialog>
+            <div class="icons">
+              <a href="https://github.com/mattburnett-repo/chat-mvp" class="icon" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-github" title="View Chat MVP on GitHub"></i>
+              </a>
+            </div>
+          </div>
+          <h3>Chat MVP</h3>
+        </div>
         <!-- Mark: Filescan (activist upload scanning service) -->
         <div class="portfolio-item">
           <div class="image">
