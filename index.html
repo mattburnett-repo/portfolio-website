@@ -66,7 +66,15 @@
         "ColdFusion",
         "ColdBox",
         "agentic coding",
-        "AI-assisted development"
+        "AI-assisted development",
+        "RAG",
+        "LangChain",
+        "OpenAI",
+        "Hugging Face",
+        "LangSmith",
+        "pgvector",
+        "FastAPI",
+        "LLM pipelines"
       ],
       "knowsAbout": [
         "React",
@@ -88,9 +96,24 @@
         "agentic coding",
         "AI",
         "AI-assisted development",
-        "agent-based development"
+        "agent-based development",
+        "RAG",
+        "LangChain",
+        "OpenAI",
+        "Hugging Face",
+        "LangSmith",
+        "pgvector",
+        "FastAPI",
+        "LLM pipelines",
+        "Streamlit",
+        "JSON Schema"
       ],
       "workExample": [
+        {
+          "@type": "CreativeWork",
+          "name": "Aptitude Search",
+          "url": "https://github.com/mattburnett-repo/aptitude-search"
+        },
         {
           "@type": "CreativeWork",
           "name": "Chat MVP",
@@ -222,6 +245,73 @@
         </p>
       </div>
       <div class="portfolio-container">
+        <!-- Mark: Aptitude Search (aptitude-driven job search pipeline) -->
+        <div class="portfolio-item">
+          <div class="image">
+            <img src="images/aptitude-search-banner.png" alt="Aptitude Search">
+          </div>
+          <div class="hover-item">
+            <h3>Aptitude Search</h3>
+            <div class="hover-body hover-body-full">
+              <ul>
+                <li>LLM-powered aptitude profiling.</li>
+                <li>Finds suitable verified job openings.</li>
+              </ul>
+            </div>
+            <div class="hover-body hover-body-xs">
+              <ul>
+                <li>Aptitude-driven job search.</li>
+                <li>FastAPI + React MVP.</li>
+              </ul>
+            </div>
+            <dialog class="portfolio-detail" role="dialog" aria-modal="true"
+              aria-labelledby="aptitude-search-dialog-title">
+              <h3 id="aptitude-search-dialog-title">Aptitude Search</h3>
+              <div class="dialog-body dialog-body-full">
+                <p>
+                  Aptitude Search is a multi-stage LLM pipeline that turns a resume and search constraints into a
+                  structured aptitude profile, then surfaces verified job openings that fit. Stage one extracts
+                  strengths, career targets, and search strategy; stage two returns matches constrained to real
+                  listings only.
+                </p>
+                <p>
+                  A FastAPI backend orchestrates Hugging Face–powered agents with JSON Schema–validated outputs; a Vite
+                  + React frontend provides an MVP UI for running the pipeline via <code>POST /v1/pipeline</code>.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul
+                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>Python, FastAPI, Uvicorn</li>
+                  <li>Hugging Face smolagents, LangSmith (observability and evaluation), JSON Schema</li>
+                  <li>React, Vite, TypeScript</li>
+                </ul>
+              </div>
+              <div class="dialog-body dialog-body-compact">
+                <p>
+                  Resume + constraints → aptitude profile → verified openings via a two-stage LLM pipeline.
+                </p>
+                <p>
+                  FastAPI API; React MVP UI; schema-validated agent outputs.
+                </p>
+                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
+                <ul
+                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
+                  <li>FastAPI, Hugging Face, LangSmith</li>
+                  <li>React, TypeScript</li>
+                  <li>JSON Schema</li>
+                </ul>
+              </div>
+              <button class="close-dialog">Close</button>
+            </dialog>
+            <div class="icons">
+              <a href="https://github.com/mattburnett-repo/aptitude-search" class="icon" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-github" title="View Aptitude Search on GitHub"></i>
+              </a>
+            </div>
+          </div>
+          <h3>Aptitude Search</h3>
+        </div>
         <!-- Mark: Chat MVP (RAG chat over ingested sources) -->
         <div class="portfolio-item">
           <div class="image">
@@ -876,6 +966,7 @@
                 <li>Django</li>
                 <li>DRF</li>
                 <li>Flask</li>
+                <li>FastAPI</li>
                 <li>ColdFusion</li>
                 <li>CFML</li>
               </ul>
@@ -901,6 +992,36 @@
         </div>
         <div class="skill-summary-item">
           <div class="skill-summary-title">
+            <p>AI / LLM</p>
+          </div>
+          <div class="skill-summary-list">
+            <div>
+              <ul>
+                <li>RAG</li>
+                <li>LLM pipelines</li>
+                <li>LangChain</li>
+                <li>OpenAI API</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li>Hugging Face</li>
+                <li>LangSmith</li>
+                <li>pgvector</li>
+                <li>JSON Schema</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li>Streamlit</li>
+                <li>Agentic workflows</li>
+                <li>AI-assisted development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="skill-summary-item">
+          <div class="skill-summary-title">
             <p>Other</p>
           </div>
           <div class="skill-summary-list">
@@ -916,8 +1037,6 @@
               <ul>
                 <li>API integration</li>
                 <li>CI/CD pipelines</li>
-                <li>AI-assisted development</li>
-                <li>Agentic coding workflows</li>
               </ul>
             </div>
           </div>
