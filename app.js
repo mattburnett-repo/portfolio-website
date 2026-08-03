@@ -1,21 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
-  const cursor = document.querySelector('.cursor');
-  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   if (yearEl) {
     yearEl.textContent = String(new Date().getFullYear());
-  }
-
-  if (finePointer && cursor) {
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
-    });
-
-    document.querySelectorAll('a, button, [data-hover]').forEach((el) => {
-      el.addEventListener('mouseenter', () => cursor.classList.add('lg'));
-      el.addEventListener('mouseleave', () => cursor.classList.remove('lg'));
-    });
   }
 
   const reveals = document.querySelectorAll('.reveal');
@@ -36,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach((el) => el.classList.add('in'));
   }
 
-  // Soften topbar over the video hero
   const topbar = document.querySelector('.topbar');
   const hero = document.querySelector('.hero');
   const syncTopbar = () => {
