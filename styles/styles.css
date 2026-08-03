@@ -19,6 +19,7 @@
   --frame: 1480px;
   --pad: clamp(20px, 4vw, 36px);
   --ease: cubic-bezier(0.2, 0.85, 0.2, 1);
+  --topbar-clearance: 4.75rem;
 }
 
 *,
@@ -31,6 +32,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--topbar-clearance);
 }
 
 body {
@@ -213,10 +215,6 @@ video {
   transition: color 0.35s;
 }
 
-.brand .dot {
-  color: #8eb0ff;
-}
-
 .live {
   display: inline-flex;
   gap: 8px;
@@ -272,10 +270,6 @@ video {
 
 .topbar.on-paper .brand {
   color: var(--ink);
-}
-
-.topbar.on-paper .brand .dot {
-  color: var(--signal);
 }
 
 .topbar.on-paper .cta {
@@ -374,15 +368,6 @@ video {
   width: 100%;
 }
 
-.hero-eyebrow {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(244, 247, 251, 0.65);
-  margin-bottom: 28px;
-}
-
 .hero-name {
   font-family: var(--serif);
   font-weight: 400;
@@ -406,11 +391,6 @@ video {
   animation-delay: 0.28s;
   font-style: italic;
   color: #8eb0ff;
-}
-
-.hero-name .period {
-  color: #f4f7fb;
-  font-style: normal;
 }
 
 @keyframes rise {
@@ -762,7 +742,6 @@ video {
   gap: 36px;
   padding: 48px 0;
   border-bottom: 1px solid var(--rule);
-  transition: background 0.3s;
 }
 
 .case:first-child {
@@ -930,25 +909,6 @@ video {
 
 .stack-col li:last-child {
   border-bottom: none;
-}
-
-.quote {
-  margin-top: 72px;
-  padding: 40px 0 0;
-  border-top: 1px solid var(--rule);
-  max-width: 720px;
-}
-
-.quote p {
-  font-family: var(--serif);
-  font-size: clamp(24px, 2.4vw, 34px);
-  line-height: 1.35;
-  color: var(--ink-soft);
-}
-
-.quote em {
-  color: var(--signal);
-  font-style: italic;
 }
 
 /* Record */
