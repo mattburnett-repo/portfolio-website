@@ -1,4 +1,4 @@
-This website serves as my personal portfolio, built with HTML, JavaScript, and CSS/SASS to showcase my
+This website serves as my personal portfolio, built with HTML, JavaScript, and CSS to showcase my
 skills and
 projects. As an exercise in basic web development, it demonstrates my capability to create a functional
 and visually

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <!-- Mark: Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8VEQCVPCX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,9 +12,9 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-  <meta property="og:title" content="Matt Burnett Web Developer" />
+  <meta property="og:title" content="Matt Burnett — Web Developer | AI" />
   <meta property="og:url" content="https://mattburnett-repo.github.io/portfolio-website/" />
   <meta property="og:image" content="https://mattburnett-repo.github.io/portfolio-website/images/splash-screen.png" />
   <meta property="og:type" content="website" />
@@ -24,23 +23,19 @@
   <meta name="description"
     content="Web developer Matt Burnett’s portfolio: enterprise web apps in React, Vue, Node, ColdFusion, and real-world projects using agentic coding and AI-assisted development." />
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <link rel='canonical' href="https://mattburnett-repo.github.io/portfolio-website/" />
+  <link rel="canonical" href="https://mattburnett-repo.github.io/portfolio-website/" />
+  <meta name="theme-color" content="#E8EDF4" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0B1426" media="(prefers-color-scheme: dark)" />
+  <meta name="color-scheme" content="light" />
 
-  <!--  Mark: Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600&family=Manrope:wght@300;400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="./styles/styles.css">
   <link rel="shortcut icon" href="./images/ladderIcon_01.png" type="image/x-icon" />
 
-  <!-- Mark: Scripts -->
-  <script src="https://kit.fontawesome.com/7f8ab5b4da.js" crossorigin="anonymous"></script>
-  <script src="app.js"></script>
-
-  <!-- Mark: Structured Data (inlined for SEO) -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -50,1056 +45,484 @@
       "url": "https://mattburnett-repo.github.io/portfolio-website/",
       "sameAs": [
         "https://www.linkedin.com/in/matt-burnett-5768ab20a/",
-        "https://github.com/mattburnett-repo"
+        "https://github.com/mattburnett-repo",
+        "https://mattburnett-repo.github.io/blog/"
       ],
       "skills": [
-        "React",
-        "Node.js",
-        "PostgreSQL",
-        "TypeScript",
-        "Vue",
-        "Vue.js",
-        "HTML",
-        "JavaScript",
-        "CSS",
-        "Git",
-        "ColdFusion",
-        "ColdBox",
-        "agentic coding",
-        "AI-assisted development",
-        "RAG",
-        "LangChain",
-        "OpenAI",
-        "Hugging Face",
-        "LangSmith",
-        "pgvector",
-        "FastAPI",
-        "LLM pipelines"
+        "React", "Node.js", "PostgreSQL", "TypeScript", "Vue", "Vue.js", "HTML", "JavaScript", "CSS", "Git",
+        "ColdFusion", "ColdBox", "agentic coding", "AI-assisted development", "RAG", "LangChain", "OpenAI",
+        "Hugging Face", "LangSmith", "pgvector", "FastAPI", "LLM pipelines"
       ],
       "knowsAbout": [
-        "React",
-        "Node JS",
-        "Nest JS",
-        "PostgreSQL",
-        "TypeORM",
-        "Git",
-        "GitHub",
-        "HTML",
-        "CSS",
-        "Javascript",
-        "TypeScript",
-        "SEO",
-        "Vue",
-        "Vue.js",
-        "ColdFusion",
-        "ColdBox",
-        "agentic coding",
-        "AI",
-        "AI-assisted development",
-        "agent-based development",
-        "RAG",
-        "LangChain",
-        "OpenAI",
-        "Hugging Face",
-        "LangSmith",
-        "pgvector",
-        "FastAPI",
-        "LLM pipelines",
-        "Streamlit",
-        "JSON Schema"
+        "React", "Node JS", "Nest JS", "PostgreSQL", "TypeORM", "Git", "GitHub", "HTML", "CSS", "Javascript",
+        "TypeScript", "SEO", "Vue", "Vue.js", "ColdFusion", "ColdBox", "agentic coding", "AI",
+        "AI-assisted development", "agent-based development", "RAG", "LangChain", "OpenAI", "Hugging Face",
+        "LangSmith", "pgvector", "FastAPI", "LLM pipelines", "Streamlit", "JSON Schema"
       ],
       "workExample": [
-        {
-          "@type": "CreativeWork",
-          "name": "Aptitude Search",
-          "url": "https://github.com/mattburnett-repo/aptitude-search"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Chat MVP",
-          "url": "https://github.com/mattburnett-repo/chat-mvp"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Filescan (activist)",
-          "url": "https://github.com/activist-org/activist/tree/main/services/filescan"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Activist.org",
-          "url": "https://activist.org/"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Carbon Interface API Frontend",
-          "url": "https://carbon-interface.vercel.app/"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "GreenShop / E-commerce UI",
-          "url": "https://e-comm-ui.vercel.app/"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "E-commerce REST API",
-          "url": "https://e-comm-api.fly.dev/api"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "NestJS REST API Template",
-          "url": "https://nestjs-api-template.fly.dev/api"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Resonate Music Streaming Service",
-          "url": "https://resonate.coop/"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "ServePoint",
-          "url": "https://github.com/mattburnett-repo/servepoint"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Portfolio Website",
-          "url": "https://github.com/mattburnett-repo/portfolio-website"
-        }
+        { "@type": "CreativeWork", "name": "Aptitude Search", "url": "https://github.com/mattburnett-repo/aptitude-search" },
+        { "@type": "CreativeWork", "name": "Chat MVP", "url": "https://github.com/mattburnett-repo/chat-mvp" },
+        { "@type": "CreativeWork", "name": "Filescan (activist)", "url": "https://github.com/activist-org/activist/tree/main/services/filescan" },
+        { "@type": "CreativeWork", "name": "Activist.org", "url": "https://activist.org/" },
+        { "@type": "CreativeWork", "name": "Carbon Interface API Frontend", "url": "https://carbon-interface.vercel.app/" },
+        { "@type": "CreativeWork", "name": "GreenShop / E-commerce UI", "url": "https://e-comm-ui.vercel.app/" },
+        { "@type": "CreativeWork", "name": "E-commerce REST API", "url": "https://e-comm-api.fly.dev/api" },
+        { "@type": "CreativeWork", "name": "NestJS REST API Template", "url": "https://nestjs-api-template.fly.dev/api" },
+        { "@type": "CreativeWork", "name": "Resonate Music Streaming Service", "url": "https://resonate.coop/" },
+        { "@type": "CreativeWork", "name": "ServePoint", "url": "https://github.com/mattburnett-repo/servepoint" },
+        { "@type": "CreativeWork", "name": "Portfolio Website", "url": "https://github.com/mattburnett-repo/portfolio-website" }
       ]
     }
   </script>
 
-  <title>Matt Burnett | Web Developer</title>
+  <title>Matt Burnett | Web Developer | AI</title>
 </head>
 
 <body>
-  <main>
-    <!-- Mark: Home -->
-    <section class="section home" id="home">
-      <div class="home-container">
-        <video class="home-bg-video" poster="images/techImage_02.jpeg" autoplay muted loop playsinline preload="auto">
-          <source src="images/techImage_02.mp4" type="video/mp4" />
-        </video>
-        <div class="home-overlay">
-          <h1>Matt Burnett</h1>
-          <h2>Making things.</h2>
-          <h2>Making things better.</h2>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="cursor" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <a class="brand" href="#top">Matt Burnett</a>
+      <span class="live" aria-hidden="true">
+        <span class="live-dot"></span>
+        Full-Stack | AI · DC Metro
+      </span>
+    </div>
+    <nav class="topbar-nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="topbar-right">
+      <time class="clock" id="clock" aria-hidden="true"></time>
+      <a class="cta" href="mailto:burnett.mj@gmail.com?subject=Message%20from%20Matt%20Burnett%20portfolio%20website">Email →</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <video class="hero-video" poster="images/techImage_02.jpeg" autoplay muted loop playsinline preload="auto">
+        <source src="images/techImage_02.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-veil" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <h1 class="hero-name" id="hero-name">
+          <span class="line"><span>Matt</span></span>
+          <span class="line italic"><span>Burnett</span></span>
+        </h1>
+        <div class="hero-tag">
+          <p>
+            Making things. Making things <em>better</em> —
+            full-stack systems, AI-assisted workflows, and apps meant for real people.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#work" data-hover>See selected work <span class="arr" aria-hidden="true">→</span></a>
+            <a class="btn ghost" href="mailto:burnett.mj@gmail.com?subject=Message%20from%20Matt%20Burnett%20portfolio%20website" data-hover>Email me <span class="arr" aria-hidden="true">→</span></a>
+          </div>
         </div>
+      </div>
+
+      <div class="hero-foot">
+        <span>Washington, DC Metro — Open to contract &amp; freelance</span>
+        <a class="scroll" href="#about">Scroll <span class="scroll-arrow" aria-hidden="true">↓</span></a>
       </div>
     </section>
-    <!-- Mark: Bio -->
-    <section class="section bio" id="bio">
-      <div class="main-title">
-        <h2>Bio<span class="bg-text">Bio</span></h2>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>
+          <span class="word">React</span><span class="dot"></span>
+          <span class="word">TypeScript</span><span class="dot"></span>
+          <span class="word">FastAPI</span><span class="dot"></span>
+          <span class="word">RAG Pipelines</span><span class="dot"></span>
+          <span class="word">ColdFusion</span><span class="dot"></span>
+          <span class="word">Vue</span><span class="dot"></span>
+          <span class="word">NestJS</span><span class="dot"></span>
+          <span class="word">PostgreSQL</span><span class="dot"></span>
+          <span class="word">Agentic Coding</span><span class="dot"></span>
+          <span class="word">Legacy Modernization</span><span class="dot"></span>
+        </span>
+        <span>
+          <span class="word">React</span><span class="dot"></span>
+          <span class="word">TypeScript</span><span class="dot"></span>
+          <span class="word">FastAPI</span><span class="dot"></span>
+          <span class="word">RAG Pipelines</span><span class="dot"></span>
+          <span class="word">ColdFusion</span><span class="dot"></span>
+          <span class="word">Vue</span><span class="dot"></span>
+          <span class="word">NestJS</span><span class="dot"></span>
+          <span class="word">PostgreSQL</span><span class="dot"></span>
+          <span class="word">Agentic Coding</span><span class="dot"></span>
+          <span class="word">Legacy Modernization</span><span class="dot"></span>
+        </span>
       </div>
-      <div class="bio-container">
-        <div class="bio-body-full">
-          <p>
-            I’m a web developer who got started right before the Web 1.0 / dot-com era in the Washington, DC area,
-            working as a generalist back when keeping systems running meant touching everything from front end to back
-            end.
-          </p>
-          <p>
-            After about a decade in the field, I spent several years living abroad, including twelve years in Berlin,
-            where I stayed connected to technology through independent work and involvement with <a
-              href="https://docs.activist.org/activist" target="_blank"
-              rel="noopener noreferrer">activist.org</a>.
-          </p>
-          <p>
-            I’m now back in the DC area, re-establishing myself locally and focused on building modern full-stack web
-            applications with React, TypeScript, Python, and AI-powered workflows. I enjoy designing systems that solve
-            practical problems through thoughtful engineering, semantic matching, and automation, turning complex ideas
-            into tools that are useful, maintainable, and grounded in real-world needs.
-          </p>
-        </div>
-        <div class="bio-body-xs">
-          <p>
-            I’m a web developer who got started right before the Web 1.0 / dot-com era in the Washington, DC area,
-            working as a generalist back when keeping systems running meant touching everything from front end to back
-            end.
-          </p>
-          <p>
-            After about a decade in the field, I spent several years living abroad, including twelve years in Berlin,
-            where I stayed connected to technology through independent work and involvement with <a
-              href="https://docs.activist.org/activist" target="_blank"
-              rel="noopener noreferrer">activist.org</a>.
-          </p>
-          <p>
-            I’m now back in the DC area, re-establishing myself locally and focused on building modern full-stack web
-            applications with React, TypeScript, Python, and AI-powered workflows. I enjoy designing systems that solve
-            practical problems through thoughtful engineering, semantic matching, and automation, turning complex ideas
-            into tools that are useful, maintainable, and grounded in real-world needs.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- Mark: Portfolio -->
-    <section class="section portfolio" id="portfolio">
-      <div class="main-title">
-        <h2><span>portfolio</span><span class="bg-text">Portfolio</span></h2>
-        <p class="port-text">
-          Hover over / click on the images for more info.
-        </p>
-      </div>
-      <div class="portfolio-container">
-        <!-- Mark: Aptitude Search (aptitude-driven job search pipeline) -->
-        <div class="portfolio-item">
-          <div class="image">
-            <img src="images/aptitude-search-banner.png" alt="Aptitude Search">
+    </div>
+
+    <!-- 01 About -->
+    <section class="section" id="about">
+      <div class="frame">
+        <header class="sec-head reveal">
+          <div>
+            <div class="sec-num" aria-hidden="true"></div>
+            <p class="sec-kicker" aria-hidden="true"></p>
           </div>
-          <div class="hover-item">
-            <h3>Aptitude Search</h3>
-            <div class="hover-body hover-body-full">
-              <ul>
-                <li>LLM-powered aptitude profiling.</li>
-                <li>Finds suitable verified job openings.</li>
-              </ul>
+          <h2 class="sec-title">Shaped by the <em>long</em> arc of the web.</h2>
+        </header>
+
+        <div class="position">
+          <aside class="position-side reveal">
+            <div class="stack">
+              <div><strong>Practice</strong> Full-stack apps · RAG · AI-assisted delivery</div>
+              <div><strong>Based</strong> DC Metro · U.S.</div>
+              <div><strong>Engaged via</strong> Contract · Freelance · Full-time</div>
+              <div><strong>Stack</strong> Modern web · AI tooling · enterprise CF</div>
             </div>
-            <div class="hover-body hover-body-xs">
-              <ul>
-                <li>Aptitude-driven job search.</li>
-                <li>FastAPI + React MVP.</li>
-              </ul>
-            </div>
-            <dialog class="portfolio-detail" role="dialog" aria-modal="true"
-              aria-labelledby="aptitude-search-dialog-title">
-              <h3 id="aptitude-search-dialog-title">Aptitude Search</h3>
-              <div class="dialog-body dialog-body-full">
-                <p>
-                  Aptitude Search is a multi-stage LLM pipeline that turns a resume and search constraints into a
-                  structured aptitude profile, then surfaces verified job openings that fit. Stage one extracts
-                  strengths, career targets, and search strategy; stage two returns matches constrained to real
-                  listings only.
-                </p>
-                <p>
-                  A FastAPI backend orchestrates Hugging Face–powered agents with JSON Schema–validated outputs; a Vite
-                  + React frontend provides an MVP UI for running the pipeline via <code>POST /v1/pipeline</code>.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>Python, FastAPI, Uvicorn</li>
-                  <li>Hugging Face smolagents, LangSmith (observability and evaluation), JSON Schema</li>
-                  <li>React, Vite, TypeScript</li>
-                </ul>
-              </div>
-              <div class="dialog-body dialog-body-compact">
-                <p>
-                  Resume + constraints → aptitude profile → verified openings via a two-stage LLM pipeline.
-                </p>
-                <p>
-                  FastAPI API; React MVP UI; schema-validated agent outputs.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>FastAPI, Hugging Face, LangSmith</li>
-                  <li>React, TypeScript</li>
-                  <li>JSON Schema</li>
-                </ul>
-              </div>
-              <button class="close-dialog">Close</button>
-            </dialog>
-            <div class="icons">
-              <a href="https://github.com/mattburnett-repo/aptitude-search" class="icon" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fab fa-github" title="View Aptitude Search on GitHub"></i>
-              </a>
-              <a href="https://aptitude-search.vercel.app/" class="icon" target="_blank">
-                <i class="fas fa-home" data-tooltip="Visit Aptitude Search deployment"></i>
-              </a>
-              <a href="./docs/one-sheets/aptitude-search-onesheet.pdf" class="icon" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-file-pdf" title="Download Aptitude Search one-sheet (PDF)"></i>
-              </a>
-            </div>
-          </div>
-          <h3>Aptitude Search</h3>
-        </div>
-        <!-- Mark: Chat MVP (RAG chat over ingested sources) -->
-        <div class="portfolio-item">
-          <div class="image">
-            <img src="images/chat-mvp.png" alt="Chat MVP">
-          </div>
-          <div class="hover-item">
-            <h3>Chat MVP</h3>
-            <div class="hover-body hover-body-full">
-              <ul>
-                <li>RAG chat over ingested documents.</li>
-                <li>FastAPI + Streamlit + PostgreSQL/pgvector.</li>
-              </ul>
-            </div>
-            <div class="hover-body hover-body-xs">
-              <ul>
-                <li>Doc-grounded RAG.</li>
-                <li>FastAPI + Streamlit.</li>
-              </ul>
-            </div>
-            <dialog class="portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="chat-mvp-dialog-title">
-              <h3 id="chat-mvp-dialog-title">Chat MVP</h3>
-              <div class="dialog-body dialog-body-full">
-                <p>
-                  Chat MVP is a minimal RAG application: sources are crawled and chunked into PostgreSQL with the
-                  pgvector extension, embeddings are generated via the OpenAI API, and answers are produced with
-                  LangChain using retrieved context plus a trimmed chat history.
-                </p>
-                <p>
-                  A FastAPI service exposes health and query endpoints; a Streamlit frontend posts questions and shows
-                  answers with cited source chunks. The stack is suited to demos and iterative work on ingestion,
-                  retrieval quality, and prompt behavior.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>Python 3.13, FastAPI, Uvicorn, Streamlit</li>
-                  <li>PostgreSQL, pgvector, LangChain, OpenAI (chat + embeddings)</li>
-                  <li>Trafilatura, BeautifulSoup (HTML extraction)</li>
-                </ul>
-              </div>
-              <div class="dialog-body dialog-body-compact">
-                <p>
-                  RAG chat: ingest sources into PostgreSQL/pgvector, retrieve top-k chunks, answer with an OpenAI model.
-                </p>
-                <p>
-                  FastAPI for <code>/query</code>; Streamlit UI; LangChain for retrieval and generation.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>FastAPI, Streamlit</li>
-                  <li>PostgreSQL, pgvector</li>
-                  <li>LangChain, OpenAI</li>
-                </ul>
-              </div>
-              <button class="close-dialog">Close</button>
-            </dialog>
-            <div class="icons">
-              <a href="https://github.com/mattburnett-repo/chat-mvp" class="icon" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fab fa-github" title="View Chat MVP on GitHub"></i>
-              </a>
-              <a href="https://chatmvp.streamlit.app/" class="icon" target="_blank">
-                <i class="fas fa-home" data-tooltip="Visit Chat MVP deployment"></i>
-              </a>
-              <a href="./docs/one-sheets/chat-mvp-one-sheet.pdf" class="icon" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-file-pdf" title="Download Chat MVP one-sheet (PDF)"></i>
-              </a>
-            </div>
-          </div>
-          <h3>Chat MVP</h3>
-        </div>
-        <!-- Mark: Filescan (activist upload scanning service) -->
-        <div class="portfolio-item">
-          <div class="image">
-            <img src="images/filescan.png" alt="Filescan service">
-          </div>
-          <div class="hover-item">
-            <h3>Filescan</h3>
-            <div class="hover-body hover-body-full">
-              <ul>
-                <li>Scans image uploads for malware.</li>
-                <li>Stops unsafe files before app processing.</li>
-              </ul>
-            </div>
-            <div class="hover-body hover-body-xs">
-              <ul>
-                <li>Scans for malware.</li>
-                <li>Blocks unsafe files.</li>
-              </ul>
-            </div>
-            <dialog class="portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="filescan-dialog-title">
-              <h3 id="filescan-dialog-title">Filescan</h3>
-              <div class="dialog-body dialog-body-full">
-                <p>
-                  Filescan is an upload-scanning service that checks submitted images for malware before they enter the
-                  main application flow. It receives files over HTTP, scans them with ClamAV, and returns a clear
-                  clean-or-infected result.
-                </p>
-                <p>
-                  The service adds a security gate at the point of entry. Unsafe files can be isolated early, which
-                  lowers downstream risk and strengthens confidence in the upload pipeline.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>FastAPI (scan service API)</li>
-                  <li>ClamAV / clamd (malware detection)</li>
-                  <li>Docker (service packaging/runtime)</li>
-                  <li>Quarantine + backend event notification</li>
-                </ul>
-              </div>
-              <div class="dialog-body dialog-body-compact">
-                <p>
-                  Scans image uploads for malware with a clear clean-or-infected result.
-                </p>
-                <p>
-                  Blocks unsafe files at upload time to protect the pipeline.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>FastAPI</li>
-                  <li>ClamAV</li>
-                  <li>Docker</li>
-                </ul>
-              </div>
-              <button class="close-dialog">Close</button>
-            </dialog>
-            <div class="icons">
-              <a href="https://github.com/activist-org/activist/blob/main/services/filescan/README.md" class="icon"
-                target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github" title="View filescan service on GitHub"></i>
-              </a>
-            </div>
-          </div>
-          <h3>Filescan</h3>
-        </div>
-        <!-- Mark: ServePoint -->
-        <div class="portfolio-item">
-          <div class="image">
-            <img src="images/servepointScreencap_01.png" alt="ServePoint">
-          </div>
-          <div class="hover-item">
-            <h3>ServePoint</h3>
-            <div class="hover-body hover-body-full">
-              <ul>
-                <li>Manages citizen-service cases securely.</li>
-                <li>Supports reliable public-service delivery.</li>
-              </ul>
-            </div>
-            <div class="hover-body hover-body-xs">
-              <ul>
-                <li>Tracks service cases.</li>
-                <li>Supports secure delivery.</li>
-              </ul>
-            </div>
-            <dialog class="portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="servepoint-dialog-title">
-              <h3 id="servepoint-dialog-title">ServePoint</h3>
-              <div class="dialog-body dialog-body-full">
-                <p>
-                  <code>ServePoint</code> is a case management application for agencies that deliver public services.
-                  It is designed to support structured workflows, case tracking, and secure handling of sensitive data.
-                </p>
-                <p>
-                  The project demonstrates how modern ColdFusion architecture can support high-trust environments where
-                  reliability, privacy, and operational clarity are critical.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>ColdFusion 2025 + ColdBox</li>
-                  <li>PostgreSQL + ORM</li>
-                  <li>Secure workflow design</li>
-                  <li>Agentic / AI-assisted development</li>
-                </ul>
-              </div>
-              <div class="dialog-body dialog-body-compact">
-                <p>
-                  Case management for public-service agencies with secure workflows.
-                </p>
-                <p>
-                  Modern ColdFusion for sensitive, mission-driven workloads.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>ColdFusion</li>
-                  <li>ColdBox</li>
-                  <li>PostgreSQL</li>
-                </ul>
-              </div>
-              <button class="close-dialog">Close</button>
-            </dialog>
-            <div class="icons">
-              <a href="https://github.com/mattburnett-repo/servepoint" class="icon" target="_blank">
-                <i class="fab fa-github" title="View on GitHub"></i>
-              </a>
-              <a href="https://servepoint.onrender.com/" class="icon" target="_blank">
-                <i class="fas fa-home" data-tooltip="Visit ServePoint deployment"></i>
-              </a>
-            </div>
-          </div>
-          <h3>ServePoint</h3>
-        </div>
-        <!-- Mark: Activist.org -->
-        <div class="portfolio-item">
-          <div class="image">
-            <img src="images/activistOpenGraphImage.png" alt="Activist.org">
-          </div>
-          <div class="hover-item">
-            <h3>Activist.org</h3>
-            <div class="hover-body hover-body-full">
-              <ul>
-                <li>Connects activists to organizations and causes.</li>
-                <li>Makes civic participation easier.</li>
-              </ul>
-            </div>
-            <div class="hover-body hover-body-xs">
-              <ul>
-                <li>Links activists to causes.</li>
-                <li>Improves participation.</li>
-              </ul>
-            </div>
-            <dialog class="portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="activist-dialog-title">
-              <h3 id="activist-dialog-title">Activist.org</h3>
-              <div class="dialog-body dialog-body-full">
-                <p>
-                  Activist.org is a web platform that connects activists with organizations, campaigns, and causes.
-                  I contribute across frontend and backend work to deliver features that help users discover and engage
-                  with relevant civic opportunities.
-                </p>
-                <p>
-                  This work supports stronger community participation by improving usability, performance, and
-                  maintainability in a mission-driven product used by organizers and volunteers.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>Vue 3 + TypeScript</li>
-                  <li>Django + DRF</li>
-                  <li>Tailwind CSS + Headless UI</li>
-                  <li>Agentic / AI-assisted development</li>
-                </ul>
-              </div>
-              <div class="dialog-body dialog-body-compact">
-                <p>
-                  Connects activists with organizations and causes across the stack.
-                </p>
-                <p>
-                  UX and performance work for mission-driven community use.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>Vue 3</li>
-                  <li>Django / DRF</li>
-                  <li>TypeScript</li>
-                </ul>
-              </div>
-              <button class="close-dialog">Close</button>
-            </dialog>
-            <div class="icons">
-              <a href="https://github.com/activist-org/activist" class="icon" target="_blank">
-                <i class="fab fa-github" title="View on GitHub"></i>
-              </a>
-              <a href="https://docs.activist.org/activist" class="icon" target="_blank">
-                <i class="fas fa-home" data-tooltip="Visit Activist.org Website"></i>
-              </a>
-            </div>
-          </div>
-          <h3>Activist.org</h3>
-        </div>
-        <!-- Mark: Carbon Interface API frontend-->
-        <div class="portfolio-item">
-          <div class="image">
-            <img src="images/dashboard-screenshot.png" alt="Carbon Interface">
-          </div>
-          <div class="hover-item">
-            <h3>Carbon Interface API Frontend</h3>
-            <div class="hover-body hover-body-full">
-              <ul>
-                <li>Estimates travel emissions.</li>
-                <li>Supports lower-impact choices.</li>
-              </ul>
-            </div>
-            <div class="hover-body hover-body-xs">
-              <ul>
-                <li>Estimates emissions.</li>
-                <li>Supports greener travel.</li>
-              </ul>
-            </div>
-            <dialog class="portfolio-detail" role="dialog" aria-modal="true"
-              aria-labelledby="carbon-interface-dialog-title">
-              <h3 id="carbon-interface-dialog-title">Carbon Interface API Frontend</h3>
-              <div class="dialog-body dialog-body-full">
-                <p>
-                  This project is a frontend for the <code>Carbon Interface API</code> that estimates emissions for
-                  travel and transport scenarios. It presents the input and result flow in a clear, user-friendly UI.
-                </p>
-                <p>
-                  The interface turns technical carbon data into understandable outputs, helping users compare options
-                  and make better-informed decisions.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>React + TypeScript</li>
-                  <li>Material UI + Formik</li>
-                  <li>Carbon Interface API</li>
-                </ul>
-              </div>
-              <div class="dialog-body dialog-body-compact">
-                <p>
-                  This frontend uses the Carbon Interface API to estimate emissions for travel and transport in a clear
-                  UI flow.
-                </p>
-                <p>
-                  It makes carbon data easier to interpret for practical decision-making.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>React</li>
-                  <li>TypeScript</li>
-                  <li>Carbon Interface API</li>
-                </ul>
-              </div>
-              <button class="close-dialog">Close</button>
-            </dialog>
-            <div class="icons">
-              <a href="https://github.com/mattburnett-repo/carbon-interface" class="icon" target="_blank">
-                <i class="fab fa-github" title="View on GitHub"></i>
-              </a>
-              <a href="https://carbon-interface.vercel.app/" class="icon" target="_blank">
-                <i class="fab fa-react" data-tooltip="View on Vercel"></i>
-              </a>
-            </div>
-          </div>
-          <h3>Carbon Interface API Frontend</h3>
-        </div>
-        <!-- Mark: create-flask-app -->
-        <div class="portfolio-item">
-          <div class="image">
-            <img src="images/click-name.png" alt="create-flask-app">
-          </div>
-          <div class="hover-item">
-            <h3>create-flask-app</h3>
-            <div class="hover-body hover-body-full">
-              <ul>
-                <li>Scaffolds Flask apps via CLI.</li>
-                <li>Reduces setup boilerplate.</li>
-              </ul>
-            </div>
-            <div class="hover-body hover-body-xs">
-              <ul>
-                <li>Generates Flask starters.</li>
-                <li>Cuts setup boilerplate.</li>
-              </ul>
-            </div>
-            <dialog class="portfolio-detail" role="dialog" aria-modal="true"
-              aria-labelledby="create-flask-app-dialog-title">
-              <h3 id="create-flask-app-dialog-title">create-flask-app</h3>
-              <div class="dialog-body dialog-body-full">
-                <p>
-                  <code>create-flask-app</code> is a CLI tool that scaffolds Flask projects with a clean, opinionated
-                  structure. It automates common setup steps and creates a usable starter quickly.
-                </p>
-                <p>
-                  The tool reduces repetitive boilerplate and helps developers move faster into feature work with
-                  consistent project organization.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>Python</li>
-                  <li>Click CLI</li>
-                  <li>Flask project scaffolding</li>
-                  <li>Template-driven generation</li>
-                </ul>
-              </div>
-              <div class="dialog-body dialog-body-compact">
-                <p>
-                  CLI scaffold for Flask projects with a clean starter layout.
-                </p>
-                <p>
-                  Cuts repetitive setup so you can focus on features.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>Python</li>
-                  <li>Click</li>
-                  <li>Flask</li>
-                </ul>
-              </div>
-              <button class="close-dialog">Close</button>
-            </dialog>
-            <div class="icons">
-              <a href="https://github.com/mattburnett-repo/create-flask-app" class="icon" target="_blank">
-                <i class="fab fa-github" title="View on GitHub"></i>
-              </a>
-            </div>
-          </div>
-          <h3>create-flask-app</h3>
-        </div>
-        <!-- Mark: E-commerce API -->
-        <div class="portfolio-item">
-          <div class="image">
-            <img src="images/ecomm-api.png" alt="E-commerce API">
-          </div>
-          <div class="hover-item">
-            <h3>E-commerce REST API</h3>
-            <div class="hover-body hover-body-full">
-              <ul>
-                <li>Handles products, orders, and auth.</li>
-                <li>Keeps transactions reliable.</li>
-              </ul>
-            </div>
-            <div class="hover-body hover-body-xs">
-              <ul>
-                <li>Runs products and orders.</li>
-                <li>Keeps transactions stable.</li>
-              </ul>
-            </div>
-            <dialog class="portfolio-detail" role="dialog" aria-modal="true" aria-labelledby="ecomm-api-dialog-title">
-              <h3 id="ecomm-api-dialog-title">E-commerce REST API</h3>
-              <div class="dialog-body dialog-body-full">
-                <p>
-                  The E-commerce REST API powers an online shopping experience by handling products, transactions, and
-                  authentication
-                  through a structured backend service.
-                </p>
-                <p>
-                  The service provides predictable endpoints, documentation, and deployment checks that support stable
-                  integrations and reliable commerce operations.
-                </p>
-                <p>
-                  Developers can explore the OpenAPI docs using <code>e-comm/e-comm</code>.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>NestJS + TypeScript</li>
-                  <li>PostgreSQL + TypeORM</li>
-                  <li>OpenAPI docs</li>
-                  <li>GitHub Actions CI/CD</li>
-                </ul>
-              </div>
-              <div class="dialog-body dialog-body-compact">
-                <p>
-                  Backend for online shopping: products, transactions, and auth.
-                </p>
-                <p>
-                  OpenAPI docs and CI/CD for reliable delivery.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>NestJS</li>
-                  <li>PostgreSQL</li>
-                  <li>OpenAPI</li>
-                </ul>
-              </div>
-              <button class="close-dialog">Close</button>
-            </dialog>
-            <div class="icons">
-              <a href="https://github.com/mattburnett-repo/e-comm-api" class="icon" target="_blank">
-                <i class="fab fa-github" title="View on GitHub"></i>
-              </a>
-              <a href="https://e-comm-api.fly.dev/api" class="icon" target="_blank">
-                <i class="fa-solid fa-server" data-tooltip="View on fly.io"></i>
-              </a>
-            </div>
-          </div>
-          <h3>E-commerce REST API</h3>
-        </div>
-        <!-- Mark: This website -->
-        <div class="portfolio-item">
-          <div class="image">
-            <img src="images/techImage_02.jpeg" alt="This website">
-          </div>
-          <div class="hover-item">
-            <h3>This website</h3>
-            <div class="hover-body hover-body-full">
-              <ul>
-                <li>Showcases projects and skills.</li>
-                <li>Improves professional visibility.</li>
-              </ul>
-            </div>
-            <div class="hover-body hover-body-xs">
-              <ul>
-                <li>Shows projects and skills.</li>
-                <li>Boosts visibility.</li>
-              </ul>
-            </div>
-            <dialog class="portfolio-detail" role="dialog" aria-modal="true"
-              aria-labelledby="this-website-dialog-title">
-              <h3 id="this-website-dialog-title">This website</h3>
-              <div class="dialog-body dialog-body-full">
-                <p>
-                  This site is my personal portfolio and central project showcase. It presents work samples, technical
-                  focus areas, and background information in a single navigable interface.
-                </p>
-                <p>
-                  The implementation prioritizes clarity, responsiveness, and discoverability so recruiters and teams
-                  can
-                  quickly review relevant experience and project outcomes.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>HTML + JavaScript</li>
-                  <li>CSS / SASS</li>
-                  <li>SEO + Schema.org structured data</li>
-                </ul>
-              </div>
-              <div class="dialog-body dialog-body-compact">
-                <p>
-                  Personal portfolio showcasing projects and background in one site.
-                </p>
-                <p>
-                  Built for clarity, responsiveness, and search visibility.
-                </p>
-                <p style="margin-bottom: 0;"><strong>Related tech:</strong></p>
-                <ul
-                  style="text-align: left; list-style-position: inside; padding-left: 0; margin-left: 0; margin-top: 0;">
-                  <li>HTML</li>
-                  <li>SASS</li>
-                  <li>SEO</li>
-                </ul>
-              </div>
-              <button class="close-dialog">Close</button>
-            </dialog>
-            <div class="icons">
-              <a href="https://github.com/mattburnett-repo/portfolio-website" class="icon" target="_blank">
-                <i class="fab fa-github" title="View on GitHub"></i>
-              </a>
-            </div>
-          </div>
-          <h3>This website</h3>
-        </div>
-      </div>
-      </div>
-    </section>
-    <!-- Mark: Skill summary -->
-    <section class="section skill-summary" id="skill-summary">
-      <div class="main-title">
-        <h2><span>Skill</span> Summary<span class="bg-text">Skill Summary</span></h2>
-      </div>
-      <div class="skill-summary-container">
-        <div class="skill-summary-item">
-          <div class="skill-summary-title">
-            <p>Frontend</p>
-          </div>
-          <div class="skill-summary-list">
-            <div>
-              <ul>
-                <li>React</li>
-                <li>Angular</li>
-                <li>Vue</li>
-                <li>Nuxt</li>
-                <li>TypeScript</li>
-                <li>JavaScript</li>
-                <li>HTML/CSS</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>AJAX</li>
-                <li>jQuery</li>
-                <li>OOP</li>
-              </ul>
-            </div>
+          </aside>
+          <div class="position-body reveal">
+            <p>
+              I’m a web developer who got started right before the Web 1.0 / dot-com era in the Washington, DC area —
+              a generalist when keeping systems running meant touching everything from front end to back end.
+            </p>
+            <p>
+              After about a decade in the field, I spent several years living abroad, including twelve years in Berlin,
+              staying connected to technology through independent work and involvement with
+              <a class="uline" href="https://docs.activist.org/activist" target="_blank" rel="noopener noreferrer">activist.org</a>.
+            </p>
+            <p>
+              I’m now back in the DC area, focused on modern full-stack applications with React, TypeScript, Python,
+              and AI-powered workflows — systems that solve practical problems through thoughtful engineering,
+              semantic matching, and automation.
+            </p>
           </div>
         </div>
-        <div class="skill-summary-item">
-          <div class="skill-summary-title">
-            <p>Backend / API</p>
+
+        <div class="stats reveal">
+          <div class="stat">
+            <div class="num"><em>15</em>+</div>
+            <div class="lab">Years shipping<br>production software</div>
           </div>
-          <div class="skill-summary-list">
-            <div>
-              <ul>
-                <li>Node.js</li>
-                <li>Nest.js</li>
-                <li>Django</li>
-                <li>DRF</li>
-                <li>Flask</li>
-                <li>FastAPI</li>
-                <li>ColdFusion</li>
-                <li>CFML</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>CFC</li>
-                <li>ColdBox</li>
-                <li>Fusebox</li>
-                <li>Mach II</li>
-                <li>Sequelize ORM</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>TypeORM</li>
-                <li>PostgreSQL</li>
-                <li>SQL Server</li>
-                <li>SQL</li>
-              </ul>
-            </div>
+          <div class="stat">
+            <div class="num"><em>Dot</em>-com</div>
+            <div class="lab">Era survivor · early<br>Internet adopter</div>
           </div>
-        </div>
-        <div class="skill-summary-item">
-          <div class="skill-summary-title">
-            <p>AI / LLM</p>
+          <div class="stat">
+            <div class="num"><em>AI</em></div>
+            <div class="lab">RAG · agents · and<br>AI-assisted delivery</div>
           </div>
-          <div class="skill-summary-list">
-            <div>
-              <ul>
-                <li>RAG</li>
-                <li>LLM pipelines</li>
-                <li>LangChain</li>
-                <li>OpenAI API</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>Hugging Face</li>
-                <li>LangSmith</li>
-                <li>pgvector</li>
-                <li>JSON Schema</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>Streamlit</li>
-                <li>Agentic workflows</li>
-                <li>AI-assisted development</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="skill-summary-item">
-          <div class="skill-summary-title">
-            <p>Other</p>
-          </div>
-          <div class="skill-summary-list">
-            <div>
-              <ul>
-                <li>GitHub/Git</li>
-                <li>GitHub Actions</li>
-                <li>VS Code</li>
-                <li>Docker</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>API integration</li>
-                <li>CI/CD pipelines</li>
-              </ul>
-            </div>
+          <div class="stat">
+            <div class="num"><em>US</em></div>
+            <div class="lab">Citizen · Public Trust<br>eligible · federal exp.</div>
           </div>
         </div>
       </div>
     </section>
-    <!-- MARK: Other info -->
-    <section class="section other-info" id="other-info">
-      <div class="main-title">
-        <h2>Other <span>Info</span><span class="bg-text">Other Info</span></h2>
-      </div>
-      <div class="other-info-container">
-        <div class="other-info-item">
-          <div class="other-info-title">
-            <p>Work Info</p>
+
+    <!-- 02 Work -->
+    <section class="section" id="work">
+      <div class="frame">
+        <header class="sec-head reveal">
+          <div>
+            <div class="sec-num" aria-hidden="true"></div>
+            <p class="sec-kicker" aria-hidden="true"></p>
           </div>
-          <div class="other-info-list">
+          <h2 class="sec-title">Making things. Making things <em>better</em>.</h2>
+        </header>
+
+        <div class="cases">
+          <article class="case reveal" data-hover>
+            <div class="case-ix"><span class="num">01</span>LLM Pipeline</div>
+            <div class="case-body">
+              <h3>Aptitude <em>Search</em></h3>
+              <p class="case-role">Multi-stage LLM pipeline · FastAPI + React · 2025–Present</p>
+              <p>
+                Resume and search constraints become a structured aptitude profile grounded in O*NET occupation data,
+                then verified job openings that fit — Hugging Face agents with JSON Schema–validated outputs,
+                orchestrated by FastAPI, surfaced in a Vite + React MVP.
+              </p>
+              <div class="case-tags">
+                <span>FastAPI</span><span>O*NET</span><span>Hugging Face</span><span>LangSmith</span><span>React</span><span>TypeScript</span>
+              </div>
+              <div class="case-links">
+                <a href="https://aptitude-search.vercel.app/" target="_blank" rel="noopener noreferrer">Live →</a>
+                <a href="https://github.com/mattburnett-repo/aptitude-search" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                <a href="./docs/one-sheets/aptitude-search-onesheet.pdf" target="_blank" rel="noopener noreferrer">One-sheet →</a>
+              </div>
+            </div>
+            <div class="case-metrics">
+              <div><em>3</em>-stage<br>LLM pipeline</div>
+              <div>Schema<br>validated agents</div>
+            </div>
+          </article>
+
+          <article class="case reveal" data-hover>
+            <div class="case-ix"><span class="num">02</span>RAG Chat</div>
+            <div class="case-body">
+              <h3>Chat <em>MVP</em></h3>
+              <p class="case-role">Doc-grounded RAG · FastAPI + Streamlit · 2025</p>
+              <p>
+                Sources crawled and chunked into PostgreSQL/pgvector, embeddings via OpenAI, answers with LangChain
+                using retrieved context plus trimmed chat history — built to iterate on ingestion, retrieval, and prompts.
+              </p>
+              <div class="case-tags">
+                <span>FastAPI</span><span>pgvector</span><span>LangChain</span><span>OpenAI</span><span>Streamlit</span>
+              </div>
+              <div class="case-links">
+                <a href="https://chatmvp.streamlit.app/" target="_blank" rel="noopener noreferrer">Live →</a>
+                <a href="https://github.com/mattburnett-repo/chat-mvp" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                <a href="./docs/one-sheets/chat-mvp-one-sheet.pdf" target="_blank" rel="noopener noreferrer">One-sheet →</a>
+              </div>
+            </div>
+            <div class="case-metrics">
+              <div>RAG<br>over docs</div>
+              <div>Cited<br>source chunks</div>
+              <div>Postgres<br>+ pgvector</div>
+            </div>
+          </article>
+
+          <article class="case reveal" data-hover>
+            <div class="case-ix"><span class="num">03</span>Security Gate</div>
+            <div class="case-body">
+              <h3><em>Filescan</em></h3>
+              <p class="case-role">Upload scanning · activist.org · ClamAV</p>
+              <p>
+                Image uploads checked for malware before they enter the main application flow —
+                FastAPI + ClamAV, packaged in Docker, with quarantine and backend event notification.
+              </p>
+              <div class="case-tags">
+                <span>FastAPI</span><span>ClamAV</span><span>Docker</span><span>Security</span>
+              </div>
+              <div class="case-links">
+                <a href="https://github.com/activist-org/activist/blob/main/services/filescan/README.md" target="_blank" rel="noopener noreferrer">GitHub →</a>
+              </div>
+            </div>
+            <div class="case-metrics">
+              <div>Malware<br>gate at upload</div>
+              <div>Clean / infected<br>result</div>
+              <div>Open<br>source</div>
+            </div>
+          </article>
+
+          <article class="case reveal" data-hover>
+            <div class="case-ix"><span class="num">04</span>Public Sector</div>
+            <div class="case-body">
+              <h3>Serve<em>Point</em></h3>
+              <p class="case-role">Case management · ColdFusion 2025 + ColdBox</p>
+              <p>
+                Case management for agencies delivering public services — structured workflows, secure handling of
+                sensitive data, and modern ColdFusion + ColdBox architecture for high-trust environments.
+              </p>
+              <div class="case-tags">
+                <span>ColdFusion</span><span>ColdBox</span><span>PostgreSQL</span><span>ORM</span>
+              </div>
+              <div class="case-links">
+                <a href="https://servepoint.onrender.com/" target="_blank" rel="noopener noreferrer">Live →</a>
+                <a href="https://github.com/mattburnett-repo/servepoint" target="_blank" rel="noopener noreferrer">GitHub →</a>
+              </div>
+            </div>
+            <div class="case-metrics">
+              <div>Secure<br>workflows</div>
+              <div>Public-service<br>cases</div>
+              <div>Agentic<br>dev assist</div>
+            </div>
+          </article>
+
+          <article class="case reveal" data-hover>
+            <div class="case-ix"><span class="num">05</span>Civic Tech</div>
+            <div class="case-body">
+              <h3>Activist<em>.org</em></h3>
+              <p class="case-role">Open source · Vue 3 + Django + PostgreSQL · Contributor</p>
+              <p>
+                Platform connecting activists with organizations, campaigns, and causes —
+                frontend and backend contributions for usability, performance, and maintainability
+                on a Vue / Django / PostgreSQL stack in a mission-driven product.
+              </p>
+              <div class="case-tags">
+                <span>Vue 3</span><span>TypeScript</span><span>Django</span><span>DRF</span><span>PostgreSQL</span><span>Tailwind</span>
+              </div>
+              <div class="case-links">
+                <a href="https://docs.activist.org/activist" target="_blank" rel="noopener noreferrer">Docs →</a>
+                <a href="https://github.com/activist-org/activist" target="_blank" rel="noopener noreferrer">GitHub →</a>
+              </div>
+            </div>
+            <div class="case-metrics">
+              <div>Civic<br>participation</div>
+              <div>Full-stack<br>contribution</div>
+              <div>Open<br>source</div>
+            </div>
+          </article>
+
+          <article class="case reveal" data-hover>
+            <div class="case-ix"><span class="num">06</span>More work</div>
+            <div class="case-body">
+              <h3>More <em>work</em></h3>
+              <p class="case-role">APIs · tooling · climate UI</p>
+              <ul class="also-list">
+                <li><a href="https://carbon-interface.vercel.app/" target="_blank" rel="noopener noreferrer">Carbon Interface frontend</a> — travel emissions estimates (React + TypeScript)</li>
+                <li><a href="https://e-comm-api.fly.dev/api" target="_blank" rel="noopener noreferrer">E-commerce REST API</a> — NestJS + PostgreSQL + OpenAPI</li>
+                <li><a href="https://github.com/mattburnett-repo/create-flask-app" target="_blank" rel="noopener noreferrer">create-flask-app</a> — CLI scaffold for Flask projects</li>
+                <li><a href="https://nestjs-api-template.fly.dev/api" target="_blank" rel="noopener noreferrer">NestJS API template</a> — reusable REST starter</li>
+              </ul>
+            </div>
+            <div class="case-metrics">
+              <div>APIs<br>&amp; CLIs</div>
+              <div>Climate<br>data UI</div>
+              <div>Open<br>templates</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Stack -->
+    <section class="section" id="stack">
+      <div class="frame">
+        <header class="sec-head reveal">
+          <div>
+            <div class="sec-num" aria-hidden="true"></div>
+            <p class="sec-kicker" aria-hidden="true"></p>
+          </div>
+          <h2 class="sec-title">The <em>stack</em> behind the work.</h2>
+        </header>
+
+        <div class="stack-grid reveal">
+          <div class="stack-col">
+            <h3>Frontend</h3>
             <ul>
-              <li>Available for contract / free-lance work</li>
-              <li>Full and/or part-time possible</li>
-              <li>Open Source contributor</li>
-              <li>U.S. citizen</li>
-              <li>Eligible for Public Trust</li>
-              <li>Experience with U.S. federal agencies (NRC, FAA, US Army JAG, US Border Control)</li>
+              <li>React · Angular · Vue · Nuxt</li>
+              <li>TypeScript · JavaScript</li>
+              <li>HTML / CSS · AJAX · jQuery</li>
+              <li>Responsive UI · component design</li>
+              <li>OOP</li>
+            </ul>
+          </div>
+          <div class="stack-col">
+            <h3>Backend / API</h3>
+            <ul>
+              <li>Node.js · NestJS · FastAPI</li>
+              <li>Django · DRF · Flask</li>
+              <li>ColdFusion · ColdBox · CFML · CFC</li>
+              <li>Fusebox · Mach II · Sequelize</li>
+              <li>TypeORM · PostgreSQL · SQL Server · SQL</li>
+            </ul>
+          </div>
+          <div class="stack-col">
+            <h3>AI / LLM</h3>
+            <ul>
+              <li>RAG · LLM pipelines</li>
+              <li>LangChain · LangSmith</li>
+              <li>OpenAI · Hugging Face</li>
+              <li>pgvector · Streamlit · JSON Schema</li>
+              <li>Agentic workflows · AI-assisted development</li>
+            </ul>
+          </div>
+          <div class="stack-col">
+            <h3>Delivery</h3>
+            <ul>
+              <li>Git · GitHub Actions</li>
+              <li>Docker · CI/CD pipelines</li>
+              <li>VS Code · API integration</li>
+              <li>Legacy modernization</li>
             </ul>
           </div>
         </div>
-        <div class="other-info-item">
-          <div class="other-info-title">
-            <p>Areas of capability</p>
+      </div>
+    </section>
+
+    <!-- 04 Record -->
+    <section class="section" id="record">
+      <div class="frame">
+        <header class="sec-head reveal">
+          <div>
+            <div class="sec-num" aria-hidden="true"></div>
+            <p class="sec-kicker" aria-hidden="true"></p>
           </div>
-          <div class="other-info-list">
+          <h2 class="sec-title">Education, certs, and <em>capacity</em>.</h2>
+        </header>
+
+        <div class="record-grid">
+          <div class="record-block reveal">
+            <h3>Work info</h3>
             <ul>
-              <li>Web Application Development</li>
-              <li>API Development and Integration</li>
-              <li>Database Design and Implementation</li>
+              <li>Available for contract / freelance</li>
+              <li>Full-time and part-time possible</li>
+              <li>Open source contributor</li>
+              <li>U.S. citizen · Public Trust eligible</li>
+              <li>Federal agency experience (NRC, FAA, US Army JAG, US Border Control)</li>
+            </ul>
+          </div>
+          <div class="record-block reveal">
+            <h3>Capabilities</h3>
+            <ul>
+              <li>Web application development</li>
+              <li>API development and integration</li>
+              <li>Database design and implementation</li>
               <li>Legacy system modernization</li>
-              <li>Test-driven development and QA</li>
-              <li>Open source collaboration</li>
               <li>CI/CD and deployment workflows</li>
             </ul>
           </div>
-        </div>
-        <div class="other-info-item">
-          <div class="other-info-title">
-            <p>Certifications &amp; Education</p>
-          </div>
-          <div class="other-info-list">
+          <div class="record-block reveal">
+            <h3>Education &amp; certs</h3>
             <ul>
               <li>Adobe ColdFusion Professional Certification</li>
               <li>Codecademy Full Stack Engineer Career Path</li>
               <li>BMus with Honors, Virginia Commonwealth University</li>
             </ul>
           </div>
-        </div>
-        <div class="other-info-item">
-          <div class="other-info-title">
-            <p>Languages</p>
-          </div>
-          <div class="other-info-list">
+          <div class="record-block reveal">
+            <h3>Languages</h3>
             <ul>
-              <li>English (Native)</li>
-              <li>German (B2 Deutsch für Beruf / Professional level B2)</li>
+              <li>English — Native</li>
+              <li>German — B2 (Deutsch für Beruf)</li>
             </ul>
           </div>
         </div>
       </div>
-      </div>
     </section>
-    <!-- Mark: Contact -->
+
+    <!-- 05 Contact -->
     <section class="section contact" id="contact">
-      <div class="main-title">
-        <h2>Contact<span class="bg-text">Contact</span></h2>
-      </div>
-      <div class="contact-container">
-        <div class="contact-icons">
-          <div class="contact-email">
-            <a href="mailto:burnett.mj@gmail.com?subject=Message from Matt Burnett portfolio website"
-              target="_blank">burnett.mj@gmail.com</a>
+      <div class="frame">
+        <header class="sec-head reveal">
+          <div>
+            <div class="sec-num" aria-hidden="true"></div>
+            <p class="sec-kicker" aria-hidden="true"></p>
           </div>
-          <div class="contact-icon">
-            <a href="https://www.linkedin.com/in/matt-burnett-5768ab20a/" target="_blank" title="LinkedIn"
-              aria-label="LinkedIn profile">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/mattburnett-repo" target="_blank" title="GitHub" aria-label="GitHub profile">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:burnett.mj@gmail.com?subject=Message from Matt Burnett portfolio website" target="_blank"
-              title="Email" aria-label="Send email to Matt Burnett">
-              <i class="fas fa-envelope"></i>
-            </a>
+          <h2 class="sec-title">Let’s <em>talk</em>.</h2>
+        </header>
+
+        <p class="contact-blurb reveal">
+          Open to contract, freelance, and full-time work — remote or hybrid from the DC Metro area.
+          U.S. citizen · Public Trust eligible.
+        </p>
+
+        <div class="cta-band reveal">
+          <a class="btn primary large" href="mailto:burnett.mj@gmail.com?subject=Message%20from%20Matt%20Burnett%20portfolio%20website" data-hover>
+            burnett.mj@gmail.com <span class="arr" aria-hidden="true">→</span>
+          </a>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/matt-burnett-5768ab20a/" target="_blank" rel="noopener noreferrer" data-hover>LinkedIn</a>
+            <a href="https://github.com/mattburnett-repo" target="_blank" rel="noopener noreferrer" data-hover>GitHub</a>
+            <a href="https://mattburnett-repo.github.io/blog/" target="_blank" rel="noopener noreferrer" data-hover>Blog</a>
           </div>
         </div>
       </div>
     </section>
-    <!-- Mark: Nav buttons -->
-    <nav class="controls" aria-label="Section navigation">
-      <div class="control active-btn" title="Home" aria-label="Home">
-        <span title="Home" data-id="home">Home</span>
-      </div>
-      <div class="control" title="Bio" aria-label="Bio">
-        <span title="Bio" data-id="bio">Bio</span>
-      </div>
-      <div class="control" title="Portfolio" aria-label="Portfolio">
-        <span title="Portfolio" data-id="portfolio">Portfolio</span>
-      </div>
-      <div class="control" title="Skill-Summary" aria-label="Skill summary">
-        <span class="label-full" title="Skill-Summary" data-id="skill-summary">Skill Set</span>
-        <span class="label-short">Skills</span>
-      </div>
-      <div class="control" title="Other Info" aria-label="Other information">
-        <span class="label-full" title="Other Info" data-id="other-info">Other Info</span>
-        <span class="label-short">Info</span>
-      </div>
-      <div class="control" title="Contact" aria-label="Contact">
-        <span title="Contact" data-id="contact">Contact</span>
-      </div>
-    </nav>
-    <!-- Mark: Theme toggle button -->
-    <div class="theme-btn" role="button" aria-label="Switch to light mode" aria-pressed="false" tabindex="0">
-      <i class="fas fa-moon dark-icon"></i>
-      <i class="fas fa-sun light-icon"></i>
-    </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="frame footer-inner">
+      <p>© <span id="year">2026</span> Matt Burnett · DC Metro — All rights reserved.</p>
+      <p class="colophon">Set in <strong>Fraunces</strong> &amp; <strong>IBM Plex</strong></p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 
 </html>
