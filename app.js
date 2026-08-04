@@ -5,6 +5,24 @@ document.addEventListener('DOMContentLoaded', () => {
     yearEl.textContent = String(new Date().getFullYear());
   }
 
+  const HASH_ALIASES = {
+    home: 'top',
+    bio: 'about',
+    portfolio: 'work',
+    'skill-summary': 'stack',
+    'other-info': 'record',
+  };
+
+  const remapHash = () => {
+    const key = window.location.hash.slice(1);
+    const target = HASH_ALIASES[key];
+    if (target) {
+      window.location.replace(`#${target}`);
+    }
+  };
+  remapHash();
+  window.addEventListener('hashchange', remapHash);
+
   const reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(
@@ -32,4 +50,5 @@ document.addEventListener('DOMContentLoaded', () => {
   };
   syncTopbar();
   window.addEventListener('scroll', syncTopbar, { passive: true });
+  window.addEventListener('resize', syncTopbar);
 });

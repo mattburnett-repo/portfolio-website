@@ -31,10 +31,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Syne:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./styles/styles.css">
   <link rel="shortcut icon" href="./images/ladderIcon_01.png" type="image/x-icon" />
+  <script>
+    document.documentElement.classList.add('js');
+    window.setTimeout(function () {
+      document.querySelectorAll('.reveal:not(.in)').forEach(function (el) {
+        el.classList.add('in');
+      });
+    }, 4000);
+  </script>
 
   <script type="application/ld+json">
     {
@@ -97,7 +105,8 @@
     </nav>
     <div class="topbar-right">
       <time class="clock" id="clock" aria-hidden="true"></time>
-      <a class="cta" href="mailto:burnett.mj@gmail.com?subject=Message%20from%20Matt%20Burnett%20portfolio%20website">Email →</a>
+      <a class="cta"
+        href="mailto:burnett.mj@gmail.com?subject=Message%20from%20Matt%20Burnett%20portfolio%20website">Email →</a>
     </div>
   </header>
 
@@ -120,8 +129,11 @@
             full-stack systems, AI-assisted workflows, and apps meant for real people.
           </p>
           <div class="hero-actions">
-            <a class="btn primary" href="#work" data-hover>See selected work <span class="arr" aria-hidden="true">→</span></a>
-            <a class="btn ghost" href="mailto:burnett.mj@gmail.com?subject=Message%20from%20Matt%20Burnett%20portfolio%20website" data-hover>Email me <span class="arr" aria-hidden="true">→</span></a>
+            <a class="btn primary" href="#work" data-hover>See selected work <span class="arr"
+                aria-hidden="true">→</span></a>
+            <a class="btn ghost"
+              href="mailto:burnett.mj@gmail.com?subject=Message%20from%20Matt%20Burnett%20portfolio%20website"
+              data-hover>Email me <span class="arr" aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
@@ -189,7 +201,7 @@
               maintain complete software systems.
             </p>
             <p>
-              After spending several years living abroad—including twelve years in Berlin—I remained deeply engaged with
+              While spending several years living abroad—including twelve years in Berlin—I remained deeply engaged with
               software through independent projects. Those experiences reinforced a preference for thoughtful,
               mission-driven engineering and building products that solve real problems.
             </p>
@@ -205,11 +217,11 @@
         <div class="stats reveal">
           <div class="stat">
             <div class="num"><em>15</em>+</div>
-            <div class="lab">Years shipping<br>production software</div>
+            <div class="lab">Years shipping<br>software</div>
           </div>
           <div class="stat">
-            <div class="num"><em>Dot</em>-com</div>
-            <div class="lab">Era survivor · early<br>Internet adopter</div>
+            <div class="num"><em>DC</em></div>
+            <div class="lab">Metro · remote<br>&amp; hybrid</div>
           </div>
           <div class="stat">
             <div class="num"><em>AI</em></div>
@@ -239,19 +251,22 @@
             <div class="case-ix"><span class="num">01</span>LLM Pipeline</div>
             <div class="case-body">
               <h3>Aptitude <em>Search</em></h3>
-              <p class="case-role">Multi-stage LLM pipeline · FastAPI + React · 2025–Present</p>
+              <p class="case-role">Multi-stage LLM pipeline · FastAPI + React</p>
               <p>
                 Resume and search constraints become a structured aptitude profile grounded in O*NET occupation data,
                 then verified job openings that fit — Hugging Face agents with JSON Schema–validated outputs,
                 orchestrated by FastAPI, surfaced in a Vite + React MVP.
               </p>
               <div class="case-tags">
-                <span>FastAPI</span><span>O*NET</span><span>Hugging Face</span><span>LangSmith</span><span>React</span><span>TypeScript</span>
+                <span>FastAPI</span><span>O*NET</span><span>Hugging
+                  Face</span><span>LangSmith</span><span>React</span><span>TypeScript</span>
               </div>
               <div class="case-links">
                 <a href="https://aptitude-search.vercel.app/" target="_blank" rel="noopener noreferrer">Live →</a>
-                <a href="https://github.com/mattburnett-repo/aptitude-search" target="_blank" rel="noopener noreferrer">GitHub →</a>
-                <a href="./docs/one-sheets/aptitude-search-onesheet.pdf" target="_blank" rel="noopener noreferrer">One-sheet →</a>
+                <a href="https://github.com/mattburnett-repo/aptitude-search" target="_blank"
+                  rel="noopener noreferrer">GitHub →</a>
+                <a href="./docs/one-sheets/aptitude-search-onesheet.pdf" target="_blank"
+                  rel="noopener noreferrer">One-sheet →</a>
               </div>
             </div>
             <div class="case-metrics">
@@ -264,18 +279,21 @@
             <div class="case-ix"><span class="num">02</span>RAG Chat</div>
             <div class="case-body">
               <h3>Chat <em>MVP</em></h3>
-              <p class="case-role">Doc-grounded RAG · FastAPI + Streamlit · 2025</p>
+              <p class="case-role">Doc-grounded RAG · FastAPI + Streamlit</p>
               <p>
                 Sources crawled and chunked into PostgreSQL/pgvector, embeddings via OpenAI, answers with LangChain
-                using retrieved context plus trimmed chat history — built to iterate on ingestion, retrieval, and prompts.
+                using retrieved context plus trimmed chat history — built to iterate on ingestion, retrieval, and
+                prompts.
               </p>
               <div class="case-tags">
                 <span>FastAPI</span><span>pgvector</span><span>LangChain</span><span>OpenAI</span><span>Streamlit</span>
               </div>
               <div class="case-links">
                 <a href="https://chatmvp.streamlit.app/" target="_blank" rel="noopener noreferrer">Live →</a>
-                <a href="https://github.com/mattburnett-repo/chat-mvp" target="_blank" rel="noopener noreferrer">GitHub →</a>
-                <a href="./docs/one-sheets/chat-mvp-one-sheet.pdf" target="_blank" rel="noopener noreferrer">One-sheet →</a>
+                <a href="https://github.com/mattburnett-repo/chat-mvp" target="_blank" rel="noopener noreferrer">GitHub
+                  →</a>
+                <a href="./docs/one-sheets/chat-mvp-one-sheet.pdf" target="_blank" rel="noopener noreferrer">One-sheet
+                  →</a>
               </div>
             </div>
             <div class="case-metrics">
@@ -298,7 +316,8 @@
                 <span>FastAPI</span><span>ClamAV</span><span>Docker</span><span>Security</span>
               </div>
               <div class="case-links">
-                <a href="https://github.com/activist-org/activist/blob/main/services/filescan/README.md" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                <a href="https://github.com/activist-org/activist/blob/main/services/filescan/README.md" target="_blank"
+                  rel="noopener noreferrer">GitHub →</a>
               </div>
             </div>
             <div class="case-metrics">
@@ -322,7 +341,8 @@
               </div>
               <div class="case-links">
                 <a href="https://servepoint.onrender.com/" target="_blank" rel="noopener noreferrer">Live →</a>
-                <a href="https://github.com/mattburnett-repo/servepoint" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                <a href="https://github.com/mattburnett-repo/servepoint" target="_blank"
+                  rel="noopener noreferrer">GitHub →</a>
               </div>
             </div>
             <div class="case-metrics">
@@ -343,11 +363,13 @@
                 on a Vue / Django / PostgreSQL stack in a mission-driven product.
               </p>
               <div class="case-tags">
-                <span>Vue 3</span><span>TypeScript</span><span>Django</span><span>DRF</span><span>PostgreSQL</span><span>Tailwind</span>
+                <span>Vue
+                  3</span><span>TypeScript</span><span>Django</span><span>DRF</span><span>PostgreSQL</span><span>Tailwind</span>
               </div>
               <div class="case-links">
                 <a href="https://docs.activist.org/activist" target="_blank" rel="noopener noreferrer">Docs →</a>
-                <a href="https://github.com/activist-org/activist" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                <a href="https://github.com/activist-org/activist" target="_blank" rel="noopener noreferrer">GitHub
+                  →</a>
               </div>
             </div>
             <div class="case-metrics">
@@ -363,10 +385,14 @@
               <h3>More <em>work</em></h3>
               <p class="case-role">APIs · tooling · climate UI</p>
               <ul class="also-list">
-                <li><a href="https://carbon-interface.vercel.app/" target="_blank" rel="noopener noreferrer">Carbon Interface frontend</a> — travel emissions estimates (React + TypeScript)</li>
-                <li><a href="https://e-comm-api.fly.dev/api" target="_blank" rel="noopener noreferrer">E-commerce REST API</a> — NestJS + PostgreSQL + OpenAPI</li>
-                <li><a href="https://github.com/mattburnett-repo/create-flask-app" target="_blank" rel="noopener noreferrer">create-flask-app</a> — CLI scaffold for Flask projects</li>
-                <li><a href="https://nestjs-api-template.fly.dev/api" target="_blank" rel="noopener noreferrer">NestJS API template</a> — reusable REST starter</li>
+                <li><a href="https://carbon-interface.vercel.app/" target="_blank" rel="noopener noreferrer">Carbon
+                    Interface frontend</a> — travel emissions estimates (React + TypeScript)</li>
+                <li><a href="https://e-comm-api.fly.dev/api" target="_blank" rel="noopener noreferrer">E-commerce REST
+                    API</a> — NestJS + PostgreSQL + OpenAPI</li>
+                <li><a href="https://github.com/mattburnett-repo/create-flask-app" target="_blank"
+                    rel="noopener noreferrer">create-flask-app</a> — CLI scaffold for Flask projects</li>
+                <li><a href="https://nestjs-api-template.fly.dev/api" target="_blank" rel="noopener noreferrer">NestJS
+                    API template</a> — reusable REST starter</li>
               </ul>
             </div>
             <div class="case-metrics">
@@ -502,13 +528,17 @@
         </p>
 
         <div class="cta-band reveal">
-          <a class="btn primary large" href="mailto:burnett.mj@gmail.com?subject=Message%20from%20Matt%20Burnett%20portfolio%20website" data-hover>
+          <a class="btn primary large"
+            href="mailto:burnett.mj@gmail.com?subject=Message%20from%20Matt%20Burnett%20portfolio%20website" data-hover>
             burnett.mj@gmail.com <span class="arr" aria-hidden="true">→</span>
           </a>
           <div class="socials">
-            <a href="https://www.linkedin.com/in/matt-burnett-5768ab20a/" target="_blank" rel="noopener noreferrer" data-hover>LinkedIn</a>
-            <a href="https://github.com/mattburnett-repo" target="_blank" rel="noopener noreferrer" data-hover>GitHub</a>
-            <a href="https://mattburnett-repo.github.io/blog/" target="_blank" rel="noopener noreferrer" data-hover>Blog</a>
+            <a href="https://www.linkedin.com/in/matt-burnett-5768ab20a/" target="_blank" rel="noopener noreferrer"
+              data-hover>LinkedIn</a>
+            <a href="https://github.com/mattburnett-repo" target="_blank" rel="noopener noreferrer"
+              data-hover>GitHub</a>
+            <a href="https://mattburnett-repo.github.io/blog/" target="_blank" rel="noopener noreferrer"
+              data-hover>Blog</a>
           </div>
         </div>
       </div>
@@ -518,7 +548,7 @@
   <footer class="site-footer">
     <div class="frame footer-inner">
       <p>© <span id="year">2026</span> Matt Burnett · DC Metro — All rights reserved.</p>
-      <p class="colophon">Set in <strong>Fraunces</strong> &amp; <strong>IBM Plex</strong></p>
+      <p class="colophon" aria-hidden="true"></p>
       <a href="#top">Back to top ↑</a>
     </div>
   </footer>
