@@ -12,7 +12,7 @@
   --signal-deep: #0B3DB8;
   --teal: #1A8A7A;
 
-  --serif: 'Fraunces', 'Times New Roman', serif;
+  --display: 'Syne', system-ui, sans-serif;
   --sans: 'IBM Plex Sans', system-ui, sans-serif;
   --mono: 'IBM Plex Mono', ui-monospace, monospace;
 
@@ -152,7 +152,7 @@ button,
 }
 
 .brand {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: 22px;
   letter-spacing: 0;
   text-transform: none;
@@ -315,7 +315,7 @@ button,
 }
 
 .hero-name {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-weight: 400;
   font-size: clamp(64px, 12vw, 168px);
   line-height: 0.92;
@@ -359,7 +359,7 @@ button,
 }
 
 .hero-tag p {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(20px, 2.1vw, 28px);
   line-height: 1.32;
   max-width: 640px;
@@ -484,7 +484,7 @@ button,
   gap: 64px;
   width: max-content;
   animation: scroll 40s linear infinite;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(28px, 3.5vw, 38px);
   line-height: 1;
   color: var(--ink);
@@ -558,7 +558,7 @@ button,
 }
 
 .sec-title {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-weight: 400;
   font-size: clamp(40px, 5.8vw, 88px);
   line-height: 0.96;
@@ -602,7 +602,7 @@ button,
 }
 
 .position-body {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(20px, 1.85vw, 28px);
   line-height: 1.42;
   color: var(--ink-soft);
@@ -649,7 +649,7 @@ button,
 }
 
 .stat .num {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(40px, 4.5vw, 68px);
   line-height: 1;
   color: var(--ink);
@@ -706,7 +706,7 @@ button,
 
 .case-ix .num {
   display: block;
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: 28px;
   letter-spacing: -0.02em;
   color: var(--signal);
@@ -716,7 +716,7 @@ button,
 }
 
 .case-body h3 {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-weight: 400;
   font-size: clamp(28px, 3vw, 42px);
   line-height: 1.1;
@@ -795,7 +795,7 @@ button,
 }
 
 .case-metrics em {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: 22px;
   font-style: italic;
   color: var(--ink);
@@ -884,7 +884,7 @@ button,
 
 /* Contact */
 .contact-blurb {
-  font-family: var(--serif);
+  font-family: var(--display);
   font-size: clamp(22px, 2.2vw, 32px);
   line-height: 1.4;
   color: var(--ink-soft);
@@ -949,21 +949,25 @@ button,
   color: var(--signal);
 }
 
-.colophon strong {
-  color: var(--ink-soft);
-  font-weight: 500;
-  text-transform: none;
-  letter-spacing: 0;
+.colophon {
+  min-width: 12ch;
+  visibility: hidden;
+  pointer-events: none;
 }
 
-/* Reveal */
+/* Reveal — visible by default; only hide when JS marks the page */
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+html.js .reveal {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
 }
 
-.reveal.in {
+html.js .reveal.in {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1065,7 +1069,8 @@ button,
   }
   .hero-name .line span,
   .hero-tag,
-  .reveal {
+  .reveal,
+  html.js .reveal {
     opacity: 1;
     transform: none;
   }
